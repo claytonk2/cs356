@@ -11,4 +11,4 @@ class view extends React.Component {
   }
 }
 
-export default home
+export default view

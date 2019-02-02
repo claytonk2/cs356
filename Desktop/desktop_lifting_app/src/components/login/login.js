@@ -11,4 +11,4 @@ class login extends React.Component {
   }
 }
 
-export default home
+export default login

@@ -11,4 +11,4 @@ class graph extends React.Component {
   }
 }
 
-export default home
+export default graph

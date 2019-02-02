@@ -11,7 +11,7 @@ import login from "./components/login/login"
 import view from "./components/view/view"
 
 import './index.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
 	<BrowserRouter basename={process.env.PUBLIC_URL}>
