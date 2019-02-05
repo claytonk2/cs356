@@ -1,10 +1,18 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import { Navbar } from 'bootstrap';
 import './App.css';
 
 class App extends React.Component {
-	static accountName = "Clayton Kingsbury";
-	static accoutUserName = "Clayball2"
+	constructor(props) {
+        super(props);
+
+        this.state = {
+						accountName: "Clayton Kingsbury",
+						accoutUserName: "Clayball2"
+					}
+				}
+
 	render() {
 		return (
 			<div className="container-fluid" style={{padding:0}}>
@@ -32,6 +40,8 @@ class App extends React.Component {
 							</li>
 							</ul>
 							<ul className="navbar-nav ml-auto">
+							<span class="navbar-brand mb-0 p">{this.state.accountName}</span>
+							<span class="navbar-brand mb-0 p">{this.state.accoutUserName}</span>
               <li className="nav-item">
 								<Link className="nav-link" to="/login" activeclassname="active">Sign In</Link>
 							</li>
