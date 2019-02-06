@@ -1,9 +1,13 @@
 import React from 'react';
+import { render } from "react-dom";
 import { Link } from 'react-router-dom';
 import { AgGridReact } from 'ag-grid-react';
 import { Button, ButtonGroup, ButtonToolbar } from 'reactstrap';
 import './ag-grid.css';
+import "ag-grid-enterprise";
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 
@@ -23,11 +27,18 @@ class track extends React.Component {
 
         this.state = {
             columnDefs: [
-                {headerName: "Exercise", field: "exercise", editable: true},
-                {headerName: "Sets", field: "sets", editable: true},
-                {headerName: "Reps", field: "reps", editable: true},
-                {headerName: "Weight", field: "weight", editable: true},
-                {headerName: "Effort", field: "effort", editable: true}
+                {headerName: "Exercise", field: "exercise", editable: true, resizable: true},
+                {headerName: "Sets", field: "sets", editable: true, resizable: true},
+                {headerName: "Reps", field: "reps", editable: true, resizable: true},
+                {headerName: "Weight", field: "weight", editable: true, resizable: true},
+                { headerName: "Effort", field: "effort", cellEditor: "agRichSelectCellEditor",
+                cellEditorParams: {
+                  values: ["low", "medium", "high", "max"]
+                },
+                editable: true,
+                resizable: true
+                }
+
 
             ],
             rowData: [
@@ -36,24 +47,33 @@ class track extends React.Component {
               {exercise: "Fly ", sets: 3, reps: 12, weight: 45, effort: "medium"},
               {exercise: "Row", sets: 3, reps: 10, weight: 225, effort: "medium"}
             ],
-            rowSelection: "multiple"
+            rowSelection: "multiple",
+            startDate: new Date()
+
         }
+        this.handleChange = this.handleChange.bind(this);
     }
+
     onGridReady = params => {
       this.gridApi = params.api;
       this.gridColumnApi = params.columnApi;
+      params.api.sizeColumnsToFit();
     };
     addItems() {
-      var newItems = [{exercise: "", sets: 0, reps: 0, weight: 0, effort: ""}];
+      var newItems = [{exercise: "", sets: 0, reps: 0, weight: 0, effort: "medium"}];
       var res = this.gridApi.updateRowData({ add: newItems });
       printResult(res);
     }
     onRemoveSelected() {
-    var selectedData = this.gridApi.getSelectedRows();
-    var res = this.gridApi.updateRowData({ remove: selectedData });
-    printResult(res);
-  }
-
+      var selectedData = this.gridApi.getSelectedRows();
+      var res = this.gridApi.updateRowData({ remove: selectedData });
+      printResult(res);
+    }
+    handleChange(date) {
+        this.setState({
+          startDate: date
+        });
+      }
 
     // componentDidMount() { //https://medium.com/ag-grid/get-started-with-react-grid-in-5-minutes-f6e5fb16afa
     //     fetch('https://api.myjson.com/bins/15psn9')
@@ -65,15 +85,25 @@ class track extends React.Component {
 
 	render() {
 		return (
-      <div>
+      <div style={{
+        alignItems: 'center',
+        padding: "2.0%"
+    }}>
 			<div className="text-center">
 
 				<h2>Enter data to be tracked</h2>
 			</div>
+      <div className="text-center">
 
+        <h3>Record Lifting Data for :</h3>
+        <DatePicker
+        selected={this.state.startDate}
+        onChange={this.handleChange}
+      />
+      </div>
       <div
                       className="ag-theme-blue"
-                      style={{ height: '80%', width: '74.7%', padding: "2.5%"}}
+
                   >
                       <AgGridReact
                           enableSorting={true}
@@ -87,6 +117,9 @@ class track extends React.Component {
                   <ButtonToolbar style={{  padding: "0.5%" }}>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
