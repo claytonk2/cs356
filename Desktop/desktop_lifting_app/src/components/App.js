@@ -3,15 +3,19 @@ import {Link} from 'react-router-dom'
 import { Navbar } from 'bootstrap';
 import './App.css';
 
+
 class App extends React.Component {
 	constructor(props) {
         super(props);
 
         this.state = {
-						accountName: "Clayton Kingsbury",
-						accoutUserName: "Clayball2"
+						accountName: "Example User",
+						accoutUserName: "user123",
+            workouts: []
 					}
+
 				}
+
 
 	render() {
 		return (

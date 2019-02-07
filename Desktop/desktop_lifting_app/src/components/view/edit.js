@@ -90,7 +90,6 @@ render() {
 			<DatePicker
 			selected={this.state.startDate}
 			onChange={this.handleChange}
-      readOnly={true}
 			placeholderText="Edit Lifting Data for :"
 		/>
 		</div>

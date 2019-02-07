@@ -14,6 +14,9 @@ import view from "./components/view/view"
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
+
 ReactDOM.render(
 	<BrowserRouter basename={process.env.PUBLIC_URL}>
 		<div>
