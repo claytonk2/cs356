@@ -9,6 +9,9 @@ import 'ag-grid-community/dist/styles/ag-theme-blue.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+import firebase from '../firebase.js'
+import App from '../App.js'
+
 
 
 const ColoredLine = ({ color }) => (
@@ -20,6 +23,29 @@ const ColoredLine = ({ color }) => (
         }}
     />
 );
+var database = firebase.database();
+
+function writeNewEx(exName, sets, reps, weight, effort, date) {
+  // A post entry.
+  var postData = {
+    name: exName,
+    sets: sets,
+    reps: reps,
+    weight: weight,
+    effort: effort,
+    date: date
+  };
+
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().child('workouts').push().key;
+
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  var updates = {};
+  updates['/workouts/' + newPostKey] = postData;
+  updates['/users/' + App.state.uuid + '/' + newPostKey] = postData;
+
+  return firebase.database().ref().update(updates);
+}
 
 class track extends React.Component {
   constructor(props) {
@@ -82,7 +108,7 @@ class track extends React.Component {
     // }
 
 
-// change color of line and font 
+// change color of line and font
 	render() {
 		return (
       <div style={{
@@ -133,7 +159,7 @@ class track extends React.Component {
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <Button outline color="danger" onClick={this.onRemoveSelected.bind(this)}>Delete Selected Row</Button>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <Button outline color="primary" href="/graph">Submit</Button>
+                    <Button outline color="primary" onClick={this.onRemoveSelected.bind(this)} href="/view">Submit</Button>
                   </ButtonToolbar>;
                   </div>
     );
