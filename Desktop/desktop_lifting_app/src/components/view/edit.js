@@ -8,21 +8,22 @@ import 'ag-grid-community/dist/styles/ag-theme-blue.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-class view extends React.Component {
+class edit extends React.Component {
 
 constructor(props) {
 			super(props);
 
 			this.state = {
 					columnDefs: [
-							{headerName: "Exercise", field: "exercise", resizable: true},
-							{headerName: "Sets", field: "sets", resizable: true},
-							{headerName: "Reps", field: "reps", resizable: true},
-							{headerName: "Weight", field: "weight", resizable: true},
+							{headerName: "Exercise", field: "exercise", editable: true, resizable: true},
+							{headerName: "Sets", field: "sets", editable: true, resizable: true},
+							{headerName: "Reps", field: "reps", editable: true, resizable: true},
+							{headerName: "Weight", field: "weight", editable: true, resizable: true},
 							{ headerName: "Effort", field: "effort", cellEditor: "agRichSelectCellEditor",
 							cellEditorParams: {
 								values: ["low", "medium", "high", "max"]
 							},
+							editable: true,
 							resizable: true
 							}
 
@@ -85,11 +86,12 @@ render() {
 			padding: "1.0%"
 	}}>
 
-			<h3>View Lifting Data for :</h3>
+			<h3>Edit Lifting Data for :</h3>
 			<DatePicker
 			selected={this.state.startDate}
 			onChange={this.handleChange}
-			placeholderText="Record Lifting Data for :"
+      readOnly={true}
+			placeholderText="Edit Lifting Data for :"
 		/>
 		</div>
 		<div
@@ -105,20 +107,21 @@ render() {
 												onGridReady={this.onGridReady}>
 										</AgGridReact>
 								</div>
-								<ButtonToolbar style={{  padding: "0.5%", alignItems: 'center' }}>
+								<ButtonToolbar style={{  padding: "0.5%" }}>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<Button outline color="primary" href="/edit" >Edit Data</Button>
+									<Button outline color="primary" onClick={this.addItems.bind(this)}>+ Add More</Button>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<Button outline color="danger" onClick={this.onRemoveSelected.bind(this)}>Delete Selected Row</Button>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<Button outline color="primary" href="/view">Save</Button>
 								</ButtonToolbar>;
 								</div>
 	);
@@ -143,4 +146,4 @@ if (res.update) {
 	});
 }
 }
-export default view
+export default edit

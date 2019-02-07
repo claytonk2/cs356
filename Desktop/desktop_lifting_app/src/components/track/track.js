@@ -93,12 +93,16 @@ class track extends React.Component {
 
 				<h2>Enter data to be tracked</h2>
 			</div>
-      <div className="text-center">
+      <div className="text-center"
+      style={{
+        padding: "1.0%"
+    }}>
 
         <h3>Record Lifting Data for :</h3>
         <DatePicker
         selected={this.state.startDate}
         onChange={this.handleChange}
+        placeholderText="Record Lifting Data for :"
       />
       </div>
       <div
