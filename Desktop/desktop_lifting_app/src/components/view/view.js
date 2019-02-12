@@ -20,18 +20,18 @@ style={{
 
 class view extends React.Component {
 
-constructor(props) {
-			super(props);
-
-			this.state = {
-					columnDefs: this.props.columnDefs,
-					rowData: this.props.rowData,
-					rowSelection: "multiple",
-					startDate: this.props.startDate
-
-			}
-			this.handleChange = this.handleChange.bind(this);
-	}
+// constructor(props) {
+// 			super(props);
+//
+// 			this.state = {
+// 					columnDefs: this.props.columnDefs,
+// 					rowData: this.props.rowData,
+// 					rowSelection: "multiple",
+// 					startDate: this.props.startDate
+//
+// 			}
+// 			this.handleChange = this.handleChange.bind(this);
+// 	}
 
 	onGridReady = params => {
 		this.gridApi = params.api;
@@ -41,12 +41,12 @@ constructor(props) {
 	addItems() {
 		var newItems = [{exercise: "", sets: 0, reps: 0, weight: 0, effort: "medium"}];
 		var res = this.gridApi.updateRowData({ add: newItems });
-		printResult(res);
+
 	}
 	onRemoveSelected() {
 		var selectedData = this.gridApi.getSelectedRows();
 		var res = this.gridApi.updateRowData({ remove: selectedData });
-		printResult(res);
+
 	}
 	handleChange(date) {
 			this.setState({
@@ -66,73 +66,31 @@ render() {
 	return (
 		<div style={{
 			alignItems: 'center',
-			padding: "2.0%"
-	}}>
-		<div className="text-center">
-
-			<h2>View and edit data here</h2>
-		</div>
-    <ColoredLine color = "black"></ColoredLine>
-		<div className="text-center"
-		style={{
 			padding: "1.0%"
 	}}>
 
-			<DatePicker
-			selected={this.state.startDate}
-			onChange={this.handleChange}
-			placeholderText="View Lifting Data for :"
-		/>
-		</div>
-		<div
-										className="ag-theme-blue"
 
-								>
-										<AgGridReact
-												enableSorting={true}
-												columnDefs={this.state.columnDefs}
-												rowData={this.state.rowData}
-												animateRows={true}
-												rowSelection={this.state.rowSelection}
-												onGridReady={this.onGridReady}>
-										</AgGridReact>
-								</div>
-								<ButtonToolbar style={{  padding: "0.5%", alignItems: 'center' }}>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<Button outline color="primary" href="/edit" >Edit Data</Button>
-								</ButtonToolbar>;
-								</div>
+
+		<ButtonToolbar style={{  padding: "0.5%", alignItems: 'center' }}>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<Button outline color="primary" onClick={this.props.onEdit} >Edit Data</Button>
+		</ButtonToolbar>;
+		</div>
 	);
 }
 }
 
-function printResult(res) {
-console.log("---------------------------------------");
-if (res.add) {
-	res.add.forEach(function(rowNode) {
-		console.log("Added Row Node", rowNode);
-	});
-}
-if (res.remove) {
-	res.remove.forEach(function(rowNode) {
-		console.log("Removed Row Node", rowNode);
-	});
-}
-if (res.update) {
-	res.update.forEach(function(rowNode) {
-		console.log("Updated Row Node", rowNode);
-	});
-}
-}
+
+
 export default view

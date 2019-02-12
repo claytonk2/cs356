@@ -8,8 +8,8 @@ import 'ag-grid-community/dist/styles/ag-theme-blue.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import view from "view.js"
-import edit from "edit.js"
+import view from "./view.js"
+import edit from "./edit.js"
 
 
 const ColoredLine = ({ color }) => (
@@ -56,7 +56,7 @@ class parentView extends React.Component {
             ],
             rowSelection: "multiple",
             screen: true,
-            startDate: new Date()
+            dateEnabled: false
 
         }
         this.handleChange = this.handleChange.bind(this);
@@ -70,17 +70,39 @@ class parentView extends React.Component {
     addItems() {
         var newItems = [{exercise: "", sets: 0, reps: 0, weight: 0, effort: "medium"}];
         var res = this.gridApi.updateRowData({ add: newItems });
-        printResult(res);
+
     }
     onRemoveSelected() {
         var selectedData = this.gridApi.getSelectedRows();
         var res = this.gridApi.updateRowData({ remove: selectedData });
-        printResult(res);
+
     }
     handleChange(date) {
         this.setState({
             startDate: date
         });
+    }
+    onEditButton(){
+        this.setState({
+            screen : false,
+            dateEnabled: true});
+        this.gridColumnApi.getColumn('exercise').getColDef().editable = true;
+        this.gridColumnApi.getColumn('sets').getColDef().editable = true;
+        this.gridColumnApi.getColumn('reps').getColDef().editable = true;
+        this.gridColumnApi.getColumn('weight').getColDef().editable = true;
+        this.gridColumnApi.getColumn('effort').getColDef().editable = true;
+
+
+    }
+    toView(){
+        this.setState({
+            screen : true,
+            dateEnabled: false});
+        this.gridColumnApi.getColumn('exercise').getColDef().editable = false;
+        this.gridColumnApi.getColumn('sets').getColDef().editable = false;
+        this.gridColumnApi.getColumn('reps').getColDef().editable = false;
+        this.gridColumnApi.getColumn('weight').getColDef().editable = false;
+        this.gridColumnApi.getColumn('effort').getColDef().editable = false;
     }
 
     // componentDidMount() { //https://medium.com/ag-grid/get-started-with-react-grid-in-5-minutes-f6e5fb16afa
@@ -92,12 +114,51 @@ class parentView extends React.Component {
 
 
     render() {
-        return (
         const ComponentToRender = this.state.screen ? view : edit;
-        return <ComponentToRender columnDefs={this.state.columnDefs}
-                                      rowData={ this.state.rowData}
-                                      startDate={ this.state.startDate}/>;
-    );
+        return (
+            <div style={{
+                alignItems: 'center',
+                padding: "1.0%"
+            }}>
+                <div className="text-center">
+
+                    <h2>View and edit data here</h2>
+                </div>
+                <ColoredLine color = "black"></ColoredLine>
+
+                <div className="text-center"
+                     style={{
+                         padding: "1.0%"
+                     }}>
+                    <DatePicker
+                        selected={this.state.startDate}
+                        onChange={this.handleChange}
+
+                        readOnly={this.state.dateEnabled}
+                        placeholderText="Edit Lifting Data for :"
+                    />
+                </div>
+                <div
+                    className="ag-theme-blue"
+
+                >
+                    <AgGridReact
+                        enableSorting={true}
+                        columnDefs={this.state.columnDefs}
+                        rowData={this.state.rowData}
+                        animateRows={true}
+                        rowSelection={this.state.rowSelection}
+                        onGridReady={this.onGridReady}
+                        singleClickEdit={true}>
+                    </AgGridReact>
+                </div>
+
+
+            <ComponentToRender onEdit={ this.onEditButton.bind(this)}
+                               addItems={this.addItems.bind(this)}
+                               onRemoveSelected={this.onRemoveSelected.bind(this)}
+                               toView={this.toView.bind(this)}/>
+            </div>);
     }
 }
 

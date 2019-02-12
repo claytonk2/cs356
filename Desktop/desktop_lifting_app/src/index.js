@@ -9,7 +9,7 @@ import track from "./components/track/track"
 import edit from "./components/view/edit"
 import graph from "./components/graph/graph"
 import login from "./components/login/login"
-import parentView from "./components/view/view"
+import parentView from "./components/view/parentView"
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';

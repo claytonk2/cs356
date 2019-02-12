@@ -21,57 +21,7 @@ const ColoredLine = ({ color }) => (
 
 class edit extends React.Component {
 
-constructor(props) {
-			super(props);
 
-			this.state = {
-					columnDefs: [
-							{headerName: "Exercise", field: "exercise", editable: true, resizable: true},
-							{headerName: "Sets", field: "sets", editable: true, resizable: true},
-							{headerName: "Reps", field: "reps", editable: true, resizable: true},
-							{headerName: "Weight", field: "weight", editable: true, resizable: true},
-							{ headerName: "Effort", field: "effort", cellEditor: "agRichSelectCellEditor",
-							cellEditorParams: {
-								values: ["low", "medium", "high", "max"]
-							},
-							editable: true,
-							resizable: true
-							}
-
-
-					],
-					rowData: [
-						{exercise: "Bench", sets: 5, reps: 5, weight: 275, effort: "medium"},
-						{exercise: "DB Bench", sets: 3, reps: 10, weight: 100, effort: "medium"},
-						{exercise: "Fly ", sets: 3, reps: 12, weight: 45, effort: "medium"},
-						{exercise: "Row", sets: 3, reps: 10, weight: 225, effort: "medium"}
-					],
-					rowSelection: "multiple"
-
-			}
-			this.handleChange = this.handleChange.bind(this);
-	}
-
-	onGridReady = params => {
-		this.gridApi = params.api;
-		this.gridColumnApi = params.columnApi;
-		params.api.sizeColumnsToFit();
-	};
-	addItems() {
-		var newItems = [{exercise: "", sets: 0, reps: 0, weight: 0, effort: "medium"}];
-		var res = this.gridApi.updateRowData({ add: newItems });
-		printResult(res);
-	}
-	onRemoveSelected() {
-		var selectedData = this.gridApi.getSelectedRows();
-		var res = this.gridApi.updateRowData({ remove: selectedData });
-		printResult(res);
-	}
-	handleChange(date) {
-			this.setState({
-				startDate: date
-			});
-		}
 
 	// componentDidMount() { //https://medium.com/ag-grid/get-started-with-react-grid-in-5-minutes-f6e5fb16afa
 	//     fetch('https://api.myjson.com/bins/15psn9')
@@ -85,57 +35,26 @@ render() {
 	return (
 		<div style={{
 			alignItems: 'center',
-			padding: "2.0%"
-	}}>
-		<div className="text-center">
-
-			<h2>View and edit data here</h2>
-		</div>
-            <ColoredLine color = "black"></ColoredLine>
-
-			<div className="text-center"
-		style={{
 			padding: "1.0%"
 	}}>
 
-			<h3>Edit Lifting Data for :</h3>
-			<DatePicker
-			selected={View.state.startDate}
-			onChange={this.handleChange}
-			IsEnabled="False"
-			placeholderText="Edit Lifting Data for :"
-		/>
+		<ButtonToolbar style={{  padding: "0.5%" }}>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<Button outline color="primary" onClick={this.props.addItems}>+ Add More</Button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<Button outline color="danger" onClick={this.props.onRemoveSelected}>Delete Selected Row</Button>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<Button outline color="primary" onClick={this.props.toView}>Save</Button>
+		</ButtonToolbar>;
 		</div>
-		<div
-										className="ag-theme-blue"
-
-								>
-										<AgGridReact
-												enableSorting={true}
-												columnDefs={this.state.columnDefs}
-												rowData={this.state.rowData}
-												animateRows={true}
-												rowSelection={this.state.rowSelection}
-												onGridReady={this.onGridReady}>
-										</AgGridReact>
-								</div>
-								<ButtonToolbar style={{  padding: "0.5%" }}>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<Button outline color="primary" onClick={this.addItems.bind(this)}>+ Add More</Button>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<Button outline color="danger" onClick={this.onRemoveSelected.bind(this)}>Delete Selected Row</Button>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<Button outline color="primary" href="/view">Save</Button>
-								</ButtonToolbar>;
-								</div>
 	);
 }
 }

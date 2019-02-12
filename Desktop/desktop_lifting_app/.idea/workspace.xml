@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccf4c50a-b234-4a4d-947f-d84656dcac2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/view/parentView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.firebaserc" beforeDir="false" afterPath="$PROJECT_DIR$/../.firebaserc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Desktop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database.rules.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/track/track.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/track/track.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/view/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/view/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/view/parentView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/view/parentView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/view/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/view/view.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firebase.json" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,22 +20,22 @@
     <session id="-1772791996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.31" value="2" />
-          <entry key="project.open.time.35" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.35" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1075" />
+          <entry key="js" value="1782" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="1075" />
+          <entry key="JavaScript" value="1782" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -64,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/track/track.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+            <state relative-caret-position="-868">
+              <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -73,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/view/parentView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="609">
+              <caret line="151" column="46" selection-start-line="151" selection-start-column="46" selection-end-line="151" selection-end-column="46" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -88,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+            <state relative-caret-position="585">
+              <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -100,11 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -123,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/view/view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+            <state relative-caret-position="548">
+              <caret line="86" column="66" selection-start-line="86" selection-start-column="66" selection-end-line="86" selection-end-column="66" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -138,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/view/edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="570">
+              <caret line="54" column="70" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="70" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -154,19 +144,24 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>View</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/view/edit.js" />
         <option value="$PROJECT_DIR$/src/components/firebase.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
-        <option value="$PROJECT_DIR$/src/components/view/parentView.js" />
         <option value="$PROJECT_DIR$/src/components/track/track.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/view/view.js" />
+        <option value="$PROJECT_DIR$/src/components/view/edit.js" />
+        <option value="$PROJECT_DIR$/src/components/view/parentView.js" />
       </list>
     </option>
   </component>
@@ -186,7 +181,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -196,7 +191,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,13 +227,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549993614352" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550006224242" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -269,18 +264,19 @@
       <workItem from="1549922562212" duration="2810000" />
       <workItem from="1549953046885" duration="457000" />
       <workItem from="1549989675886" duration="2989000" />
-      <workItem from="1549994453399" duration="325000" />
+      <workItem from="1549994453399" duration="4569000" />
+      <workItem from="1550004057320" duration="1675000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7477000" />
+    <option name="totallyTimeSpent" value="13519000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -317,20 +313,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/track/track.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+        <state relative-caret-position="585">
+          <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -339,11 +325,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -357,33 +340,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/view/edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/view/parentView.js">
+    <entry file="file://$PROJECT_DIR$/src/components/view/view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="548">
+          <caret line="86" column="66" selection-start-line="86" selection-start-column="66" selection-end-line="86" selection-end-column="66" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/view/view.js">
+    <entry file="file://$PROJECT_DIR$/src/components/view/edit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        <state relative-caret-position="570">
+          <caret line="54" column="70" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/track/track.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-868">
+          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/view/parentView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="151" column="46" selection-start-line="151" selection-start-column="46" selection-end-line="151" selection-end-column="46" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

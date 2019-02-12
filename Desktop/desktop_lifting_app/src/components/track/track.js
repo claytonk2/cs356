@@ -146,7 +146,7 @@ class track extends React.Component {
 		return (
       <div style={{
         alignItems: 'center',
-        padding: "2.0%"
+        padding: "01.0%"
     }}>
 			<div className="text-center">
 
