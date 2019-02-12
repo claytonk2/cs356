@@ -8,34 +8,26 @@ import 'ag-grid-community/dist/styles/ag-theme-blue.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+const ColoredLine = ({ color }) => (
+<hr
+style={{
+    color: color,
+        backgroundColor: color,
+        height: 1
+}}
+/>
+);
+
 class view extends React.Component {
 
 constructor(props) {
 			super(props);
 
 			this.state = {
-					columnDefs: [
-							{headerName: "Exercise", field: "exercise", resizable: true},
-							{headerName: "Sets", field: "sets", resizable: true},
-							{headerName: "Reps", field: "reps", resizable: true},
-							{headerName: "Weight", field: "weight", resizable: true},
-							{ headerName: "Effort", field: "effort", cellEditor: "agRichSelectCellEditor",
-							cellEditorParams: {
-								values: ["low", "medium", "high", "max"]
-							},
-							resizable: true
-							}
-
-
-					],
-					rowData: [
-						{exercise: "Bench", sets: 5, reps: 5, weight: 275, effort: "medium"},
-						{exercise: "DB Bench", sets: 3, reps: 10, weight: 100, effort: "medium"},
-						{exercise: "Fly ", sets: 3, reps: 12, weight: 45, effort: "medium"},
-						{exercise: "Row", sets: 3, reps: 10, weight: 225, effort: "medium"}
-					],
+					columnDefs: this.props.columnDefs,
+					rowData: this.props.rowData,
 					rowSelection: "multiple",
-					startDate: new Date()
+					startDate: this.props.startDate
 
 			}
 			this.handleChange = this.handleChange.bind(this);
@@ -80,16 +72,16 @@ render() {
 
 			<h2>View and edit data here</h2>
 		</div>
+    <ColoredLine color = "black"></ColoredLine>
 		<div className="text-center"
 		style={{
 			padding: "1.0%"
 	}}>
 
-			<h3>View Lifting Data for :</h3>
 			<DatePicker
 			selected={this.state.startDate}
 			onChange={this.handleChange}
-			placeholderText="Record Lifting Data for :"
+			placeholderText="View Lifting Data for :"
 		/>
 		</div>
 		<div

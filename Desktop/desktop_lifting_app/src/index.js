@@ -9,7 +9,7 @@ import track from "./components/track/track"
 import edit from "./components/view/edit"
 import graph from "./components/graph/graph"
 import login from "./components/login/login"
-import view from "./components/view/view"
+import parentView from "./components/view/view"
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,7 +25,7 @@ ReactDOM.render(
 			<Route exact path='/enter' component={track} />
 			<Route exact path='/graph' component={graph} />
 			<Route exact path='/login' component={login} />
-			<Route exact path='/view' component={view} />
+			<Route exact path='/view' component={parentView} />
 			<Route exact path='/edit' component={edit} />
 		</div>
 	</BrowserRouter>,
@@ -35,4 +35,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.register();

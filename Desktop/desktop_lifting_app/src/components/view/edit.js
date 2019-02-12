@@ -7,6 +7,17 @@ import "ag-grid-enterprise";
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import View from "./view";
+
+const ColoredLine = ({ color }) => (
+    <hr
+        style={{
+            color: color,
+            backgroundColor: color,
+            height: 1
+        }}
+    />
+);
 
 class edit extends React.Component {
 
@@ -35,8 +46,7 @@ constructor(props) {
 						{exercise: "Fly ", sets: 3, reps: 12, weight: 45, effort: "medium"},
 						{exercise: "Row", sets: 3, reps: 10, weight: 225, effort: "medium"}
 					],
-					rowSelection: "multiple",
-					startDate: new Date()
+					rowSelection: "multiple"
 
 			}
 			this.handleChange = this.handleChange.bind(this);
@@ -81,15 +91,18 @@ render() {
 
 			<h2>View and edit data here</h2>
 		</div>
-		<div className="text-center"
+            <ColoredLine color = "black"></ColoredLine>
+
+			<div className="text-center"
 		style={{
 			padding: "1.0%"
 	}}>
 
 			<h3>Edit Lifting Data for :</h3>
 			<DatePicker
-			selected={this.state.startDate}
+			selected={View.state.startDate}
 			onChange={this.handleChange}
+			IsEnabled="False"
 			placeholderText="Edit Lifting Data for :"
 		/>
 		</div>

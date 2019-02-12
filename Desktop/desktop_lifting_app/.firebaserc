@@ -1,6 +1,5 @@
 {
   "projects": {
-    "development": "liftingprogresstracker",
     "default": "liftingprogresstracker"
   }
 }

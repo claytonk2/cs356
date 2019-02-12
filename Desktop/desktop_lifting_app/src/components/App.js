@@ -11,8 +11,7 @@ class App extends React.Component {
         this.state = {
 						accountName: "Example User",
 						accoutUserName: "user123",
-            workouts: [],
-						uuid: "sBAGIexZ8o7DoBAgCeHf"
+            workouts: []
 					}
 
 				}

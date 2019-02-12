@@ -25,24 +25,37 @@ const ColoredLine = ({ color }) => (
 );
 var database = firebase.database();
 
-function writeNewEx(exName, sets, reps, weight, effort, date) {
-  // A post entry.
-  var postData = {
-    name: exName,
-    sets: sets,
-    reps: reps,
-    weight: weight,
-    effort: effort,
-    date: date
-  };
 
+function writeNewWorkout(updates, node, newDateKey){
+    var postData = {
+        name: node.exercise,
+        sets: node.sets,
+        reps: node.reps,
+        weight: node.weight,
+        effort: node.effort
+    };
+    var newPostKey = firebase.database().ref().child('workouts').push().key;
+    updates['/workouts/' + newPostKey] = postData;
+    updates['/users/' + "sBAGIexZ8o7DoBAgCeHf" + '/' + newDateKey + '/' + newPostKey] = postData;
+    return updates
+}
+function writeNewEx(date) {
+  // A post entry.
+
+    var dateData= {
+        date:date
+    }
   // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('workouts').push().key;
+  var newDateKey = firebase.database().ref().child('workoutDate').push().key;
+
+
 
   // Write the new post's data simultaneously in the posts list and the user's post list.
   var updates = {};
-  updates['/workouts/' + newPostKey] = postData;
-  updates['/users/' + App.state.uuid + '/' + newPostKey] = postData;
+  updates['/workoutDate/' + newDateKey] = dateData;
+  this.gridApi.forEachNode(node => writeNewWorkout(updates, node, newDateKey));
+
+
 
   return firebase.database().ref().update(updates);
 }
@@ -73,8 +86,7 @@ class track extends React.Component {
               {exercise: "Fly ", sets: 3, reps: 12, weight: 45, effort: "medium"},
               {exercise: "Row", sets: 3, reps: 10, weight: 225, effort: "medium"}
             ],
-            rowSelection: "multiple",
-            startDate: new Date()
+            rowSelection: "multiple"
 
         }
         this.handleChange = this.handleChange.bind(this);
@@ -94,6 +106,27 @@ class track extends React.Component {
       var selectedData = this.gridApi.getSelectedRows();
       var res = this.gridApi.updateRowData({ remove: selectedData });
       printResult(res);
+    }
+    onSubmit(){
+        // writeNewEx(this.state.startDate)
+        // A post entry.
+
+        var dateData= {
+            date: this.state.startDate
+        }
+        // Get a key for a new Post.
+        var newDateKey = firebase.database().ref().child('workoutDate').push().key;
+
+
+
+        // Write the new post's data simultaneously in the posts list and the user's post list.
+        var updates = {};
+        updates['/workoutDate/' + newDateKey] = dateData;
+        this.gridApi.forEachNode(node => writeNewWorkout(updates, node, newDateKey));
+
+
+
+        return firebase.database().ref().update(updates);
     }
     handleChange(date) {
         this.setState({
@@ -118,14 +151,14 @@ class track extends React.Component {
 			<div className="text-center">
 
 				<h2>Enter data to be tracked</h2>
-        <ColoredLine color = "blue"></ColoredLine>
+        <ColoredLine color = "black"></ColoredLine>
 			</div>
       <div className="text-center"
       style={{
         padding: "1.0%"
     }}>
 
-        <h3>Record Lifting Data for :</h3>
+
         <DatePicker
         selected={this.state.startDate}
         onChange={this.handleChange}
@@ -159,12 +192,14 @@ class track extends React.Component {
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <Button outline color="danger" onClick={this.onRemoveSelected.bind(this)}>Delete Selected Row</Button>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <Button outline color="primary" onClick={this.onRemoveSelected.bind(this)} href="/view">Submit</Button>
+                    <Button outline color="primary"  onClick={this.onSubmit.bind(this)} >Submit</Button>
                   </ButtonToolbar>;
                   </div>
     );
   }
 }
+
+//href="/view"
 
 function printResult(res) {
   console.log("---------------------------------------");

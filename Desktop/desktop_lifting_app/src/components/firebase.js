@@ -8,6 +8,7 @@ var config = {
     storageBucket: "liftingprogresstracker.appspot.com",
     messagingSenderId: "22311839866"
   };
+var uuid={uuid: "sBAGIexZ8o7DoBAgCeHf"}
 firebase.initializeApp(config);
 // export const provider = new firebase.auth.GoogleAuthProvider();
 
