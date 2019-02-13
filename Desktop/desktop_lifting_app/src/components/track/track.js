@@ -28,13 +28,14 @@ var database = firebase.database();
 
 function writeNewWorkout(updates, node, newDateKey){
     var postData = {
-        name: node.exercise,
-        sets: node.sets,
-        reps: node.reps,
-        weight: node.weight,
-        effort: node.effort
+        name: node.data.exercise,
+        sets: node.data.sets,
+        reps: node.data.reps,
+        weight: node.data.weight,
+        effort: node.data.effort
     };
     var newPostKey = firebase.database().ref().child('workouts').push().key;
+    // var userId = firebase.auth().currentUser.uid; userId
     updates['/workouts/' + newPostKey] = postData;
     updates['/users/' + "sBAGIexZ8o7DoBAgCeHf" + '/' + newDateKey + '/' + newPostKey] = postData;
     return updates
@@ -150,7 +151,7 @@ class track extends React.Component {
     }}>
 			<div className="text-center">
 
-				<h2>Enter data to be tracked</h2>
+				<h2>Enter Data to be Tracked</h2>
         <ColoredLine color = "black"></ColoredLine>
 			</div>
       <div className="text-center"

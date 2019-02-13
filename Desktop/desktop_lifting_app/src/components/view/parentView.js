@@ -122,7 +122,7 @@ class parentView extends React.Component {
             }}>
                 <div className="text-center">
 
-                    <h2>View and edit data here</h2>
+                    <h2>View and Edit Data</h2>
                 </div>
                 <ColoredLine color = "black"></ColoredLine>
 
