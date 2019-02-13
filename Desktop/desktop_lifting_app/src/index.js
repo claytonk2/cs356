@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 
 import App from "./components/App";
 import home from "./components/home/home";
-import track from "./components/track/track"
+import parentTrack from "./components/track/parentTrack"
 import edit from "./components/view/edit"
 import graph from "./components/graph/graph"
 import login from "./components/login/login"
@@ -22,7 +22,7 @@ ReactDOM.render(
 		<div>
 			<Route path='/' component={App} />
 			<Route exact path='/' component={home} />
-			<Route exact path='/enter' component={track} />
+			<Route exact path='/enter' component={parentTrack} />
 			<Route exact path='/graph' component={graph} />
 			<Route exact path='/login' component={login} />
 			<Route exact path='/view' component={parentView} />

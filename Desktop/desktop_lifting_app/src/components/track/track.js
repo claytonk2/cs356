@@ -1,8 +1,6 @@
 import React from 'react';
-import { render } from "react-dom";
-import { Link } from 'react-router-dom';
 import { AgGridReact } from 'ag-grid-react';
-import { Button, ButtonGroup, ButtonToolbar } from 'reactstrap';
+import { Button,  ButtonToolbar } from 'reactstrap';
 import './ag-grid.css';
 import "ag-grid-enterprise";
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
@@ -10,7 +8,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import firebase from '../firebase.js'
-import App from '../App.js'
 
 
 
@@ -23,7 +20,6 @@ const ColoredLine = ({ color }) => (
         }}
     />
 );
-var database = firebase.database();
 
 
 function writeNewWorkout(updates, node, newDateKey){
@@ -37,29 +33,10 @@ function writeNewWorkout(updates, node, newDateKey){
     var newPostKey = firebase.database().ref().child('workouts').push().key;
     // var userId = firebase.auth().currentUser.uid; userId
     updates['/workouts/' + newPostKey] = postData;
-    updates['/users/' + "sBAGIexZ8o7DoBAgCeHf" + '/' + newDateKey + '/' + newPostKey] = postData;
+    updates['/users/sBAGIexZ8o7DoBAgCeHf/' + newDateKey + '/' + newPostKey] = postData;
     return updates
 }
-function writeNewEx(date) {
-  // A post entry.
 
-    var dateData= {
-        date:date
-    }
-  // Get a key for a new Post.
-  var newDateKey = firebase.database().ref().child('workoutDate').push().key;
-
-
-
-  // Write the new post's data simultaneously in the posts list and the user's post list.
-  var updates = {};
-  updates['/workoutDate/' + newDateKey] = dateData;
-  this.gridApi.forEachNode(node => writeNewWorkout(updates, node, newDateKey));
-
-
-
-  return firebase.database().ref().update(updates);
-}
 
 class track extends React.Component {
   constructor(props) {
@@ -82,10 +59,7 @@ class track extends React.Component {
 
             ],
             rowData: [
-              {exercise: "Bench", sets: 5, reps: 5, weight: 275, effort: "medium"},
-              {exercise: "DB Bench", sets: 3, reps: 10, weight: 100, effort: "medium"},
-              {exercise: "Fly ", sets: 3, reps: 12, weight: 45, effort: "medium"},
-              {exercise: "Row", sets: 3, reps: 10, weight: 225, effort: "medium"}
+              {exercise: "exercise", sets: 0, reps: 0, weight: 0, effort: "medium"}
             ],
             rowSelection: "multiple"
 
@@ -125,7 +99,7 @@ class track extends React.Component {
         updates['/workoutDate/' + newDateKey] = dateData;
         this.gridApi.forEachNode(node => writeNewWorkout(updates, node, newDateKey));
 
-
+        this.props.onSubmitTrack();
 
         return firebase.database().ref().update(updates);
     }
@@ -133,6 +107,7 @@ class track extends React.Component {
         this.setState({
           startDate: date
         });
+        this.props.onChangeDate(date);
       }
 
     // componentDidMount() { //https://medium.com/ag-grid/get-started-with-react-grid-in-5-minutes-f6e5fb16afa
@@ -176,7 +151,8 @@ class track extends React.Component {
                           rowData={this.state.rowData}
                           animateRows={true}
                           rowSelection={this.state.rowSelection}
-                          onGridReady={this.onGridReady}>
+                          onGridReady={this.onGridReady}
+                          singleClickEdit={true}>
                       </AgGridReact>
                   </div>
                   <ButtonToolbar style={{  padding: "0.5%" }}>
@@ -193,7 +169,7 @@ class track extends React.Component {
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <Button outline color="danger" onClick={this.onRemoveSelected.bind(this)}>Delete Selected Row</Button>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <Button outline color="primary"  onClick={this.onSubmit.bind(this)} >Submit</Button>
+                    <Button outline color="primary"  onClick={this.onSubmit.bind(this)}>Submit</Button>
                   </ButtonToolbar>;
                   </div>
     );

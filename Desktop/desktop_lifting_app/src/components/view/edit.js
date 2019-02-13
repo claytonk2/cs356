@@ -1,23 +1,9 @@
 import React from 'react';
-import { render } from "react-dom";
-import { Link } from 'react-router-dom';
-import { AgGridReact } from 'ag-grid-react';
-import { Button, ButtonGroup, ButtonToolbar } from 'reactstrap';
+import { Button, ButtonToolbar } from 'reactstrap';
 import "ag-grid-enterprise";
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import View from "./view";
 
-const ColoredLine = ({ color }) => (
-    <hr
-        style={{
-            color: color,
-            backgroundColor: color,
-            height: 1
-        }}
-    />
-);
 
 class edit extends React.Component {
 
@@ -59,22 +45,6 @@ render() {
 }
 }
 
-function printResult(res) {
-console.log("---------------------------------------");
-if (res.add) {
-	res.add.forEach(function(rowNode) {
-		console.log("Added Row Node", rowNode);
-	});
-}
-if (res.remove) {
-	res.remove.forEach(function(rowNode) {
-		console.log("Removed Row Node", rowNode);
-	});
-}
-if (res.update) {
-	res.update.forEach(function(rowNode) {
-		console.log("Updated Row Node", rowNode);
-	});
-}
-}
+
+
 export default edit

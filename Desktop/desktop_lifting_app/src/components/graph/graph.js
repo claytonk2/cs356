@@ -1,12 +1,50 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import DatePicker from "react-datepicker/es";
+const ColoredLine = ({ color }) => (
+    <hr
+        style={{
+            color: color,
+            backgroundColor: color,
+            height: 1
+        }}
+    />
+);
 class graph extends React.Component {
+	constructor(props){
+		super(props)
+		this.state={
+			startDate: new Date()
+		}
+	}
+    handleChange(date) {
+        this.setState({
+            startDate: date
+        });
+    }
 	render() {
 		return (
-			<div className="jumbotron text-center">
-				<h2>Graph data here</h2>
-      </div>
+            <div style={{
+                alignItems: 'center',
+                padding: "01.0%"
+            }}>
+                <div className="text-center">
+
+                    <h2>Graph Data Here</h2>
+                    <ColoredLine color = "black"></ColoredLine>
+                </div>
+                <div className="text-center"
+                     style={{
+                         padding: "1.0%"
+                     }}>
+
+
+                    <DatePicker
+                        selected={this.state.startDate}
+                        onChange={this.handleChange}
+                        placeholderText="Record Lifting Data for :"
+                    />
+                </div>
+			</div>
     );
   }
 }

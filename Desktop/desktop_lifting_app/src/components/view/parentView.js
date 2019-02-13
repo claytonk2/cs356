@@ -1,8 +1,5 @@
 import React from 'react';
-import { render } from "react-dom";
-import { Link } from 'react-router-dom';
 import { AgGridReact } from 'ag-grid-react';
-import { Button, ButtonGroup, ButtonToolbar } from 'reactstrap';
 import "ag-grid-enterprise";
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
 import DatePicker from "react-datepicker";
@@ -56,7 +53,8 @@ class parentView extends React.Component {
             ],
             rowSelection: "multiple",
             screen: true,
-            dateEnabled: false
+            dateEnabled: false,
+            startDate: props.startDate
 
         }
         this.handleChange = this.handleChange.bind(this);
@@ -69,12 +67,12 @@ class parentView extends React.Component {
     };
     addItems() {
         var newItems = [{exercise: "", sets: 0, reps: 0, weight: 0, effort: "medium"}];
-        var res = this.gridApi.updateRowData({ add: newItems });
+        this.gridApi.updateRowData({ add: newItems });
 
     }
     onRemoveSelected() {
         var selectedData = this.gridApi.getSelectedRows();
-        var res = this.gridApi.updateRowData({ remove: selectedData });
+        this.gridApi.updateRowData({ remove: selectedData });
 
     }
     handleChange(date) {
