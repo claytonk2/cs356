@@ -36,6 +36,7 @@ class view extends React.Component {
 		this.gridApi.updateRowData({ remove: selectedData });
 
 	}
+
 	handleChange(date) {
 			this.setState({
 				startDate: date

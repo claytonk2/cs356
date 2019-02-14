@@ -79,6 +79,7 @@ class parentView extends React.Component {
         this.setState({
             startDate: date
         });
+        this.importData(date);
     }
     onEditButton(){
         this.setState({
@@ -102,7 +103,41 @@ class parentView extends React.Component {
         this.gridColumnApi.getColumn('weight').getColDef().editable = false;
         this.gridColumnApi.getColumn('effort').getColDef().editable = false;
     }
+    addRowData(row, dateKey){
+        if(dateKey == row.dateId) {
+            var newItems = [{
+                exercise: row.name,
+                sets: row.sets,
+                reps: row.reps,
+                weight: row.weight,
+                effort: row.effort
+            }];
+            this.gridApi.updateRowData({add: newItems});
+        }
+    }
+    importData(date){
+        var dateKey = ""
+        firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/workoutDate/').on('value', function (snapshot) {
+            console.log(snapshot.val())
+            snapshot.forEach(function(childSnapshot) {
+                if(childSnapshot.val() == date){
+                    dateKey = childSnapshot.key();
+                }
+            });
+        }, function (errorObject) {
+            console.log("The read failed: " + errorObject.code);
+        });
 
+        firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/workouts/').on('value', function (snapshot) {
+            console.log(snapshot.val())
+            snapshot.forEach(function(childSnapshot) {
+                this.addRowData(childSnapshot.val(), dateKey);
+            });
+        }, function (errorObject) {
+            console.log("The read failed: " + errorObject.code);
+        });
+
+    }
     // componentDidMount() { //https://medium.com/ag-grid/get-started-with-react-grid-in-5-minutes-f6e5fb16afa
     //     fetch('https://api.myjson.com/bins/15psn9')
     //         .then(result => result.json())

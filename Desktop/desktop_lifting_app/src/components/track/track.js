@@ -28,7 +28,8 @@ function writeNewWorkout(updates, node, newDateKey){
         sets: node.data.sets,
         reps: node.data.reps,
         weight: node.data.weight,
-        effort: node.data.effort
+        effort: node.data.effort,
+        dateId: newDateKey
     };
     var newPostKey = firebase.database().ref().child('workouts').push().key;
     // var userId = firebase.auth().currentUser.uid; userId
