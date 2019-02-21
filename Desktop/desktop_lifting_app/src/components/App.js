@@ -15,7 +15,9 @@ class App extends React.Component {
 
 				}
 
-
+    componentWillMount() {
+        document.title = 'Lifting Progress Tracker'
+    }
 	render() {
 		return (
 			<div className="container-fluid" style={{padding:0}}>
@@ -35,12 +37,13 @@ class App extends React.Component {
 							<li className="nav-item">
 								<Link className="nav-link" to="/enter" activeclassname="active">Record Data</Link>
 							</li>
-              <li className="nav-item">
-								<Link className="nav-link" to="/graph" activeclassname="active">Progress Tracker</Link>
-							</li>
+
               <li className="nav-item">
 								<Link className="nav-link" to="/view" activeclassname="active">Past Data</Link>
 							</li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/graph" activeclassname="active">Progress Tracker</Link>
+                            </li>
 							</ul>
 							<ul className="navbar-nav ml-auto">
 							<span class="navbar-brand mb-0 p">{this.state.accountName}</span>

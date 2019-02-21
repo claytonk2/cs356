@@ -31,10 +31,10 @@ function writeNewWorkout(updates, node, newDateKey){
         effort: node.data.effort,
         dateId: newDateKey
     };
-    var newPostKey = firebase.database().ref().child('workouts').push().key;
+    var newPostKey = firebase.database().ref().child('workouts').push().key;// try without the post key??
     // var userId = firebase.auth().currentUser.uid; userId
     updates['/workouts/' + newPostKey] = postData;
-    updates['/users/sBAGIexZ8o7DoBAgCeHf/' + newDateKey + '/' + newPostKey] = postData;
+    updates['/users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + newDateKey + '/workouts/'] = postData;
     return updates
 }
 
@@ -59,9 +59,7 @@ class track extends React.Component {
 
 
             ],
-            rowData: [
-              {exercise: "exercise", sets: 0, reps: 0, weight: 0, effort: "medium"}
-            ],
+            rowData: this.props.rowData,
             rowSelection: "multiple"
 
         }
@@ -88,8 +86,8 @@ class track extends React.Component {
         // A post entry.
 
         var dateData= {
-            date: this.state.startDate
-        }
+            date: this.state.startDate.toISOString()
+        };
         // Get a key for a new Post.
         var newDateKey = firebase.database().ref().child('workoutDate').push().key;
 
@@ -171,7 +169,7 @@ class track extends React.Component {
                     <Button outline color="danger" onClick={this.onRemoveSelected.bind(this)}>Delete Selected Row</Button>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <Button outline color="primary"  onClick={this.onSubmit.bind(this)}>Submit</Button>
-                  </ButtonToolbar>;
+                  </ButtonToolbar>
                   </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
-import DatePicker from "react-datepicker/es";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 const ColoredLine = ({ color }) => (
     <hr
         style={{
@@ -11,7 +12,7 @@ const ColoredLine = ({ color }) => (
 );
 class graph extends React.Component {
 	constructor(props){
-		super(props)
+		super(props);
 		this.state={
 			startDate: new Date()
 		}
@@ -40,7 +41,7 @@ class graph extends React.Component {
 
                     <DatePicker
                         selected={this.state.startDate}
-                        onChange={this.handleChange}
+                        onChange={this.handleChange.bind(this)}
                         placeholderText="Record Lifting Data for :"
                     />
                 </div>

@@ -7,7 +7,10 @@ class parentTrack extends React.Component {
         super(props);
         this.state={
             submit: false,
-            startDate: new Date()
+            startDate: new Date(),
+            rowData: [
+                {exercise: "exercise", sets: 0, reps: 0, weight: 0, effort: "medium"}
+            ]
 
         }
     }
@@ -21,11 +24,13 @@ class parentTrack extends React.Component {
             submit: true
         });
     }
+
     render() {
         const ComponentToRender = this.state.submit ? parentView : track;
         return (<ComponentToRender onSubmitTrack={this.onSubmitTrack.bind(this)}
                                     onChangeDate={this.onChangeDate.bind(this)}
-                                    startDate={this.state.startDate }/>
+                                    startDate={this.state.startDate }
+                                    rowData={this.state.rowData}/>
         );
     }
 }

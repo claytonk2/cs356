@@ -8,6 +8,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import view from "./view.js"
 import edit from "./edit.js"
 
+import firebase from '../firebase.js'
+
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -24,6 +26,26 @@ const ColoredLine = ({ color }) => (
 // }else{
 //     return <edit></edit>;
 // }
+
+
+// var dateKey = ""
+// var ref = firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/');
+// ref.orderByChild("workoutDate/").equalTo(date).on('value', function (snapshot) {
+//     console.log(snapshot.val());
+//     dateKey = snapshot.key;
+// }, function (errorObject) {
+//     console.log("The read failed: " + errorObject.code);
+// });
+//
+// var ref1 = firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/workouts/');
+// ref1.orderByChild("dateId").equalTo(dateKey).on('value', function (snapshot) {
+//     console.log(snapshot.val());
+//     snapshot.forEach(function(childSnapshot) {
+//         this.addRowData(childSnapshot.val());
+//     });
+// }, function (errorObject) {
+//     console.log("The read failed: " + errorObject.code);
+// });
 
 class parentView extends React.Component {
 
@@ -45,12 +67,7 @@ class parentView extends React.Component {
 
 
             ],
-            rowData: [
-                {exercise: "Bench", sets: 5, reps: 5, weight: 275, effort: "medium"},
-                {exercise: "DB Bench", sets: 3, reps: 10, weight: 100, effort: "medium"},
-                {exercise: "Fly ", sets: 3, reps: 12, weight: 45, effort: "medium"},
-                {exercise: "Row", sets: 3, reps: 10, weight: 225, effort: "medium"}
-            ],
+            rowData: props.rowData,
             rowSelection: "multiple",
             screen: true,
             dateEnabled: false,
@@ -76,10 +93,11 @@ class parentView extends React.Component {
 
     }
     handleChange(date) {
+        this.importData(date.toISOString());
         this.setState({
             startDate: date
         });
-        this.importData(date);
+
     }
     onEditButton(){
         this.setState({
@@ -103,40 +121,50 @@ class parentView extends React.Component {
         this.gridColumnApi.getColumn('weight').getColDef().editable = false;
         this.gridColumnApi.getColumn('effort').getColDef().editable = false;
     }
-    addRowData(row, dateKey){
-        if(dateKey == row.dateId) {
-            var newItems = [{
-                exercise: row.name,
-                sets: row.sets,
-                reps: row.reps,
-                weight: row.weight,
-                effort: row.effort
-            }];
-            this.gridApi.updateRowData({add: newItems});
-        }
+    addRowData(row){
+        var newItems = [{
+            exercise: row.name,
+            sets: row.sets,
+            reps: row.reps,
+            weight: row.weight,
+            effort: row.effort
+        }];
+        this.gridApi.updateRowData({add: newItems});
+
     }
     importData(date){
-        var dateKey = ""
-        firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/workoutDate/').on('value', function (snapshot) {
-            console.log(snapshot.val())
-            snapshot.forEach(function(childSnapshot) {
-                if(childSnapshot.val() == date){
-                    dateKey = childSnapshot.key();
-                }
+        // var dateKey = ""
+        // var self = this;
+        // console.log("Import Data\n");
+        // var ref = firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/');
+        // ref.orderByChild("workoutDate/").equalTo(date).on('value', function (snapshot) {
+        //     console.log(snapshot.val());
+        //     snapshot.val().workouts.forEach(function(childSnapshot) {
+        //         self.addRowData(childSnapshot.val());
+        //     });
+        // }, function (errorObject) {
+        //     console.log("The read failed: " + errorObject.code);
+        // });
+    this.addItems();
+        var self = this;
+        var dateKey = "";
+        console.log("Import Data\n");
+        var ref = firebase.database().ref('workoutDate/');
+        ref.equalTo(date).on('value', function (snapshot) {
+            console.log(snapshot.key);
+            dateKey = snapshot.key;
+        }, function (errorObject) {
+            console.log("The read failed: " + errorObject.code);
+        });
+        var ref = firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/workoutDate/' + dateKey +"/workouts/");
+        ref.orderByChild("name").on('child_added', function (snapshot) {
+            console.log(snapshot.val());
+            snapshot.val().forEach(function(childSnapshot) {
+                self.addRowData(childSnapshot.val());
             });
         }, function (errorObject) {
             console.log("The read failed: " + errorObject.code);
         });
-
-        firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/workouts/').on('value', function (snapshot) {
-            console.log(snapshot.val())
-            snapshot.forEach(function(childSnapshot) {
-                this.addRowData(childSnapshot.val(), dateKey);
-            });
-        }, function (errorObject) {
-            console.log("The read failed: " + errorObject.code);
-        });
-
     }
     // componentDidMount() { //https://medium.com/ag-grid/get-started-with-react-grid-in-5-minutes-f6e5fb16afa
     //     fetch('https://api.myjson.com/bins/15psn9')
@@ -147,6 +175,7 @@ class parentView extends React.Component {
 
 
     render() {
+        console.log("Render\n");
         const ComponentToRender = this.state.screen ? view : edit;
         return (
             <div style={{

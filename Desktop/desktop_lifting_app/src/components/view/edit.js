@@ -39,7 +39,7 @@ render() {
 			<Button outline color="danger" onClick={this.props.onRemoveSelected}>Delete Selected Row</Button>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<Button outline color="primary" onClick={this.props.toView}>Save</Button>
-		</ButtonToolbar>;
+		</ButtonToolbar>
 		</div>
 	);
 }

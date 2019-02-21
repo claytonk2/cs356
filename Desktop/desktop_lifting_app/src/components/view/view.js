@@ -74,7 +74,7 @@ render() {
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<Button outline color="primary" onClick={this.props.onEdit} >Edit Data</Button>
-		</ButtonToolbar>;
+		</ButtonToolbar>
 		</div>
 	);
 }
