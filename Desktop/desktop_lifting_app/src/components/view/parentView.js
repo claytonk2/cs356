@@ -153,14 +153,16 @@ class parentView extends React.Component {
         var ref = firebase.database().ref('workoutDate/');
         ref.orderByChild('date').equalTo(date).on('value', function (snapshot) {
             console.log(snapshot.key);
-            dateKey = snapshot.val();
-            self.setState({
-                key: dateKey
-            });
+            snapshot.forEach(function(data) {
+                self.dateKey = data.key;
+
+            })
         }, function (errorObject) {
             console.log("The read failed: " + errorObject.code);
         });
-
+        self.setState({
+            key: self.dateKey
+        });
         var ref1 = firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + dateKey +'/workouts/');
         ref1.orderByChild("name").on('child_added', function (snapshot) {
             console.log(snapshot.val());
