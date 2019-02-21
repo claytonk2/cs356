@@ -95,7 +95,7 @@ class track extends React.Component {
 
         // Write the new post's data simultaneously in the posts list and the user's post list.
         var updates = {};
-        updates['/workoutDate/' + newDateKey] = dateData;
+        updates['/workoutDate/' + newDateKey] = dateData;//, newDateKey];
         this.gridApi.forEachNode(node => writeNewWorkout(updates, node, newDateKey));
 
         this.props.onSubmitTrack();

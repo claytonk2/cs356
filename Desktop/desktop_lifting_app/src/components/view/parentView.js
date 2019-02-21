@@ -71,7 +71,8 @@ class parentView extends React.Component {
             rowSelection: "multiple",
             screen: true,
             dateEnabled: false,
-            startDate: props.startDate
+            startDate: props.startDate,
+            key: "this"
 
         }
         this.handleChange = this.handleChange.bind(this);
@@ -145,19 +146,23 @@ class parentView extends React.Component {
         // }, function (errorObject) {
         //     console.log("The read failed: " + errorObject.code);
         // });
-    this.addItems();
+
         var self = this;
         var dateKey = "";
         console.log("Import Data\n");
         var ref = firebase.database().ref('workoutDate/');
-        ref.equalTo(date).on('value', function (snapshot) {
+        ref.orderByChild('date').equalTo(date).on('value', function (snapshot) {
             console.log(snapshot.key);
-            dateKey = snapshot.key;
+            dateKey = snapshot.val();
+            self.setState({
+                key: dateKey
+            });
         }, function (errorObject) {
             console.log("The read failed: " + errorObject.code);
         });
-        var ref = firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/workoutDate/' + dateKey +"/workouts/");
-        ref.orderByChild("name").on('child_added', function (snapshot) {
+
+        var ref1 = firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + dateKey +'/workouts/');
+        ref1.orderByChild("name").on('child_added', function (snapshot) {
             console.log(snapshot.val());
             snapshot.val().forEach(function(childSnapshot) {
                 self.addRowData(childSnapshot.val());
@@ -165,6 +170,7 @@ class parentView extends React.Component {
         }, function (errorObject) {
             console.log("The read failed: " + errorObject.code);
         });
+        this.addItems();
     }
     // componentDidMount() { //https://medium.com/ag-grid/get-started-with-react-grid-in-5-minutes-f6e5fb16afa
     //     fetch('https://api.myjson.com/bins/15psn9')
@@ -185,6 +191,7 @@ class parentView extends React.Component {
                 <div className="text-center">
 
                     <h2>View and Edit Data</h2>
+                    <p> {this.state.key}</p>
                 </div>
                 <ColoredLine color = "black"></ColoredLine>
 
