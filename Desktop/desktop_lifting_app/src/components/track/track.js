@@ -23,6 +23,7 @@ const ColoredLine = ({ color }) => (
 
 
 function writeNewWorkout(updates, node, newDateKey){
+
     var postData = {
         name: node.data.exercise,
         sets: node.data.sets,
@@ -34,7 +35,7 @@ function writeNewWorkout(updates, node, newDateKey){
     var newPostKey = firebase.database().ref().child('workouts').push().key;// try without the post key??
     // var userId = firebase.auth().currentUser.uid; userId
     updates['/workouts/' + newPostKey] = postData;
-    updates['/users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + newDateKey + '/workouts/'] = postData;
+    updates['/users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + newDateKey + '/workouts/' + newPostKey] = postData;
     return updates
 }
 

@@ -71,8 +71,7 @@ class parentView extends React.Component {
             rowSelection: "multiple",
             screen: true,
             dateEnabled: false,
-            startDate: props.startDate,
-            key: "this"
+            startDate: props.startDate
 
         }
         this.handleChange = this.handleChange.bind(this);
@@ -95,9 +94,7 @@ class parentView extends React.Component {
     }
     handleChange(date) {
         this.importData(date.toISOString());
-        this.setState({
-            startDate: date
-        });
+
 
     }
     onEditButton(){
@@ -122,7 +119,7 @@ class parentView extends React.Component {
         this.gridColumnApi.getColumn('weight').getColDef().editable = false;
         this.gridColumnApi.getColumn('effort').getColDef().editable = false;
     }
-    addRowData(row){
+    addRowData(row, self){
         var newItems = [{
             exercise: row.name,
             sets: row.sets,
@@ -130,7 +127,7 @@ class parentView extends React.Component {
             weight: row.weight,
             effort: row.effort
         }];
-        this.gridApi.updateRowData({add: newItems});
+        self.gridApi.updateRowData({add: newItems});
 
     }
     importData(date){
@@ -149,6 +146,7 @@ class parentView extends React.Component {
 
         var self = this;
         var dateKey = "";
+        this.gridApi.setRowData([]);
         console.log("Import Data\n");
         var ref = firebase.database().ref('workoutDate/');
         ref.orderByChild('date').equalTo(date).on('value', function (snapshot) {
@@ -160,19 +158,19 @@ class parentView extends React.Component {
         }, function (errorObject) {
             console.log("The read failed: " + errorObject.code);
         });
-        self.setState({
-            key: self.dateKey
-        });
-        var ref1 = firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + dateKey +'/workouts/');
-        ref1.orderByChild("name").on('child_added', function (snapshot) {
+        var ref1 = firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + self.dateKey +'/workouts/');
+        ref1.orderByChild("name").on('value', function (snapshot) {
             console.log(snapshot.val());
-            snapshot.val().forEach(function(childSnapshot) {
-                self.addRowData(childSnapshot.val());
+            snapshot.forEach(function(childSnapshot) {
+                self.addRowData(childSnapshot.val(), self);
             });
         }, function (errorObject) {
             console.log("The read failed: " + errorObject.code);
         });
-        this.addItems();
+        self.setState({
+            startDate: date
+        });
+        // this.addItems();
     }
     // componentDidMount() { //https://medium.com/ag-grid/get-started-with-react-grid-in-5-minutes-f6e5fb16afa
     //     fetch('https://api.myjson.com/bins/15psn9')
@@ -193,7 +191,6 @@ class parentView extends React.Component {
                 <div className="text-center">
 
                     <h2>View and Edit Data</h2>
-                    <p> {this.state.key}</p>
                 </div>
                 <ColoredLine color = "black"></ColoredLine>
 
