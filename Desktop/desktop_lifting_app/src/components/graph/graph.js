@@ -100,10 +100,10 @@ class graph extends React.Component {
                     });
                 });
             });
-            // var data = self.state.data.sort((a, b) => Date.parse(new Date(a.initialRegistration.split("/").reverse().join("-"))) - Date.parse(new Date(b.initialRegistration.split("/").reverse().join("-"))));
-            // self.setState({
-            //     data: data,
-            // })
+            var data = self.state.data.sort((a, b) => Date.parse(a.x) - Date.parse(b.x));
+            self.setState({
+                data: data,
+            })
             }, function (errorObject) {
             console.log("The read failed: " + errorObject.code);
         });
