@@ -1,11 +1,12 @@
 import React from 'react';
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, LineSeries} from 'react-vis';
 import {AgGridReact} from "ag-grid-react";
 import "ag-grid-enterprise";
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
-// import "react-vis/dist/style";
+import {Button, ButtonToolbar} from "reactstrap";
+import firebase from "../firebase";
+import "react-vis/dist/style.css";
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -16,15 +17,18 @@ const ColoredLine = ({ color }) => (
         }}
     />
 );
+
+
+
 class graph extends React.Component {
 	constructor(props){
 		super(props);
 		this.state={
 			startDate: new Date(),
             data: [
-                {x: '2/20/2019', y: 255},
-                {x: '2/21/2019', y: 264},
-                {x: '2/22/2019', y: 265}
+                {x: new Date("2019-02-19T07:00:00.000Z"), y: 255},
+                {x: new Date("2019-02-20T07:00:00.000Z"), y: 264},
+                {x: new Date("2019-02-21T07:00:00.000Z"), y: 265}
             ],
             columnDefs: [
                 {headerName: "Exercise", field: "exercise", editable: true, resizable: true},
@@ -41,10 +45,25 @@ class graph extends React.Component {
 
             ],
             rowData: [
-                {exercise: "exercise", sets: 0, reps: 0, weight: 0, effort: "medium"}
+                {exercise: "exercise", sets: 0, reps: 0,effort: "medium"}
             ]
 		}
 	}
+    addRowData(childSnapshot, self){
+	    console.log(childSnapshot);
+	    console.log(self.state.rowData);
+	    if (self.state.rowData[0].exercise == childSnapshot.val().name &&
+            self.state.rowData[0].sets == childSnapshot.val().sets &&
+            self.state.rowData[0].reps == childSnapshot.val().reps &&
+            self.state.rowData[0].effort == childSnapshot.val().effort){
+	        self.state.data.push({x:new Date(childSnapshot.val().dateId), y: childSnapshot.val().weight})
+        }
+
+	    console.log(self.state.data);
+        self.setState({
+            data: self.state.data,
+        })
+    }
     handleChange(date) {
         this.setState({
             startDate: date
@@ -59,6 +78,36 @@ class graph extends React.Component {
 //     return {x: d.year + '/' + d.quarter,
 //     y: parseFloat(d.count/1000)}
 // });
+    onGraph(){
+        var self = this;
+        self.state.dateKey = "";
+
+        console.log("Import Data\n");
+
+        this.setState({
+           data: []
+        });
+        var ref1 = firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/'); //+ '/workouts/'
+        ref1.orderByChild("workouts").on('value', function (snapshot) {
+            console.log(snapshot.val());
+            snapshot.forEach(function(childSnapshot) {
+                console.log(childSnapshot.val());
+                childSnapshot.forEach(function(childSnapshot1){
+                    console.log(childSnapshot1.val());
+                    childSnapshot1.forEach(function (data) {
+                        console.log(data.val())
+                        self.addRowData(data, self);
+                    });
+                });
+            });
+            // var data = self.state.data.sort((a, b) => Date.parse(new Date(a.initialRegistration.split("/").reverse().join("-"))) - Date.parse(new Date(b.initialRegistration.split("/").reverse().join("-"))));
+            // self.setState({
+            //     data: data,
+            // })
+            }, function (errorObject) {
+            console.log("The read failed: " + errorObject.code);
+        });
+    }
 	render() {
 		return (
             <div style={{
@@ -72,15 +121,11 @@ class graph extends React.Component {
                 </div>
                 <div className="text-center"
                      style={{
-                         padding: "1.0%"
+                         padding: "0.0%"
                      }}>
 
 
-                    <DatePicker
-                        selected={this.state.startDate}
-                        onChange={this.handleChange.bind(this)}
-                        placeholderText="Record Lifting Data for :"
-                    />
+
 
                 </div>
                 <div
@@ -99,10 +144,26 @@ class graph extends React.Component {
                         onGridReady={this.onGridReady}
                         singleClickEdit={true}>
                     </AgGridReact>
+                    <ButtonToolbar style={{  padding: "0.5%", alignItems: 'center' }}>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <Button outline color="primary" onClick={this.onGraph.bind(this)} >Graph</Button>
+                    </ButtonToolbar>
                 </div>
                 <div style={{
                     alignItems: 'center',
-                    padding: "01.0%"
+                    padding: "02.0%"
                 }}>
                 <XYPlot
                     xType="time"
@@ -114,8 +175,11 @@ class graph extends React.Component {
                     <XAxis title="Workout Day" />
                     <YAxis title="Weight in lbs." />
                     <LineSeries
+                        className="linemark-series-example"
                         data={this.state.data}
-                        style={{stroke: 'blue', strokeWidth: 3}}/>
+                        style={{strokeWidth: '3px'}}
+                        lineStyle={{stroke: 'red'}}
+                        markStyle={{stroke: 'blue'}}/>
                 </XYPlot>
                 </div>
 			</div>

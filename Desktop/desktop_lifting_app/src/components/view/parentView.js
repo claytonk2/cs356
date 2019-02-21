@@ -20,32 +20,23 @@ const ColoredLine = ({ color }) => (
         }}
     />
 );
+function writeNewWorkout(updates, node, newDateKey, date){
 
-// if(this.state.screen == "view"){https://stackoverflow.com/questions/50068189/switching-between-two-components-in-react
-//     return </view>;
-// }else{
-//     return <edit></edit>;
-// }
+    var postData = {
+        name: node.data.exercise,
+        sets: node.data.sets,
+        reps: node.data.reps,
+        weight: node.data.weight,
+        effort: node.data.effort,
+        dateId: date
+    };
+    var newPostKey = firebase.database().ref().child('workouts').push().key;// try without the post key??
+    // var userId = firebase.auth().currentUser.uid; userId
+    updates['/workouts/' + newPostKey] = postData;
+    updates['/users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + newDateKey + '/workouts/' + newPostKey] = postData;
+    return updates
+}
 
-
-// var dateKey = ""
-// var ref = firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/');
-// ref.orderByChild("workoutDate/").equalTo(date).on('value', function (snapshot) {
-//     console.log(snapshot.val());
-//     dateKey = snapshot.key;
-// }, function (errorObject) {
-//     console.log("The read failed: " + errorObject.code);
-// });
-//
-// var ref1 = firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/workouts/');
-// ref1.orderByChild("dateId").equalTo(dateKey).on('value', function (snapshot) {
-//     console.log(snapshot.val());
-//     snapshot.forEach(function(childSnapshot) {
-//         this.addRowData(childSnapshot.val());
-//     });
-// }, function (errorObject) {
-//     console.log("The read failed: " + errorObject.code);
-// });
 
 class parentView extends React.Component {
 
@@ -67,13 +58,13 @@ class parentView extends React.Component {
 
 
             ],
-            rowData: props.rowData,
+            rowData: [],
             rowSelection: "multiple",
             screen: true,
             dateEnabled: false,
-            startDate: props.startDate
+            key: "this"
 
-        }
+        };
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -110,6 +101,7 @@ class parentView extends React.Component {
 
     }
     toView(){
+        this.onSubmit();
         this.setState({
             screen : true,
             dateEnabled: false});
@@ -121,64 +113,77 @@ class parentView extends React.Component {
     }
     addRowData(row, self){
         var newItems = [{
-            exercise: row.name,
-            sets: row.sets,
-            reps: row.reps,
-            weight: row.weight,
-            effort: row.effort
+            exercise: row.val().name,
+            sets: row.val().sets,
+            reps: row.val().reps,
+            weight: row.val().weight,
+            effort: row.val().effort,
+            key: row.key
         }];
-        self.gridApi.updateRowData({add: newItems});
+        this.gridApi.updateRowData({add: newItems});
 
     }
     importData(date){
-        // var dateKey = ""
-        // var self = this;
-        // console.log("Import Data\n");
-        // var ref = firebase.database().ref('sBAGIexZ8o7DoBAgCeHf/');
-        // ref.orderByChild("workoutDate/").equalTo(date).on('value', function (snapshot) {
-        //     console.log(snapshot.val());
-        //     snapshot.val().workouts.forEach(function(childSnapshot) {
-        //         self.addRowData(childSnapshot.val());
-        //     });
-        // }, function (errorObject) {
-        //     console.log("The read failed: " + errorObject.code);
-        // });
 
         var self = this;
-        var dateKey = "";
-        this.gridApi.setRowData([]);
+        self.state.dateKey = "";
+
         console.log("Import Data\n");
         var ref = firebase.database().ref('workoutDate/');
         ref.orderByChild('date').equalTo(date).on('value', function (snapshot) {
-            console.log(snapshot.key);
-            snapshot.forEach(function(data) {
-                self.dateKey = data.key;
 
-            })
-        }, function (errorObject) {
-            console.log("The read failed: " + errorObject.code);
-        });
-        var ref1 = firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + self.dateKey +'/workouts/');
-        ref1.orderByChild("name").on('value', function (snapshot) {
-            console.log(snapshot.val());
-            snapshot.forEach(function(childSnapshot) {
-                self.addRowData(childSnapshot.val(), self);
+            snapshot.forEach(function(data) {
+                console.log(data.key);
+                self.state.dateKey = data.key;
+
+            });
+            var ref1 = firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + self.state.dateKey +'/workouts/');
+            ref1.orderByChild("name").on('value', function (snapshot) {
+                console.log(snapshot.val());
+                self.gridApi.setRowData([]);
+                snapshot.forEach(function(childSnapshot) {
+                    self.addRowData(childSnapshot, self);
+                });
+                self.setState({
+                    startDate: date,
+                    key: self.state.dateKey
+                });
+
+            }, function (errorObject) {
+                console.log("The read failed: " + errorObject.code);
             });
         }, function (errorObject) {
             console.log("The read failed: " + errorObject.code);
         });
-        self.setState({
-            startDate: date
-        });
+
+
+
         // this.addItems();
     }
-    // componentDidMount() { //https://medium.com/ag-grid/get-started-with-react-grid-in-5-minutes-f6e5fb16afa
-    //     fetch('https://api.myjson.com/bins/15psn9')
-    //         .then(result => result.json())
-    //         .then(rowData => this.setState({rowData}))
-    // }
+
+    onSubmitTrack(){
+        this.setState({
+            submit: true
+        });
+    }
+    onSubmit(){
+        // writeNewEx(this.state.startDate)
+        // A post entry.
+
+        // Get a key for a new Post.
+        var newDateKey = this.state.key;
 
 
+
+        // Write the new post's data simultaneously in the posts list and the user's post list.
+        var updates = {};
+        // updates['/workoutDate/' + newDateKey] = dateData;//, newDateKey];
+        this.gridApi.forEachNode(node => writeNewWorkout(updates, node, newDateKey,this.state.startDate));
+
+        this.onSubmitTrack();
+        firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/' + newDateKey +'/workouts/').set(null);
+        return firebase.database().ref().update(updates);
+    }
 
     render() {
         console.log("Render\n");

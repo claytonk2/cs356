@@ -8,46 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 class view extends React.Component {
 
-// constructor(props) {
-// 			super(props);
-//
-// 			this.state = {
-// 					columnDefs: this.props.columnDefs,
-// 					rowData: this.props.rowData,
-// 					rowSelection: "multiple",
-// 					startDate: this.props.startDate
-//
-// 			}
-// 			this.handleChange = this.handleChange.bind(this);
-// 	}
 
-	onGridReady = params => {
-		this.gridApi = params.api;
-		this.gridColumnApi = params.columnApi;
-		params.api.sizeColumnsToFit();
-	};
-	addItems() {
-		var newItems = [{exercise: "", sets: 0, reps: 0, weight: 0, effort: "medium"}];
-		this.gridApi.updateRowData({ add: newItems });
-
-	}
-	onRemoveSelected() {
-		var selectedData = this.gridApi.getSelectedRows();
-		this.gridApi.updateRowData({ remove: selectedData });
-
-	}
-
-	handleChange(date) {
-			this.setState({
-				startDate: date
-			});
-		}
-
-	// componentDidMount() { //https://medium.com/ag-grid/get-started-with-react-grid-in-5-minutes-f6e5fb16afa
-	//     fetch('https://api.myjson.com/bins/15psn9')
-	//         .then(result => result.json())
-	//         .then(rowData => this.setState({rowData}))
-	// }
 
 
 
