@@ -208,7 +208,7 @@ class parentView extends React.Component {
                         onChange={this.handleChange}
 
                         readOnly={this.state.dateEnabled}
-                        placeholderText="Edit Lifting Data for :"
+                        placeholderText="View Lifting Data for :"
                     />
                 </div>
                 <div

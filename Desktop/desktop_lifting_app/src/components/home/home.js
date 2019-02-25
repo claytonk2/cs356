@@ -9,7 +9,7 @@ const ColoredLine = ({ color }) => (
         }}
     />
 );
-
+{/*<h1>Lifting Progress Tracker</h1>*/}
 class home extends React.Component {
 	render() {
 		return (
@@ -18,7 +18,8 @@ class home extends React.Component {
                 padding: "01.0%"
             }}>
                 <div className="text-center">
-				<h1>Lifting Progress Tracker</h1>
+                    <img src={ require('./logo.png') } />
+
                     <ColoredLine color = "black"></ColoredLine>
                 <p>Record lifting data to be tracked over time.</p>
                 <p>Track lifting progress.</p>

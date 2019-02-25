@@ -63,7 +63,8 @@ class parentTrack extends React.Component {
                 {exercise: "exercise", sets: 0, reps: 0, weight: 0, effort: "medium"}
             ],
             rowSelection: "multiple",
-            key: ""
+            key: "",
+            startDate: new Date()
 
         };
         this.handleChange = this.handleChange.bind(this);
@@ -201,6 +202,7 @@ class parentTrack extends React.Component {
         style={{
             padding: "1.0%"
         }}>
+                <p>Record Lifting Data for :</p>
 
 
         <DatePicker

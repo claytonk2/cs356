@@ -31,12 +31,17 @@ class graph extends React.Component {
                 {x: new Date("2019-02-21T07:00:00.000Z"), y: 265}
             ],
             columnDefs: [
-                {headerName: "Exercise", field: "exercise", editable: true, resizable: true},
-                {headerName: "Sets", field: "sets", editable: true, resizable: true},
-                {headerName: "Reps", field: "reps", editable: true, resizable: true},
+                {headerName: "Exercise", field: "exercise", cellEditor: "agRichSelectCellEditor",
+                    cellEditorParams: {
+                        values: this.getWorkoutTypes()
+                    },editable: true, resizable: true},
+                {headerName: "Reps", field: "reps",cellEditor: "agRichSelectCellEditor",
+                    cellEditorParams: {
+                        values: this.getWorkoutReps()
+                    }, editable: true, resizable: true},
                 { headerName: "Effort", field: "effort", cellEditor: "agRichSelectCellEditor",
                     cellEditorParams: {
-                        values: ["low", "medium", "high", "max"]
+                        values: ["low", "medium", "high", "max", "all"]
                     },
                     editable: true,
                     resizable: true
@@ -45,15 +50,19 @@ class graph extends React.Component {
 
             ],
             rowData: [
-                {exercise: "exercise", sets: 0, reps: 0,effort: "medium"}
+                {exercise: "exercise", reps: "reps", effort: "all"}
             ]
 		}
 	}
     addRowData(childSnapshot, self){
 	    console.log(childSnapshot);
 	    console.log(self.state.rowData);
-	    if (self.state.rowData[0].exercise == childSnapshot.val().name &&
-            self.state.rowData[0].sets == childSnapshot.val().sets &&
+	    if (self.state.rowData[0].effort == "all" &&
+            self.state.rowData[0].exercise == childSnapshot.val().name &&
+            self.state.rowData[0].reps == childSnapshot.val().reps ){
+            self.state.data.push({x:new Date(childSnapshot.val().dateId), y: childSnapshot.val().weight})
+        }
+	    else if (self.state.rowData[0].exercise == childSnapshot.val().name &&
             self.state.rowData[0].reps == childSnapshot.val().reps &&
             self.state.rowData[0].effort == childSnapshot.val().effort){
 	        self.state.data.push({x:new Date(childSnapshot.val().dateId), y: childSnapshot.val().weight})
@@ -74,6 +83,71 @@ class graph extends React.Component {
         this.gridColumnApi = params.columnApi;
         params.api.sizeColumnsToFit();
     };
+	addTypes(child, types, self){
+	    if (types.indexOf(child.val().name) <= -1){
+	        // console.log(child.val().name);
+            types.push(child.val().name)
+        }
+        // console.log(types);
+    }
+	getWorkoutTypes(){
+        var self = this;
+        var types = [];
+
+
+
+        var ref1 = firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/'); //+ '/workouts/'
+        ref1.orderByChild("workouts").on('value', function (snapshot) {
+
+            snapshot.forEach(function(childSnapshot) {
+
+                childSnapshot.forEach(function(childSnapshot1){
+
+                    childSnapshot1.forEach(function (data) {
+
+                        self.addTypes(data, types, self);
+                    });
+                });
+            });
+        }, function (errorObject) {
+            console.log("The read failed: " + errorObject.code);
+        });
+        console.log(types);
+        return types;
+    }
+
+    addReps(child, types, self){
+        if (types.indexOf(child.val().reps) <= -1){
+            // console.log(child.val().reps);
+            types.push(child.val().reps)
+        }
+        // console.log(types);
+    }
+    getWorkoutReps(){
+        var self = this;
+        var types = [];
+
+
+
+        var ref1 = firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/'); //+ '/workouts/'
+        ref1.orderByChild("workouts").on('value', function (snapshot) {
+
+            snapshot.forEach(function(childSnapshot) {
+
+                childSnapshot.forEach(function(childSnapshot1){
+
+                    childSnapshot1.forEach(function (data) {
+
+                        self.addReps(data, types, self);
+                    });
+                });
+            });
+        }, function (errorObject) {
+            console.log("The read failed: " + errorObject.code);
+        });
+        console.log(types);
+        return types;
+    }
 //     map((d)=> {
 //     return {x: d.year + '/' + d.quarter,
 //     y: parseFloat(d.count/1000)}
@@ -83,19 +157,20 @@ class graph extends React.Component {
         self.state.dateKey = "";
 
         console.log("Import Data\n");
-
+        this.state.data = [];
         this.setState({
            data: []
         });
+        console.log(self.state.data);
         var ref1 = firebase.database().ref('users/sBAGIexZ8o7DoBAgCeHf/workoutDate/'); //+ '/workouts/'
         ref1.orderByChild("workouts").on('value', function (snapshot) {
-            console.log(snapshot.val());
+            // console.log(snapshot.val());
             snapshot.forEach(function(childSnapshot) {
-                console.log(childSnapshot.val());
+                // console.log(childSnapshot.val());
                 childSnapshot.forEach(function(childSnapshot1){
-                    console.log(childSnapshot1.val());
+                    // console.log(childSnapshot1.val());
                     childSnapshot1.forEach(function (data) {
-                        console.log(data.val())
+                        // console.log(data.val())
                         self.addRowData(data, self);
                     });
                 });
@@ -124,6 +199,7 @@ class graph extends React.Component {
                          padding: "0.0%"
                      }}>
 
+                    <p>Select exercise, reps and effort that you graphed from what has been entered.</p>
 
 
 
@@ -132,7 +208,7 @@ class graph extends React.Component {
                     className="ag-theme-blue"
                     style={{
                         alignItems: 'center',
-                        padding: "01.0%"
+                        padding: "0.0%"
                     }}
                 >
                     <AgGridReact
