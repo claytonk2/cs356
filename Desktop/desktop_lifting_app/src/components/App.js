@@ -23,7 +23,7 @@ class App extends React.Component {
 			<div className="container-fluid" style={{padding:0}}>
 
 				<nav className="navbar navbar-expand-sm bg-primary navbar-dark" style={{padding: '0 5rem'}}>
-					<Link className="navbar-brand" to="/" activeclassname="active">Lifting Progress Tracker</Link>
+					<Link className="navbar-brand" to="/home" activeclassname="active">Lifting Progress Tracker</Link>
 					<button className="navbar-toggler" type="button" data-toggle="collapse"
 							data-target="#collapsibleNavbar">
 						<span className="navbar-toggler-icon">
@@ -32,14 +32,10 @@ class App extends React.Component {
 					<div className="collapse navbar-collapse" id="collapsibleNavbar">
 						<ul className="navbar-nav">
 							<li className="nav-item">
-								<Link className="nav-link" to="/" activeclassname="active">Home</Link>
+								<Link className="nav-link" to="/home" activeclassname="active">Home</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/enter" activeclassname="active">Record Data</Link>
-							</li>
-
-              <li className="nav-item">
-								<Link className="nav-link" to="/view" activeclassname="active">Past Data</Link>
+								<Link className="nav-link" to="/view" activeclassname="active">View Workouts</Link>
 							</li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/graph" activeclassname="active">Progress Tracker</Link>

@@ -21,7 +21,8 @@ ReactDOM.render(
 	<BrowserRouter basename={process.env.PUBLIC_URL}>
 		<div>
 			<Route path='/' component={App} />
-			<Route exact path='/' component={home} />
+            <Route exact path='/' component={graph} />
+			<Route exact path='/home' component={home} />
 			<Route exact path='/enter' component={parentTrack} />
 			<Route exact path='/graph' component={graph} />
 			<Route exact path='/login' component={login} />
