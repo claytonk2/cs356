@@ -1,12 +1,13 @@
 import React from 'react';
 import "react-datepicker/dist/react-datepicker.css";
-import {XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, LineSeries} from 'react-vis';
+import {XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, LineSeries, Hint, MarkSeries} from 'react-vis';
 import {AgGridReact} from "ag-grid-react";
 import "ag-grid-enterprise";
 import 'ag-grid-community/dist/styles/ag-theme-blue.css';
 import {Button, ButtonToolbar} from "reactstrap";
 import firebase from "../firebase";
 import "react-vis/dist/style.css";
+import moment from 'moment';
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -20,7 +21,21 @@ const ColoredLine = ({ color }) => (
 
 
 
+
+
 class graph extends React.Component {
+//
+// {this.state.value ? <Hint values={this.state.value} /> : null}
+// <LineSeries
+//     className="linemark-series-example"
+//     data={this.state.data}
+//     style={{strokeWidth: '3px'}}
+//     lineStyle={{stroke: 'red'}}
+//     markStyle={{stroke: 'blue'}}
+//     onNearestXY={(datapoint, index) => this.setState({index: index})}/>
+    // figure out how to have line show up
+
+
 	constructor(props){
 		super(props);
 		this.state={
@@ -51,7 +66,8 @@ class graph extends React.Component {
             ],
             rowData: [
                 {exercise: "exercise", reps: "reps", effort: "all"}
-            ]
+            ],
+            value: null
 		}
 	}
     addRowData(childSnapshot, self){
@@ -183,8 +199,15 @@ class graph extends React.Component {
             console.log("The read failed: " + errorObject.code);
         });
     }
+    _rememberValue = value => {
+        this.setState({value});
+    };
+
 	render() {
-		return (
+        const {value} = this.state; //fix this shit
+        var titleFormat="D MMM YYYY";
+        return (
+
             <div style={{
                 alignItems: 'center',
                 padding: "01.0%"
@@ -243,20 +266,32 @@ class graph extends React.Component {
                 }}>
                 <XYPlot
                     xType="time"
-                    width={1000}
+                    width={1350}
                     height={500}
+                    yDomain={[0, 500]}
+                    onMouseLeave={() => this.setState({value: false})}
                 >
                     <VerticalGridLines />
                     <HorizontalGridLines />
                     <XAxis title="Workout Day" />
                     <YAxis title="Weight in lbs." />
-                    <LineSeries
-                        className="linemark-series-example"
-                        data={this.state.data}
-                        style={{strokeWidth: '3px'}}
-                        lineStyle={{stroke: 'red'}}
-                        markStyle={{stroke: 'blue'}}/>
+                    <MarkSeries onNearestX={this._rememberValue} data={this.state.data} />
+                    
+                        <LineSeries
+                            data= {this.state.data}
+                            className="linemark-series-example"
+                            stroke="blue"
+                        />
+                    {value ? (
+                        <Hint
+                            value={value}
+                            align={{horizontal: Hint.ALIGN.AUTO, vertical: Hint.ALIGN.TOP_EDGE}}
+                        >
+                            <div className="rv-hint__content">{`(${moment(value.x).format("D MMM YYYY")}, ${value.y})`}</div>
+                        </Hint>
+                    ) : null}
                 </XYPlot>
+
                 </div>
 			</div>
     );

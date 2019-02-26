@@ -16,6 +16,8 @@ const ColoredLine = ({ color }) => (
     />
 );
 
+// have it be one tab thats data and have the bputtom be aligned to the riught for each of the pages
+
 
 function writeNewWorkout(updates, node, newDateKey, date){
 
