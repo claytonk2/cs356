@@ -67,7 +67,7 @@ class parentTrack extends React.Component {
             ],
             rowSelection: "multiple",
             key: "",
-            startDate: new Date()
+            startDate: new Date().setHours(0, 0, 0, 0)
 
         };
         this.handleChange = this.handleChange.bind(this);
@@ -96,9 +96,11 @@ class parentTrack extends React.Component {
         // Get a key for a new Post.
         var newDateKey;
         if(this.state.edit) { //todo figure out why this isnt working
-            newDateKey = this.state.key
+            newDateKey = this.state.key;
+            console.log(this.state.key);
         }
         else{
+            console.log("new");
             newDateKey = firebase.database().ref().child('workoutDate').push().key;
         }
 
@@ -115,6 +117,7 @@ class parentTrack extends React.Component {
         return firebase.database().ref().update(updates);
     }
     handleChange(date) {
+        console.log(date.toISOString());
         this.importData(date.toISOString());
         // this.props.onChangeDate(date);
     }
@@ -207,8 +210,9 @@ class parentTrack extends React.Component {
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <h2>Enter Data to be Tracked</h2>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <h2>New Workout</h2>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -216,7 +220,7 @@ class parentTrack extends React.Component {
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     <Button color="primary" href="/view">View Workouts</Button>
                 </ButtonToolbar>

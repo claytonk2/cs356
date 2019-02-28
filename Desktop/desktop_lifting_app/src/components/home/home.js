@@ -22,8 +22,11 @@ class home extends React.Component {
 
                     <ColoredLine color = "black"></ColoredLine>
                 <p>Record lifting data to be tracked over time.</p>
+                    <img src={ require('./track.png') } />
                 <p>Track lifting progress.</p>
+                    <img src={ require('./graph.png') } />
                 <p> View and edit past data.</p>
+                    <img src={ require('./view.png') } />
             </div>
         </div>
     );
