@@ -67,7 +67,7 @@ class parentTrack extends React.Component {
             ],
             rowSelection: "multiple",
             key: "",
-            startDate: new Date().setHours(0, 0, 0, 0)
+            startDate: new Date(new Date().setHours(0, 0, 0, 0))
 
         };
         this.handleChange = this.handleChange.bind(this);
@@ -174,6 +174,7 @@ class parentTrack extends React.Component {
             buttonName: "Submit"
         });
         // this.addItems();
+        return date
     }
     // onChangeDate(date){
     //     this.setState({

@@ -15,17 +15,17 @@ class home extends React.Component {
 		return (
             <div style={{
                 alignItems: 'center',
-                padding: "01.0%"
+                padding: "0.5%"
             }}>
                 <div className="text-center">
                     <img src={ require('./logo.png') } />
 
                     <ColoredLine color = "black"></ColoredLine>
-                <p>Record lifting data to be tracked over time.</p>
+                <h1>Record lifting data to be tracked over time.</h1>
                     <img src={ require('./track.png') } />
-                <p>Track lifting progress.</p>
+                <h1>Track lifting progress.</h1>
                     <img src={ require('./graph.png') } />
-                <p> View and edit past data.</p>
+                <h1> View and edit past data.</h1>
                     <img src={ require('./view.png') } />
             </div>
         </div>
