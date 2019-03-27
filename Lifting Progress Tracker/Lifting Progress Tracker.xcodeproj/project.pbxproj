@@ -25,6 +25,19 @@
 		5551772A224AA7CC000F33CB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517721224AA7CC000F33CB /* CollectionViewCell.swift */; };
 		5551772B224AA7CC000F33CB /* RemindersEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517722224AA7CC000F33CB /* RemindersEditViewController.swift */; };
 		5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517723224AA7CC000F33CB /* NotesEditViewController.swift */; };
+		55C05FEB224B166F0046705B /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FE9224B166F0046705B /* HealthViewController.swift */; };
+		55C05FF9224B19430046705B /* RemindersCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FED224B193E0046705B /* RemindersCustomCell.swift */; };
+		55C05FFA224B19430046705B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FEE224B193F0046705B /* CollectionViewCell.swift */; };
+		55C05FFB224B19430046705B /* DataInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FEF224B193F0046705B /* DataInputViewController.swift */; };
+		55C05FFC224B19430046705B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF0224B19400046705B /* UIButtonExtension.swift */; };
+		55C05FFD224B19430046705B /* FABmenuViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF1224B19410046705B /* FABmenuViewExtention.swift */; };
+		55C05FFE224B19430046705B /* NoteInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF2224B19410046705B /* NoteInputViewController.swift */; };
+		55C05FFF224B19430046705B /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF3224B19410046705B /* NotesCell.swift */; };
+		55C06000224B19430046705B /* CarbsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF4224B19410046705B /* CarbsViewCell.swift */; };
+		55C06001224B19430046705B /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF5224B19420046705B /* FloatingActionButton.swift */; };
+		55C06002224B19430046705B /* AnalysisInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF6224B19430046705B /* AnalysisInfoTableViewController.swift */; };
+		55C06003224B19430046705B /* NotesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF7224B19430046705B /* NotesEditViewController.swift */; };
+		55C06004224B19430046705B /* RemindersEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF8224B19430046705B /* RemindersEditViewController.swift */; };
 		55CE0AC32244043D0006DB8B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CE0AC0224404020006DB8B /* Charts.framework */; };
 		55CE0AC42244043D0006DB8B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55CE0AC0224404020006DB8B /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		55CE0AC9224404B20006DB8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55CE0AC8224404B20006DB8B /* GoogleService-Info.plist */; };
@@ -128,6 +141,19 @@
 		55517721224AA7CC000F33CB /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		55517722224AA7CC000F33CB /* RemindersEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersEditViewController.swift; sourceTree = "<group>"; };
 		55517723224AA7CC000F33CB /* NotesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesEditViewController.swift; sourceTree = "<group>"; };
+		55C05FE9224B166F0046705B /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthViewController.swift; path = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"; sourceTree = SOURCE_ROOT; };
+		55C05FED224B193E0046705B /* RemindersCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersCustomCell.swift; sourceTree = "<group>"; };
+		55C05FEE224B193F0046705B /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		55C05FEF224B193F0046705B /* DataInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataInputViewController.swift; sourceTree = "<group>"; };
+		55C05FF0224B19400046705B /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		55C05FF1224B19410046705B /* FABmenuViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FABmenuViewExtention.swift; sourceTree = "<group>"; };
+		55C05FF2224B19410046705B /* NoteInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteInputViewController.swift; sourceTree = "<group>"; };
+		55C05FF3224B19410046705B /* NotesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		55C05FF4224B19410046705B /* CarbsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbsViewCell.swift; sourceTree = "<group>"; };
+		55C05FF5224B19420046705B /* FloatingActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
+		55C05FF6224B19430046705B /* AnalysisInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisInfoTableViewController.swift; sourceTree = "<group>"; };
+		55C05FF7224B19430046705B /* NotesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesEditViewController.swift; sourceTree = "<group>"; };
+		55C05FF8224B19430046705B /* RemindersEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersEditViewController.swift; sourceTree = "<group>"; };
 		55CE0ABA224404020006DB8B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master 3/Charts.xcodeproj"; sourceTree = "<group>"; };
 		55CE0AC8224404B20006DB8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		55CE0ACF224406350006DB8B /* Startup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startup.swift; sourceTree = "<group>"; };
@@ -324,6 +350,7 @@
 		55CE0ADB22440A4C0006DB8B /* Graph */ = {
 			isa = PBXGroup;
 			children = (
+				55C05FE9224B166F0046705B /* HealthViewController.swift */,
 				55CE0B052244134C0006DB8B /* GraphChangeViewController.swift */,
 				55CE0AE3224411B50006DB8B /* BalloonMarker.swift */,
 				55CE0ADE224411B40006DB8B /* ChartFormatter.swift */,
@@ -341,6 +368,18 @@
 		55CE0AEE224411F20006DB8B /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				55C05FF6224B19430046705B /* AnalysisInfoTableViewController.swift */,
+				55C05FF4224B19410046705B /* CarbsViewCell.swift */,
+				55C05FEE224B193F0046705B /* CollectionViewCell.swift */,
+				55C05FEF224B193F0046705B /* DataInputViewController.swift */,
+				55C05FF1224B19410046705B /* FABmenuViewExtention.swift */,
+				55C05FF5224B19420046705B /* FloatingActionButton.swift */,
+				55C05FF2224B19410046705B /* NoteInputViewController.swift */,
+				55C05FF3224B19410046705B /* NotesCell.swift */,
+				55C05FF7224B19430046705B /* NotesEditViewController.swift */,
+				55C05FED224B193E0046705B /* RemindersCustomCell.swift */,
+				55C05FF8224B19430046705B /* RemindersEditViewController.swift */,
+				55C05FF0224B19400046705B /* UIButtonExtension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -522,24 +561,31 @@
 				55CE0AD6224409820006DB8B /* LoginViewController.swift in Sources */,
 				55CE0B212244143A0006DB8B /* userModel.swift in Sources */,
 				55517725224AA7CC000F33CB /* AnalysisInfoTableViewController.swift in Sources */,
+				55C06001224B19430046705B /* FloatingActionButton.swift in Sources */,
 				55CE0B252244143A0006DB8B /* RemFactory.swift in Sources */,
 				55CE0AD4224409320006DB8B /* LoginCheck.swift in Sources */,
 				55CE0AE9224411B50006DB8B /* GraphDataManipulation.swift in Sources */,
 				55CE0AEA224411B50006DB8B /* GetAddedData.swift in Sources */,
 				55517729224AA7CC000F33CB /* RemindersCustomCell.swift in Sources */,
+				55C05FFE224B19430046705B /* NoteInputViewController.swift in Sources */,
 				55CE0AE7224411B50006DB8B /* ChartFormatter.swift in Sources */,
 				55517716224A9B26000F33CB /* FirebaseDatabase.swift in Sources */,
 				5544DE6C22416D2D00888097 /* RootViewController.swift in Sources */,
 				55CE0AEC224411B50006DB8B /* BalloonMarker.swift in Sources */,
+				55C05FFB224B19430046705B /* DataInputViewController.swift in Sources */,
 				55CE0B242244143A0006DB8B /* ReminderService.swift in Sources */,
+				55C06000224B19430046705B /* CarbsViewCell.swift in Sources */,
 				55CE0B262244143A0006DB8B /* ReminderToEdit.swift in Sources */,
 				55CE0AF9224412EC0006DB8B /* ProfileScreenViewController.swift in Sources */,
 				55517727224AA7CC000F33CB /* DataInputViewController.swift in Sources */,
+				55C05FF9224B19430046705B /* RemindersCustomCell.swift in Sources */,
 				5551772A224AA7CC000F33CB /* CollectionViewCell.swift in Sources */,
 				55CE0B062244134C0006DB8B /* GraphChangeViewController.swift in Sources */,
+				55C05FFA224B19430046705B /* CollectionViewCell.swift in Sources */,
 				55517726224AA7CC000F33CB /* CarbsViewCell.swift in Sources */,
 				55CE0B1F2244143A0006DB8B /* SortNotes.swift in Sources */,
 				55CE0AED224411B50006DB8B /* CustomBalloon.swift in Sources */,
+				55C05FFC224B19430046705B /* UIButtonExtension.swift in Sources */,
 				55CE0AE5224411B50006DB8B /* GraphSettings.swift in Sources */,
 				55CE0B182244143A0006DB8B /* NoteToEdit.swift in Sources */,
 				55CE0B1E2244143A0006DB8B /* INote.swift in Sources */,
@@ -555,6 +601,7 @@
 				5544DE6E22416D2D00888097 /* DataViewController.swift in Sources */,
 				55CE0B172244143A0006DB8B /* DateStringConv.swift in Sources */,
 				55CE0B04224413110006DB8B /* SummaryViewController.swift in Sources */,
+				55C05FFF224B19430046705B /* NotesCell.swift in Sources */,
 				5544DE6A22416D2D00888097 /* AppDelegate.swift in Sources */,
 				55CE0B1B2244143A0006DB8B /* NoteFactory.swift in Sources */,
 				55CE0AE8224411B50006DB8B /* GraphConstructor.swift in Sources */,
@@ -563,11 +610,16 @@
 				55CE0B1C2244143A0006DB8B /* Note.swift in Sources */,
 				55CE0AFA224412EC0006DB8B /* ProfileViewController.swift in Sources */,
 				55CE0AE6224411B50006DB8B /* GraphData.swift in Sources */,
+				55C05FFD224B19430046705B /* FABmenuViewExtention.swift in Sources */,
 				55517724224AA7CC000F33CB /* NoteInputViewController.swift in Sources */,
+				55C06003224B19430046705B /* NotesEditViewController.swift in Sources */,
 				5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */,
 				55517728224AA7CC000F33CB /* NotesCell.swift in Sources */,
+				55C06002224B19430046705B /* AnalysisInfoTableViewController.swift in Sources */,
 				55CE0B03224413110006DB8B /* SummaryTableViewController.swift in Sources */,
 				55517719224A9CF4000F33CB /* CreatePath.swift in Sources */,
+				55C05FEB224B166F0046705B /* HealthViewController.swift in Sources */,
+				55C06004224B19430046705B /* RemindersEditViewController.swift in Sources */,
 				55CE0AD0224406350006DB8B /* Startup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
