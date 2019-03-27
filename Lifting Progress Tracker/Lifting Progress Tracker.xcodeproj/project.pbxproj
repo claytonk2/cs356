@@ -14,18 +14,159 @@
 		5544DE7322416D2D00888097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5544DE7122416D2D00888097 /* Main.storyboard */; };
 		5544DE7522416D3000888097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5544DE7422416D3000888097 /* Assets.xcassets */; };
 		5544DE7822416D3000888097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5544DE7622416D3000888097 /* LaunchScreen.storyboard */; };
+		55517716224A9B26000F33CB /* FirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517715224A9B26000F33CB /* FirebaseDatabase.swift */; };
+		55517719224A9CF4000F33CB /* CreatePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517718224A9CF4000F33CB /* CreatePath.swift */; };
+		55517724224AA7CC000F33CB /* NoteInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551771B224AA7CB000F33CB /* NoteInputViewController.swift */; };
+		55517725224AA7CC000F33CB /* AnalysisInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551771C224AA7CC000F33CB /* AnalysisInfoTableViewController.swift */; };
+		55517726224AA7CC000F33CB /* CarbsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551771D224AA7CC000F33CB /* CarbsViewCell.swift */; };
+		55517727224AA7CC000F33CB /* DataInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551771E224AA7CC000F33CB /* DataInputViewController.swift */; };
+		55517728224AA7CC000F33CB /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551771F224AA7CC000F33CB /* NotesCell.swift */; };
+		55517729224AA7CC000F33CB /* RemindersCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517720224AA7CC000F33CB /* RemindersCustomCell.swift */; };
+		5551772A224AA7CC000F33CB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517721224AA7CC000F33CB /* CollectionViewCell.swift */; };
+		5551772B224AA7CC000F33CB /* RemindersEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517722224AA7CC000F33CB /* RemindersEditViewController.swift */; };
+		5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517723224AA7CC000F33CB /* NotesEditViewController.swift */; };
+		55CE0AC32244043D0006DB8B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CE0AC0224404020006DB8B /* Charts.framework */; };
+		55CE0AC42244043D0006DB8B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55CE0AC0224404020006DB8B /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		55CE0AC9224404B20006DB8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55CE0AC8224404B20006DB8B /* GoogleService-Info.plist */; };
+		55CE0AD0224406350006DB8B /* Startup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0ACF224406350006DB8B /* Startup.swift */; };
+		55CE0AD4224409320006DB8B /* LoginCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AD3224409320006DB8B /* LoginCheck.swift */; };
+		55CE0AD6224409820006DB8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AD5224409810006DB8B /* LoginViewController.swift */; };
+		55CE0AD8224409D70006DB8B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AD7224409D70006DB8B /* RegisterViewController.swift */; };
+		55CE0AE5224411B50006DB8B /* GraphSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0ADC224411B40006DB8B /* GraphSettings.swift */; };
+		55CE0AE6224411B50006DB8B /* GraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0ADD224411B40006DB8B /* GraphData.swift */; };
+		55CE0AE7224411B50006DB8B /* ChartFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0ADE224411B40006DB8B /* ChartFormatter.swift */; };
+		55CE0AE8224411B50006DB8B /* GraphConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0ADF224411B40006DB8B /* GraphConstructor.swift */; };
+		55CE0AE9224411B50006DB8B /* GraphDataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AE0224411B50006DB8B /* GraphDataManipulation.swift */; };
+		55CE0AEA224411B50006DB8B /* GetAddedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AE1224411B50006DB8B /* GetAddedData.swift */; };
+		55CE0AEB224411B50006DB8B /* GraphIndexToNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AE2224411B50006DB8B /* GraphIndexToNote.swift */; };
+		55CE0AEC224411B50006DB8B /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AE3224411B50006DB8B /* BalloonMarker.swift */; };
+		55CE0AED224411B50006DB8B /* CustomBalloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AE4224411B50006DB8B /* CustomBalloon.swift */; };
+		55CE0AF7224412EC0006DB8B /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AEF224412EB0006DB8B /* NotesTableViewController.swift */; };
+		55CE0AF8224412EC0006DB8B /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AF0224412EB0006DB8B /* RemindersViewController.swift */; };
+		55CE0AF9224412EC0006DB8B /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AF1224412EB0006DB8B /* ProfileScreenViewController.swift */; };
+		55CE0AFA224412EC0006DB8B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AF2224412EB0006DB8B /* ProfileViewController.swift */; };
+		55CE0AFC224412EC0006DB8B /* ReminderInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AF4224412EB0006DB8B /* ReminderInputViewController.swift */; };
+		55CE0AFD224412EC0006DB8B /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AF5224412EB0006DB8B /* FeedbackViewController.swift */; };
+		55CE0AFE224412EC0006DB8B /* ExpandedNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0AF6224412EC0006DB8B /* ExpandedNoteViewController.swift */; };
+		55CE0B03224413110006DB8B /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B00224413100006DB8B /* SummaryTableViewController.swift */; };
+		55CE0B04224413110006DB8B /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B01224413110006DB8B /* SummaryViewController.swift */; };
+		55CE0B062244134C0006DB8B /* GraphChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B052244134C0006DB8B /* GraphChangeViewController.swift */; };
+		55CE0B172244143A0006DB8B /* DateStringConv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B07224414390006DB8B /* DateStringConv.swift */; };
+		55CE0B182244143A0006DB8B /* NoteToEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B08224414390006DB8B /* NoteToEdit.swift */; };
+		55CE0B192244143A0006DB8B /* NoteSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B09224414390006DB8B /* NoteSearchService.swift */; };
+		55CE0B1B2244143A0006DB8B /* NoteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B0B224414390006DB8B /* NoteFactory.swift */; };
+		55CE0B1C2244143A0006DB8B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B0C224414390006DB8B /* Note.swift */; };
+		55CE0B1E2244143A0006DB8B /* INote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B0E224414390006DB8B /* INote.swift */; };
+		55CE0B1F2244143A0006DB8B /* SortNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B0F224414390006DB8B /* SortNotes.swift */; };
+		55CE0B212244143A0006DB8B /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B112244143A0006DB8B /* userModel.swift */; };
+		55CE0B222244143A0006DB8B /* DataNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B122244143A0006DB8B /* DataNote.swift */; };
+		55CE0B242244143A0006DB8B /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B142244143A0006DB8B /* ReminderService.swift */; };
+		55CE0B252244143A0006DB8B /* RemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B152244143A0006DB8B /* RemFactory.swift */; };
+		55CE0B262244143A0006DB8B /* ReminderToEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B162244143A0006DB8B /* ReminderToEdit.swift */; };
+		55CE0B29224415360006DB8B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B28224415360006DB8B /* Workout.swift */; };
+		E248307DE17EA287F0E907AA /* libPods-Lifting Progress Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E80E1ECEA4147894402795A /* libPods-Lifting Progress Tracker.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		55CE0ABF224404020006DB8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55CE0ABA224404020006DB8B /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		55CE0AC1224404020006DB8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55CE0ABA224404020006DB8B /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		55CE0AC52244043D0006DB8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55CE0ABA224404020006DB8B /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		55CE0AC72244043E0006DB8B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				55CE0AC42244043D0006DB8B /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1CA357D04CFB7F6642525135 /* Pods-Lifting Progress Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lifting Progress Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lifting Progress Tracker/Pods-Lifting Progress Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		2E80E1ECEA4147894402795A /* libPods-Lifting Progress Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lifting Progress Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5544DE6622416D2D00888097 /* Lifting Progress Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lifting Progress Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5544DE6922416D2D00888097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5544DE6B22416D2D00888097 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		5544DE6D22416D2D00888097 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		5544DE6D22416D2D00888097 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataViewController.swift; path = ../../DataViewController.swift; sourceTree = "<group>"; };
 		5544DE6F22416D2D00888097 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		5544DE7222416D2D00888097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5544DE7422416D3000888097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5544DE7722416D3000888097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5544DE7922416D3000888097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55517715224A9B26000F33CB /* FirebaseDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabase.swift; sourceTree = "<group>"; };
+		55517718224A9CF4000F33CB /* CreatePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePath.swift; sourceTree = "<group>"; };
+		5551771B224AA7CB000F33CB /* NoteInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteInputViewController.swift; sourceTree = "<group>"; };
+		5551771C224AA7CC000F33CB /* AnalysisInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisInfoTableViewController.swift; sourceTree = "<group>"; };
+		5551771D224AA7CC000F33CB /* CarbsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbsViewCell.swift; sourceTree = "<group>"; };
+		5551771E224AA7CC000F33CB /* DataInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataInputViewController.swift; sourceTree = "<group>"; };
+		5551771F224AA7CC000F33CB /* NotesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		55517720224AA7CC000F33CB /* RemindersCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersCustomCell.swift; sourceTree = "<group>"; };
+		55517721224AA7CC000F33CB /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		55517722224AA7CC000F33CB /* RemindersEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersEditViewController.swift; sourceTree = "<group>"; };
+		55517723224AA7CC000F33CB /* NotesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesEditViewController.swift; sourceTree = "<group>"; };
+		55CE0ABA224404020006DB8B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master 3/Charts.xcodeproj"; sourceTree = "<group>"; };
+		55CE0AC8224404B20006DB8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		55CE0ACF224406350006DB8B /* Startup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startup.swift; sourceTree = "<group>"; };
+		55CE0AD3224409320006DB8B /* LoginCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheck.swift; sourceTree = "<group>"; };
+		55CE0AD5224409810006DB8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		55CE0AD7224409D70006DB8B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		55CE0ADC224411B40006DB8B /* GraphSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphSettings.swift; sourceTree = "<group>"; };
+		55CE0ADD224411B40006DB8B /* GraphData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphData.swift; sourceTree = "<group>"; };
+		55CE0ADE224411B40006DB8B /* ChartFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartFormatter.swift; sourceTree = "<group>"; };
+		55CE0ADF224411B40006DB8B /* GraphConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphConstructor.swift; sourceTree = "<group>"; };
+		55CE0AE0224411B50006DB8B /* GraphDataManipulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphDataManipulation.swift; sourceTree = "<group>"; };
+		55CE0AE1224411B50006DB8B /* GetAddedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAddedData.swift; sourceTree = "<group>"; };
+		55CE0AE2224411B50006DB8B /* GraphIndexToNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphIndexToNote.swift; sourceTree = "<group>"; };
+		55CE0AE3224411B50006DB8B /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		55CE0AE4224411B50006DB8B /* CustomBalloon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBalloon.swift; sourceTree = "<group>"; };
+		55CE0AEF224412EB0006DB8B /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		55CE0AF0224412EB0006DB8B /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		55CE0AF1224412EB0006DB8B /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
+		55CE0AF2224412EB0006DB8B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		55CE0AF4224412EB0006DB8B /* ReminderInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderInputViewController.swift; sourceTree = "<group>"; };
+		55CE0AF5224412EB0006DB8B /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		55CE0AF6224412EC0006DB8B /* ExpandedNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedNoteViewController.swift; sourceTree = "<group>"; };
+		55CE0B00224413100006DB8B /* SummaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
+		55CE0B01224413110006DB8B /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		55CE0B052244134C0006DB8B /* GraphChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphChangeViewController.swift; sourceTree = "<group>"; };
+		55CE0B07224414390006DB8B /* DateStringConv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateStringConv.swift; sourceTree = "<group>"; };
+		55CE0B08224414390006DB8B /* NoteToEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteToEdit.swift; sourceTree = "<group>"; };
+		55CE0B09224414390006DB8B /* NoteSearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteSearchService.swift; sourceTree = "<group>"; };
+		55CE0B0B224414390006DB8B /* NoteFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteFactory.swift; sourceTree = "<group>"; };
+		55CE0B0C224414390006DB8B /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		55CE0B0E224414390006DB8B /* INote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INote.swift; sourceTree = "<group>"; };
+		55CE0B0F224414390006DB8B /* SortNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortNotes.swift; sourceTree = "<group>"; };
+		55CE0B112244143A0006DB8B /* userModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		55CE0B122244143A0006DB8B /* DataNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataNote.swift; sourceTree = "<group>"; };
+		55CE0B142244143A0006DB8B /* ReminderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
+		55CE0B152244143A0006DB8B /* RemFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemFactory.swift; sourceTree = "<group>"; };
+		55CE0B162244143A0006DB8B /* ReminderToEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderToEdit.swift; sourceTree = "<group>"; };
+		55CE0B28224415360006DB8B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		BCDD0003D16421C8A2880D7B /* Pods-Lifting Progress Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lifting Progress Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lifting Progress Tracker/Pods-Lifting Progress Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +174,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CE0AC32244043D0006DB8B /* Charts.framework in Frameworks */,
+				E248307DE17EA287F0E907AA /* libPods-Lifting Progress Tracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +185,11 @@
 		5544DE5D22416D2D00888097 = {
 			isa = PBXGroup;
 			children = (
+				55CE0ABA224404020006DB8B /* Charts.xcodeproj */,
 				5544DE6822416D2D00888097 /* Lifting Progress Tracker */,
 				5544DE6722416D2D00888097 /* Products */,
+				CAC227CC61EB2DAAB501BEA2 /* Pods */,
+				DD8889703863B4AC3E9C544F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,9 +204,12 @@
 		5544DE6822416D2D00888097 /* Lifting Progress Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				55CE0ACE224406130006DB8B /* UI */,
+				55CE0ACD224406040006DB8B /* Network */,
+				55CE0ACB224405F60006DB8B /* Model */,
+				55CE0AC8224404B20006DB8B /* GoogleService-Info.plist */,
 				5544DE6922416D2D00888097 /* AppDelegate.swift */,
 				5544DE6B22416D2D00888097 /* RootViewController.swift */,
-				5544DE6D22416D2D00888097 /* DataViewController.swift */,
 				5544DE6F22416D2D00888097 /* ModelController.swift */,
 				5544DE7122416D2D00888097 /* Main.storyboard */,
 				5544DE7422416D3000888097 /* Assets.xcassets */,
@@ -70,6 +219,157 @@
 			path = "Lifting Progress Tracker";
 			sourceTree = "<group>";
 		};
+		5551771A224AA7A3000F33CB /* Collection Views */ = {
+			isa = PBXGroup;
+			children = (
+				5551771C224AA7CC000F33CB /* AnalysisInfoTableViewController.swift */,
+				5551771D224AA7CC000F33CB /* CarbsViewCell.swift */,
+				55517721224AA7CC000F33CB /* CollectionViewCell.swift */,
+				5551771E224AA7CC000F33CB /* DataInputViewController.swift */,
+				5551771B224AA7CB000F33CB /* NoteInputViewController.swift */,
+				5551771F224AA7CC000F33CB /* NotesCell.swift */,
+				55517723224AA7CC000F33CB /* NotesEditViewController.swift */,
+				55517720224AA7CC000F33CB /* RemindersCustomCell.swift */,
+				55517722224AA7CC000F33CB /* RemindersEditViewController.swift */,
+			);
+			path = "Collection Views";
+			sourceTree = "<group>";
+		};
+		55CE0ABB224404020006DB8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55CE0AC0224404020006DB8B /* Charts.framework */,
+				55CE0AC2224404020006DB8B /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55CE0ACB224405F60006DB8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55CE0B27224415180006DB8B /* WorkoutData */,
+				55CE0B122244143A0006DB8B /* DataNote.swift */,
+				55CE0B07224414390006DB8B /* DateStringConv.swift */,
+				55CE0B0E224414390006DB8B /* INote.swift */,
+				55CE0B0C224414390006DB8B /* Note.swift */,
+				55CE0B0B224414390006DB8B /* NoteFactory.swift */,
+				55CE0B09224414390006DB8B /* NoteSearchService.swift */,
+				55CE0B08224414390006DB8B /* NoteToEdit.swift */,
+				55CE0B152244143A0006DB8B /* RemFactory.swift */,
+				55CE0B142244143A0006DB8B /* ReminderService.swift */,
+				55CE0B162244143A0006DB8B /* ReminderToEdit.swift */,
+				55CE0B0F224414390006DB8B /* SortNotes.swift */,
+				55CE0B112244143A0006DB8B /* userModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55CE0ACD224406040006DB8B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				55517715224A9B26000F33CB /* FirebaseDatabase.swift */,
+				55517718224A9CF4000F33CB /* CreatePath.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		55CE0ACE224406130006DB8B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5551771A224AA7A3000F33CB /* Collection Views */,
+				55CE0AEE224411F20006DB8B /* Extention */,
+				55CE0ADB22440A4C0006DB8B /* Graph */,
+				55CE0ADA22440A3E0006DB8B /* Profile */,
+				55CE0AD922440A1F0006DB8B /* Data */,
+				55CE0AD1224408D20006DB8B /* Login */,
+				55CE0ACF224406350006DB8B /* Startup.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		55CE0AD1224408D20006DB8B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				55CE0AD3224409320006DB8B /* LoginCheck.swift */,
+				55CE0AD5224409810006DB8B /* LoginViewController.swift */,
+				55CE0AD7224409D70006DB8B /* RegisterViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		55CE0AD922440A1F0006DB8B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5544DE6D22416D2D00888097 /* DataViewController.swift */,
+				55CE0B00224413100006DB8B /* SummaryTableViewController.swift */,
+				55CE0B01224413110006DB8B /* SummaryViewController.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		55CE0ADA22440A3E0006DB8B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				55CE0AF6224412EC0006DB8B /* ExpandedNoteViewController.swift */,
+				55CE0AF5224412EB0006DB8B /* FeedbackViewController.swift */,
+				55CE0AEF224412EB0006DB8B /* NotesTableViewController.swift */,
+				55CE0AF1224412EB0006DB8B /* ProfileScreenViewController.swift */,
+				55CE0AF2224412EB0006DB8B /* ProfileViewController.swift */,
+				55CE0AF4224412EB0006DB8B /* ReminderInputViewController.swift */,
+				55CE0AF0224412EB0006DB8B /* RemindersViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		55CE0ADB22440A4C0006DB8B /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				55CE0B052244134C0006DB8B /* GraphChangeViewController.swift */,
+				55CE0AE3224411B50006DB8B /* BalloonMarker.swift */,
+				55CE0ADE224411B40006DB8B /* ChartFormatter.swift */,
+				55CE0AE4224411B50006DB8B /* CustomBalloon.swift */,
+				55CE0AE1224411B50006DB8B /* GetAddedData.swift */,
+				55CE0ADF224411B40006DB8B /* GraphConstructor.swift */,
+				55CE0ADD224411B40006DB8B /* GraphData.swift */,
+				55CE0AE0224411B50006DB8B /* GraphDataManipulation.swift */,
+				55CE0AE2224411B50006DB8B /* GraphIndexToNote.swift */,
+				55CE0ADC224411B40006DB8B /* GraphSettings.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		55CE0AEE224411F20006DB8B /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		55CE0B27224415180006DB8B /* WorkoutData */ = {
+			isa = PBXGroup;
+			children = (
+				55CE0B28224415360006DB8B /* Workout.swift */,
+			);
+			path = WorkoutData;
+			sourceTree = "<group>";
+		};
+		CAC227CC61EB2DAAB501BEA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCDD0003D16421C8A2880D7B /* Pods-Lifting Progress Tracker.debug.xcconfig */,
+				1CA357D04CFB7F6642525135 /* Pods-Lifting Progress Tracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD8889703863B4AC3E9C544F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E80E1ECEA4147894402795A /* libPods-Lifting Progress Tracker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,13 +377,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5544DE7C22416D3000888097 /* Build configuration list for PBXNativeTarget "Lifting Progress Tracker" */;
 			buildPhases = (
+				3C0800A9D57BCBBF23AF38E9 /* [CP] Check Pods Manifest.lock */,
 				5544DE6222416D2D00888097 /* Sources */,
 				5544DE6322416D2D00888097 /* Frameworks */,
 				5544DE6422416D2D00888097 /* Resources */,
+				55CE0AC72244043E0006DB8B /* Embed Frameworks */,
+				C0526BAD6BFD67C9AD5D6313 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				55CE0AC62244043D0006DB8B /* PBXTargetDependency */,
 			);
 			name = "Lifting Progress Tracker";
 			productName = "Lifting Progress Tracker";
@@ -116,12 +420,35 @@
 			mainGroup = 5544DE5D22416D2D00888097;
 			productRefGroup = 5544DE6722416D2D00888097 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 55CE0ABB224404020006DB8B /* Products */;
+					ProjectRef = 55CE0ABA224404020006DB8B /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5544DE6522416D2D00888097 /* Lifting Progress Tracker */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		55CE0AC0224404020006DB8B /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 55CE0ABF224404020006DB8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		55CE0AC2224404020006DB8B /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 55CE0AC1224404020006DB8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5544DE6422416D2D00888097 /* Resources */ = {
@@ -131,24 +458,129 @@
 				5544DE7822416D3000888097 /* LaunchScreen.storyboard in Resources */,
 				5544DE7522416D3000888097 /* Assets.xcassets in Resources */,
 				5544DE7322416D2D00888097 /* Main.storyboard in Resources */,
+				55CE0AC9224404B20006DB8B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C0800A9D57BCBBF23AF38E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lifting Progress Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0526BAD6BFD67C9AD5D6313 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lifting Progress Tracker/Pods-Lifting Progress Tracker-resources.sh",
+				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lifting Progress Tracker/Pods-Lifting Progress Tracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5544DE6222416D2D00888097 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CE0AEB224411B50006DB8B /* GraphIndexToNote.swift in Sources */,
+				55CE0AD6224409820006DB8B /* LoginViewController.swift in Sources */,
+				55CE0B212244143A0006DB8B /* userModel.swift in Sources */,
+				55517725224AA7CC000F33CB /* AnalysisInfoTableViewController.swift in Sources */,
+				55CE0B252244143A0006DB8B /* RemFactory.swift in Sources */,
+				55CE0AD4224409320006DB8B /* LoginCheck.swift in Sources */,
+				55CE0AE9224411B50006DB8B /* GraphDataManipulation.swift in Sources */,
+				55CE0AEA224411B50006DB8B /* GetAddedData.swift in Sources */,
+				55517729224AA7CC000F33CB /* RemindersCustomCell.swift in Sources */,
+				55CE0AE7224411B50006DB8B /* ChartFormatter.swift in Sources */,
+				55517716224A9B26000F33CB /* FirebaseDatabase.swift in Sources */,
 				5544DE6C22416D2D00888097 /* RootViewController.swift in Sources */,
+				55CE0AEC224411B50006DB8B /* BalloonMarker.swift in Sources */,
+				55CE0B242244143A0006DB8B /* ReminderService.swift in Sources */,
+				55CE0B262244143A0006DB8B /* ReminderToEdit.swift in Sources */,
+				55CE0AF9224412EC0006DB8B /* ProfileScreenViewController.swift in Sources */,
+				55517727224AA7CC000F33CB /* DataInputViewController.swift in Sources */,
+				5551772A224AA7CC000F33CB /* CollectionViewCell.swift in Sources */,
+				55CE0B062244134C0006DB8B /* GraphChangeViewController.swift in Sources */,
+				55517726224AA7CC000F33CB /* CarbsViewCell.swift in Sources */,
+				55CE0B1F2244143A0006DB8B /* SortNotes.swift in Sources */,
+				55CE0AED224411B50006DB8B /* CustomBalloon.swift in Sources */,
+				55CE0AE5224411B50006DB8B /* GraphSettings.swift in Sources */,
+				55CE0B182244143A0006DB8B /* NoteToEdit.swift in Sources */,
+				55CE0B1E2244143A0006DB8B /* INote.swift in Sources */,
+				55CE0AD8224409D70006DB8B /* RegisterViewController.swift in Sources */,
+				5551772B224AA7CC000F33CB /* RemindersEditViewController.swift in Sources */,
+				55CE0B192244143A0006DB8B /* NoteSearchService.swift in Sources */,
+				55CE0AF7224412EC0006DB8B /* NotesTableViewController.swift in Sources */,
+				55CE0B29224415360006DB8B /* Workout.swift in Sources */,
 				5544DE7022416D2D00888097 /* ModelController.swift in Sources */,
+				55CE0AFE224412EC0006DB8B /* ExpandedNoteViewController.swift in Sources */,
+				55CE0AFC224412EC0006DB8B /* ReminderInputViewController.swift in Sources */,
+				55CE0B222244143A0006DB8B /* DataNote.swift in Sources */,
 				5544DE6E22416D2D00888097 /* DataViewController.swift in Sources */,
+				55CE0B172244143A0006DB8B /* DateStringConv.swift in Sources */,
+				55CE0B04224413110006DB8B /* SummaryViewController.swift in Sources */,
 				5544DE6A22416D2D00888097 /* AppDelegate.swift in Sources */,
+				55CE0B1B2244143A0006DB8B /* NoteFactory.swift in Sources */,
+				55CE0AE8224411B50006DB8B /* GraphConstructor.swift in Sources */,
+				55CE0AFD224412EC0006DB8B /* FeedbackViewController.swift in Sources */,
+				55CE0AF8224412EC0006DB8B /* RemindersViewController.swift in Sources */,
+				55CE0B1C2244143A0006DB8B /* Note.swift in Sources */,
+				55CE0AFA224412EC0006DB8B /* ProfileViewController.swift in Sources */,
+				55CE0AE6224411B50006DB8B /* GraphData.swift in Sources */,
+				55517724224AA7CC000F33CB /* NoteInputViewController.swift in Sources */,
+				5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */,
+				55517728224AA7CC000F33CB /* NotesCell.swift in Sources */,
+				55CE0B03224413110006DB8B /* SummaryTableViewController.swift in Sources */,
+				55517719224A9CF4000F33CB /* CreatePath.swift in Sources */,
+				55CE0AD0224406350006DB8B /* Startup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55CE0AC62244043D0006DB8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 55CE0AC52244043D0006DB8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5544DE7122416D2D00888097 /* Main.storyboard */ = {
@@ -288,7 +720,9 @@
 		};
 		5544DE7D22416D3000888097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCDD0003D16421C8A2880D7B /* Pods-Lifting Progress Tracker.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87L7M578QT;
@@ -306,7 +740,9 @@
 		};
 		5544DE7E22416D3000888097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CA357D04CFB7F6642525135 /* Pods-Lifting Progress Tracker.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87L7M578QT;
