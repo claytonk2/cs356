@@ -24,10 +24,7 @@ class DataInputViewController: UIViewController, UITextViewDelegate {
     @IBAction func SubmitFeedback(_ sender: UIButton) {
         var dataType: String = ""
         var index = 0
-        let selectedRow = DataTypePicker.selectedRow(inComponent: index)
-        if let s = DataTypePicker.delegate?.pickerView!(DataTypePicker, titleForRow: selectedRow, forComponent: index) {
-            dataType += s
-        }
+        
         
         var data: String = DataInputField.text!
         var tags: String = TagInputBox.text!

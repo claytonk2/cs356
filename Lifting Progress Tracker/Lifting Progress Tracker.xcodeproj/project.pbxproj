@@ -25,6 +25,7 @@
 		5551772A224AA7CC000F33CB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517721224AA7CC000F33CB /* CollectionViewCell.swift */; };
 		5551772B224AA7CC000F33CB /* RemindersEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517722224AA7CC000F33CB /* RemindersEditViewController.swift */; };
 		5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517723224AA7CC000F33CB /* NotesEditViewController.swift */; };
+		55AE4221224DDE1800D9A247 /* GraphSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE421F224DDE1800D9A247 /* GraphSettingsViewController.swift */; };
 		55C05FEB224B166F0046705B /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FE9224B166F0046705B /* HealthViewController.swift */; };
 		55C05FFC224B19430046705B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF0224B19400046705B /* UIButtonExtension.swift */; };
 		55C05FFD224B19430046705B /* FABmenuViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF1224B19410046705B /* FABmenuViewExtention.swift */; };
@@ -131,6 +132,7 @@
 		55517721224AA7CC000F33CB /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		55517722224AA7CC000F33CB /* RemindersEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersEditViewController.swift; sourceTree = "<group>"; };
 		55517723224AA7CC000F33CB /* NotesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesEditViewController.swift; sourceTree = "<group>"; };
+		55AE421F224DDE1800D9A247 /* GraphSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphSettingsViewController.swift; path = ../../../../../Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift; sourceTree = "<group>"; };
 		55C05FE9224B166F0046705B /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthViewController.swift; path = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C05FF0224B19400046705B /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		55C05FF1224B19410046705B /* FABmenuViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FABmenuViewExtention.swift; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				55C05FE9224B166F0046705B /* HealthViewController.swift */,
+				55AE421F224DDE1800D9A247 /* GraphSettingsViewController.swift */,
 				55CE0B052244134C0006DB8B /* GraphChangeViewController.swift */,
 				55CE0AE3224411B50006DB8B /* BalloonMarker.swift */,
 				55CE0ADE224411B40006DB8B /* ChartFormatter.swift */,
@@ -564,6 +567,7 @@
 				55CE0AFC224412EC0006DB8B /* ReminderInputViewController.swift in Sources */,
 				55CE0B222244143A0006DB8B /* DataNote.swift in Sources */,
 				5544DE6E22416D2D00888097 /* DataViewController.swift in Sources */,
+				55AE4221224DDE1800D9A247 /* GraphSettingsViewController.swift in Sources */,
 				55CE0B172244143A0006DB8B /* DateStringConv.swift in Sources */,
 				5544DE6A22416D2D00888097 /* AppDelegate.swift in Sources */,
 				55CE0B1B2244143A0006DB8B /* NoteFactory.swift in Sources */,

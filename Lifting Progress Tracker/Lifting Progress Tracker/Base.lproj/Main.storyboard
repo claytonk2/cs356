@@ -925,19 +925,19 @@
                                             <constraint firstAttribute="height" constant="40" id="i2B-I6-HXj"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="Change Graph Icon">
+                                        <state key="normal" image="Pencil Icon">
                                             <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="NotesTapped:" destination="k36-TI-D4K" eventType="touchUpInside" id="UG1-jc-M3E"/>
-                                            <segue destination="RDb-fH-WxG" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="bOb-9k-5gU"/>
+                                            <segue destination="2eA-IS-9RL" kind="modal" id="kJL-wO-o4h"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ze9-bi-svp">
-                                        <rect key="frame" x="62" y="62" width="40" height="40"/>
+                                        <rect key="frame" x="86" y="80" width="16" height="22"/>
                                         <color key="backgroundColor" red="0.17254901959999999" green="0.74117647060000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="Heart Rate Icon">
+                                        <state key="normal" image="barbellIcon">
                                             <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -970,7 +970,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBw-hb-VXl">
-                                        <rect key="frame" x="68.5" y="40" width="27" height="14"/>
+                                        <rect key="frame" x="80.5" y="58" width="27" height="14"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1265,7 +1265,9 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uxA-wz-WQa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="qaV-UG-lc7" kind="push" id="JLj-xW-ZHH"/>
+                                <segue destination="qaV-UG-lc7" kind="popoverPresentation" popoverAnchorBarButtonItem="uxA-wz-WQa" id="iU1-kQ-dbc">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1280,140 +1282,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYG-hU-vJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-767.20000000000005" y="1972.2638680659672"/>
-        </scene>
-        <!--Graph Change View Controller-->
-        <scene sceneID="aaG-Pl-KWc">
-            <objects>
-                <viewController id="RDb-fH-WxG" customClass="GraphChangeViewController" customModule="Havenly" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RHJ-YN-rDN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xkl-sA-AAB">
-                                <rect key="frame" x="0.0" y="383" width="375" height="235"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBk-iZ-a78">
-                                        <rect key="frame" x="50.5" y="57.5" width="84.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Graph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRD-QM-GJc">
-                                        <rect key="frame" x="225.5" y="57.5" width="114" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUj-j4-GqZ">
-                                        <rect key="frame" x="8" y="76" width="169" height="83"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="83" id="xu4-SB-xpg"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="dataSource" destination="RDb-fH-WxG" id="YPc-Ws-2dO"/>
-                                            <outlet property="delegate" destination="RDb-fH-WxG" id="59A-Gx-7rE"/>
-                                        </connections>
-                                    </pickerView>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1z-Ih-bBF" userLabel="Bottom Graph Picker">
-                                        <rect key="frame" x="198" y="76" width="169" height="83"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="83" id="BR3-qd-ku5"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="dataSource" destination="RDb-fH-WxG" id="ZvZ-xe-Xdz"/>
-                                            <outlet property="delegate" destination="RDb-fH-WxG" id="RGP-g5-kp9"/>
-                                        </connections>
-                                    </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h9-fD-gff">
-                                        <rect key="frame" x="333" y="10" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="E9d-Xx-XvP"/>
-                                            <constraint firstAttribute="height" constant="20" id="ejc-6I-Vna"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="Exit Icon"/>
-                                        <connections>
-                                            <action selector="DismissGraphType:" destination="RDb-fH-WxG" eventType="touchUpInside" id="nZ6-P1-W7L"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tce-m4-XT9">
-                                        <rect key="frame" x="96.5" y="176" width="182" height="40"/>
-                                        <color key="backgroundColor" red="0.64313725489999995" green="0.90588235289999997" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="182" id="c5a-OQ-7fZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Graph"/>
-                                        <connections>
-                                            <action selector="ChangeGraphType:" destination="RDb-fH-WxG" eventType="touchUpInside" id="KcI-yT-xND"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graph Change" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyG-qj-szP">
-                                        <rect key="frame" x="106" y="8" width="163.5" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="CustomBlue"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="tyG-qj-szP" secondAttribute="bottom" constant="195" id="6WE-OM-5Gy"/>
-                                    <constraint firstItem="Z1z-Ih-bBF" firstAttribute="leading" secondItem="Xkl-sA-AAB" secondAttribute="leading" constant="198" id="Fd5-Rt-S1h"/>
-                                    <constraint firstAttribute="trailing" secondItem="Z1z-Ih-bBF" secondAttribute="trailing" constant="8" id="L5k-0G-U21"/>
-                                    <constraint firstItem="zUj-j4-GqZ" firstAttribute="top" secondItem="Xkl-sA-AAB" secondAttribute="top" priority="750" constant="76" id="LbD-wc-LcP"/>
-                                    <constraint firstItem="VRD-QM-GJc" firstAttribute="centerX" secondItem="Z1z-Ih-bBF" secondAttribute="centerX" id="NN4-WT-n47"/>
-                                    <constraint firstItem="VRD-QM-GJc" firstAttribute="top" secondItem="tyG-qj-szP" secondAttribute="bottom" constant="17.5" id="O3H-x9-ssq"/>
-                                    <constraint firstItem="tyG-qj-szP" firstAttribute="centerX" secondItem="Xkl-sA-AAB" secondAttribute="centerX" id="PEt-rg-fPg"/>
-                                    <constraint firstAttribute="bottom" secondItem="zUj-j4-GqZ" secondAttribute="bottom" priority="750" constant="76" id="Q2J-Ma-uw6"/>
-                                    <constraint firstItem="3h9-fD-gff" firstAttribute="top" secondItem="Xkl-sA-AAB" secondAttribute="top" constant="10" id="WVT-ca-8bM"/>
-                                    <constraint firstItem="zUj-j4-GqZ" firstAttribute="leading" secondItem="Xkl-sA-AAB" secondAttribute="leading" constant="8" id="am1-ds-dNy"/>
-                                    <constraint firstItem="Tce-m4-XT9" firstAttribute="top" secondItem="zUj-j4-GqZ" secondAttribute="bottom" constant="17" id="blT-g9-JPy"/>
-                                    <constraint firstItem="Tce-m4-XT9" firstAttribute="top" secondItem="Z1z-Ih-bBF" secondAttribute="bottom" constant="17" id="jJR-3J-b0b"/>
-                                    <constraint firstItem="Tce-m4-XT9" firstAttribute="centerX" secondItem="Xkl-sA-AAB" secondAttribute="centerX" id="kEw-Se-b7f"/>
-                                    <constraint firstAttribute="trailing" secondItem="3h9-fD-gff" secondAttribute="trailing" constant="22" id="kVi-PO-AxF"/>
-                                    <constraint firstAttribute="bottom" secondItem="Z1z-Ih-bBF" secondAttribute="bottom" priority="750" constant="76" id="mCk-Kn-zif"/>
-                                    <constraint firstItem="uBk-iZ-a78" firstAttribute="centerX" secondItem="zUj-j4-GqZ" secondAttribute="centerX" id="meH-uW-aFV"/>
-                                    <constraint firstAttribute="bottom" secondItem="Tce-m4-XT9" secondAttribute="bottom" constant="19" id="oXn-2p-XS0"/>
-                                    <constraint firstItem="tyG-qj-szP" firstAttribute="top" secondItem="Xkl-sA-AAB" secondAttribute="top" constant="8" id="qhN-Yj-MQy"/>
-                                    <constraint firstAttribute="bottom" secondItem="uBk-iZ-a78" secondAttribute="bottom" constant="156.5" id="rdC-NA-khO"/>
-                                    <constraint firstItem="uBk-iZ-a78" firstAttribute="top" secondItem="tyG-qj-szP" secondAttribute="bottom" constant="17.5" id="uZi-Fb-OMX"/>
-                                    <constraint firstAttribute="bottom" secondItem="VRD-QM-GJc" secondAttribute="bottom" constant="156.5" id="umF-nT-6pI"/>
-                                    <constraint firstAttribute="trailing" secondItem="zUj-j4-GqZ" secondAttribute="trailing" constant="198" id="vT6-Xq-9RZ"/>
-                                    <constraint firstItem="Z1z-Ih-bBF" firstAttribute="top" secondItem="Xkl-sA-AAB" secondAttribute="top" priority="750" constant="76" id="wJo-JM-WXP"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="SQf-kk-jWE" appends="YES" id="UX3-wA-guJ"/>
-                                </connections>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Xkl-sA-AAB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lhV-sy-PgV" secondAttribute="top" constant="363" id="0oN-tR-yxt"/>
-                            <constraint firstItem="lhV-sy-PgV" firstAttribute="bottom" secondItem="Xkl-sA-AAB" secondAttribute="bottom" id="3II-SR-mNU"/>
-                            <constraint firstItem="lhV-sy-PgV" firstAttribute="trailing" secondItem="Xkl-sA-AAB" secondAttribute="trailing" id="LqQ-eA-ynh"/>
-                            <constraint firstItem="Xkl-sA-AAB" firstAttribute="leading" secondItem="lhV-sy-PgV" secondAttribute="leading" id="ohC-T6-HDK"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="lhV-sy-PgV"/>
-                    </view>
-                    <connections>
-                        <outlet property="BottomGraphPicker" destination="Z1z-Ih-bBF" id="Quc-IE-v0N"/>
-                        <outlet property="GraphChangeButton" destination="Tce-m4-XT9" id="Esd-ea-KX6"/>
-                        <outlet property="SettingsView" destination="Xkl-sA-AAB" id="gBW-wW-V0B"/>
-                        <outlet property="TopGraphPicker" destination="zUj-j4-GqZ" id="hM4-ts-TmW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z63-Yl-iLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="SQf-kk-jWE">
-                    <connections>
-                        <action selector="panGestureRecognizerHandler:" destination="RDb-fH-WxG" id="3yx-7G-9iw"/>
-                    </connections>
-                </panGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="-1687.2" y="2795.3523238380812"/>
         </scene>
         <!--Notes-->
         <scene sceneID="KCr-J4-eMa">
@@ -2635,14 +2503,14 @@ If you feel that we are not abiding by this privacy policy, you should contact u
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1C-EW-e2F" userLabel="Touch Outside">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <connections>
                                     <action selector="TouchOutside:" destination="bg9-6o-abU" eventType="touchUpInside" id="3Ni-hi-SfA"/>
                                     <action selector="TouchOutside:" destination="qaV-UG-lc7" eventType="touchUpInside" id="EXb-HY-DwM"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ey2-60-wuM">
-                                <rect key="frame" x="16" y="187.5" width="343" height="324"/>
+                                <rect key="frame" x="16" y="143.5" width="343" height="324"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z2-jw-H6J">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
@@ -3427,7 +3295,6 @@ If you feel that we are not abiding by this privacy policy, you should contact u
     <resources>
         <image name="Blue Button" width="1436" height="390"/>
         <image name="Blue Button Outline" width="1180" height="332"/>
-        <image name="Change Graph Icon" width="30" height="30"/>
         <image name="Chart_icon" width="25" height="25"/>
         <image name="Clock Icon" width="200" height="200"/>
         <image name="Exit Icon" width="45" height="45"/>
@@ -3443,13 +3310,14 @@ If you feel that we are not abiding by this privacy policy, you should contact u
         <image name="Profile_icon" width="25" height="25"/>
         <image name="Speech Bubble" width="40" height="40"/>
         <image name="SummaryIcon" width="25" height="25"/>
+        <image name="barbellIcon" width="16" height="16"/>
         <namedColor name="CustomBlue">
             <color red="0.2196078431372549" green="0.74509803921568629" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JLj-xW-ZHH"/>
-        <segue reference="Hwf-KH-CUE"/>
+        <segue reference="i3l-Lx-zz9"/>
+        <segue reference="kJL-wO-o4h"/>
         <segue reference="Qlf-Wm-g1v"/>
         <segue reference="DWD-18-ESU"/>
         <segue reference="hQv-XA-hbO"/>
