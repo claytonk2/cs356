@@ -934,10 +934,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ze9-bi-svp">
-                                        <rect key="frame" x="86" y="80" width="16" height="22"/>
+                                        <rect key="frame" x="62" y="62" width="40" height="40"/>
                                         <color key="backgroundColor" red="0.17254901959999999" green="0.74117647060000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="barbellIcon">
+                                        <state key="normal" image="Heart Rate Icon">
                                             <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -970,7 +970,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBw-hb-VXl">
-                                        <rect key="frame" x="80.5" y="58" width="27" height="14"/>
+                                        <rect key="frame" x="68.5" y="40" width="27" height="14"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1288,7 +1288,7 @@
             <objects>
                 <tableViewController id="zUM-oO-Pcr" customClass="NotesTableViewController" customModule="Lifting_Progress_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gH8-lb-ScH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <searchBar key="tableHeaderView" multipleTouchEnabled="YES" contentMode="redraw" placeholder="#Tags" id="yNI-SJ-hUt">
@@ -1772,6 +1772,7 @@
                         <outlet property="profilePicture" destination="jon-3s-PuQ" id="HqZ-js-kv1"/>
                         <outlet property="usersName" destination="Drt-GQ-Qba" id="lp0-7A-xYU"/>
                         <segue destination="O1w-As-R5o" kind="show" identifier="RemindersSegue" id="hpc-Ab-PF1"/>
+                        <segue destination="zUM-oO-Pcr" kind="show" identifier="notesSegue" id="M2R-ya-B3p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNg-8r-jRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1783,11 +1784,11 @@
             <objects>
                 <viewController title="Reminders" hidesBottomBarWhenPushed="YES" id="O1w-As-R5o" customClass="RemindersViewController" customModule="Lifting_Progress_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I46-JY-pH7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NAp-jK-yTU">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RemindersCustomCell" rowHeight="62" id="FMx-SM-67Y" customClass="RemindersCustomCell" customModule="Lifting_Progress_Tracker" customModuleProvider="target">
@@ -2872,7 +2873,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
             <objects>
                 <tableViewController storyboardIdentifier="Reminders Edit View" title="RemindersEditViewController" id="sQt-R1-mRh" customClass="RemindersEditViewController" customModule="Lifting_Progress_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="R1v-6d-vRp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -2993,7 +2994,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
             <objects>
                 <tableViewController storyboardIdentifier="Notes Edit View" title="RemindersEditViewController" id="eBr-o7-D4z" userLabel="Notes Edit View" customClass="NotesEditViewController" customModule="Lifting_Progress_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="S5A-Qy-9Zb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -3310,17 +3311,17 @@ If you feel that we are not abiding by this privacy policy, you should contact u
         <image name="Profile_icon" width="25" height="25"/>
         <image name="Speech Bubble" width="40" height="40"/>
         <image name="SummaryIcon" width="25" height="25"/>
-        <image name="barbellIcon" width="16" height="16"/>
         <namedColor name="CustomBlue">
             <color red="0.2196078431372549" green="0.74509803921568629" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="i3l-Lx-zz9"/>
-        <segue reference="kJL-wO-o4h"/>
-        <segue reference="Qlf-Wm-g1v"/>
-        <segue reference="DWD-18-ESU"/>
+        <segue reference="h7A-Ol-GTm"/>
+        <segue reference="8vi-zY-lgH"/>
+        <segue reference="hpc-Ab-PF1"/>
+        <segue reference="Yck-cD-gnZ"/>
         <segue reference="hQv-XA-hbO"/>
+        <segue reference="M2R-ya-B3p"/>
         <segue reference="s3N-OQ-DDl"/>
         <segue reference="pr9-Sn-aUn"/>
     </inferredMetricsTieBreakers>

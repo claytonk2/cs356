@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITableViewDelegate, UITableViewDataSource {
 
-    let list = ["Health Records", "Reminders"]
+    let list = ["Notes", "Reminders", "Workouts"]
     var myIndex = 0
     
     @IBOutlet weak var profilePicture: UIImageView!
@@ -46,9 +46,13 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
             self.performSegue(withIdentifier: "RemindersSegue", sender: self)
         } else {
             if indexPath.row == 0 {
-                self.performSegue(withIdentifier: "Health Records Segue", sender: self)
+                self.performSegue(withIdentifier: "notesSegue", sender: self)
             } else {
-                
+                if indexPath.row == 0 {
+                    self.performSegue(withIdentifier: "workoutsSegue", sender: self)
+                } else {
+                    
+                }
             }
         }
     }
