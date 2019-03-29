@@ -40,8 +40,8 @@ class HealthViewController: UIViewController, ChartViewDelegate {
         noteDelegate = NoteDelegate(ins: self)
         self.NoteGraph.delegate = noteDelegate
 //        self.buildGraph()
-        GraphSettings.settings.setTop(type: "Blood Glucose")
-        GraphSettings.settings.setBottom(type: "Heart Rate")
+//        GraphSettings.settings.setTop(type: "Blood Glucose")
+//        GraphSettings.settings.setBottom(type: "Heart Rate")
         closeMenu()
 
     NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)

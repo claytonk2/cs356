@@ -11,7 +11,7 @@ import UIKit
 class DataInputViewController: UIViewController, UITextViewDelegate {
 
     
-    @IBOutlet weak var DataTypePicker: UIPickerView!
+//    @IBOutlet weak var DataTypePicker: UIPickerView!
     @IBOutlet weak var MedicationInput: UITextField!
     @IBOutlet weak var RoundedView: UIView!
     @IBOutlet weak var DataInputField: UITextField!
@@ -82,7 +82,7 @@ class DataInputViewController: UIViewController, UITextViewDelegate {
         DataInputField.isHidden = false
         self.DataInputField.placeholder = "mg/dL"
         self.DataInputField.keyboardType = UIKeyboardType.numberPad
-        view.bringSubviewToFront(DataTypePicker)
+//        view.bringSubviewToFront(DataTypePicker)
         //self.BottomNumberInput.isHidden = true
         self.MedicationInput.isHidden = true
         

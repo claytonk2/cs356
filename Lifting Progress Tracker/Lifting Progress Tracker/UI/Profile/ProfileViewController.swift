@@ -67,10 +67,10 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         usersName.text = userModel.user.firstName + " " + userModel.user.lastName
         // Do any additional setup after loading the view.
         
-//        InputOpen.createFloatingActionButton()
-//        DataInput.createFloatingActionButton()
-//        FeedbackInput.createFloatingActionButton()
-//        NoteInput.createFloatingActionButton()
+        InputOpen.createFloatingActionButton()
+        DataInput.createFloatingActionButton()
+        FeedbackInput.createFloatingActionButton()
+        NoteInput.createFloatingActionButton()
         
         closeMenu()
     
@@ -103,47 +103,47 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     
     
     //FAB Menu Stuff
-//    @IBAction func BackgroundTapped(_ sender: FloatingActionButton) {
-//        InputButtonTapped()
-//    }
-//    @IBAction func FeedbackTapped(_ sender: FloatingActionButton) {
-//        InputButtonTapped()
-//    }
-//    @IBAction func DataTapped(_ sender: FloatingActionButton) {
-//        InputButtonTapped()
-//    }
-//    @IBAction func NotesTapped(_ sender: FloatingActionButton) {
-//        InputButtonTapped()
-//    }
+    @IBAction func BackgroundTapped(_ sender: FloatingActionButton) {
+        InputButtonTapped()
+    }
+    @IBAction func FeedbackTapped(_ sender: FloatingActionButton) {
+        InputButtonTapped()
+    }
+    @IBAction func DataTapped(_ sender: FloatingActionButton) {
+        InputButtonTapped()
+    }
+    @IBAction func NotesTapped(_ sender: FloatingActionButton) {
+        InputButtonTapped()
+    }
 //
     
-//    @IBAction func menuTapped(_ sender: FloatingActionButton) {
-//        UIView.animate(withDuration: 0.2, animations: {
-//            if self.menuView.transform == .identity {
-//                self.closeMenu()
-//                UIView.animate(withDuration: 0.2, animations: {
-//                    self.ShadowCover.isHidden = true
-//                })
-//            } else {
-//                self.menuView.transform = .identity
-//                UIView.animate(withDuration: 0.2, animations: {
-//                    self.ShadowCover.isHidden = false
-//                })
-//            }
-//        })
-//        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: [], animations: {
-//            if self.menuView.transform == .identity {
-//                self.DataInput.transform = .identity
-//                self.DataLabel.transform = .identity
-//                self.NoteInput.transform = .identity
-//                self.NoteLabel.transform = .identity
-//                self.FeedbackInput.transform = .identity
-//                self.FeedbackLabel.transform = .identity
-//            }
-//        })
-//
-//    }
-    
+    @IBAction func menuTapped(_ sender: FloatingActionButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+            if self.menuView.transform == .identity {
+                self.closeMenu()
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.ShadowCover.isHidden = true
+                })
+            } else {
+                self.menuView.transform = .identity
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.ShadowCover.isHidden = false
+                })
+            }
+        })
+        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: [], animations: {
+            if self.menuView.transform == .identity {
+                self.DataInput.transform = .identity
+                self.DataLabel.transform = .identity
+                self.NoteInput.transform = .identity
+                self.NoteLabel.transform = .identity
+                self.FeedbackInput.transform = .identity
+                self.FeedbackLabel.transform = .identity
+            }
+        })
+
+    }
+
     func closeMenu() {
         menuView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         NoteInput.transform = CGAffineTransform(translationX: 0,y: 15)

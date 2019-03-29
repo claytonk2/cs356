@@ -14,16 +14,14 @@ class SummaryTableViewController: UITableViewController {
 
     @IBOutlet weak var RemindersCell: UIView!
     @IBOutlet weak var ToRemindersButton: UIButton!
+   
     
+    @IBOutlet weak var Workouts: UITableViewCell!
+//    @IBOutlet weak var WorkoutTable: UITableViewSection!
     @IBOutlet weak var NotesCell: UIView!
     @IBOutlet weak var ToNotesButton: UIButton!
     
-    @IBOutlet weak var BGGraphView: LineChartView!
-    @IBOutlet weak var StepsGraphView: LineChartView!
-    @IBOutlet weak var CarbsGraphView: LineChartView!
-    @IBOutlet weak var CaloriesGraphView: LineChartView!
-    @IBOutlet weak var HeartRateGraphView: LineChartView!
-    @IBOutlet weak var BloodPressureGraphView: CombinedChartView!
+    
     var builder: GraphConstructor = GraphConstructor()
     
     @objc func loadList(){
@@ -32,6 +30,12 @@ class SummaryTableViewController: UITableViewController {
 //        self.buildGraphs()
         
     }
+    @IBOutlet weak var InputOpen: UIButton!
+    @IBOutlet weak var DataInput: UIButton!
+    @IBOutlet weak var NoteInput: UIButton!
+    
+    @IBOutlet weak var FeedbackInput: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,19 +46,12 @@ class SummaryTableViewController: UITableViewController {
         NotesCell.layer.cornerRadius = 8.0
         NotesCell.layer.masksToBounds = true
         
-        BGGraphView.layer.cornerRadius = 8.0
-        BGGraphView.layer.masksToBounds = true
+//        InputOpen.createFloatingActionButton()
+//        DataInput.createFloatingActionButton()
+//        FeedbackInput.createFloatingActionButton()
+//        NoteInput.createFloatingActionButton()
         
-        StepsGraphView.layer.cornerRadius = 8.0
-        StepsGraphView.layer.masksToBounds = true
-        
-        CarbsGraphView.layer.cornerRadius = 8.0
-        CarbsGraphView.layer.masksToBounds = true
-        
-        CaloriesGraphView.layer.cornerRadius = 8.0
-        CaloriesGraphView.layer.masksToBounds = true
-        HeartRateGraphView.layer.cornerRadius = 8.0
-        HeartRateGraphView.layer.masksToBounds = true
+       
 //        BloodPressureGraphView.layer.cornerRadius = 8.0
 //        BloodPressureGraphView.layer.masksToBounds = true
 //        DispatchQueue.main.async {
@@ -295,5 +292,100 @@ class SummaryTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //FAB Menu Stuff
+  
+//    @IBAction func BackgroundTapped(_ sender: FloatingActionButton) {
+//        InputButtonTapped()
+//    }
+//    @IBAction func FeedbackTapped(_ sender: FloatingActionButton) {
+//        InputButtonTapped()
+//    }
+//    @IBAction func DataTapped(_ sender: FloatingActionButton) {
+//        InputButtonTapped()
+//    }
+//    @IBAction func NotesTapped(_ sender: FloatingActionButton) {
+//        InputButtonTapped()
+//    }
+//    //
+//    @IBOutlet weak var menuView: UIView!
+//    @IBOutlet weak var DataLabel: UILabel!
+//    @IBOutlet weak var ShadowCover: UIButton!
+//
+//    @IBOutlet weak var NoteLabel: UILabel!
+//
+//
+//
+//    @IBOutlet weak var FeedbackLabel: UILabel!
+//    @IBAction func menuTapped(_ sender: FloatingActionButton) {
+//        UIView.animate(withDuration: 0.2, animations: {
+//            if self.menuView.transform == .identity {
+//                self.closeMenu()
+//                UIView.animate(withDuration: 0.2, animations: {
+//                    self.ShadowCover.isHidden = true
+//                })
+//            } else {
+//                self.menuView.transform = .identity
+//                UIView.animate(withDuration: 0.2, animations: {
+//                    self.ShadowCover.isHidden = false
+//                })
+//            }
+//        })
+//        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: [], animations: {
+//            if self.menuView.transform == .identity {
+//                self.DataInput.transform = .identity
+//                self.DataLabel.transform = .identity
+//                self.NoteInput.transform = .identity
+//                self.NoteLabel.transform = .identity
+//                self.FeedbackInput.transform = .identity
+//                self.FeedbackLabel.transform = .identity
+//            }
+//        })
+//
+//    }
+//
+//    func closeMenu() {
+//        menuView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+//        NoteInput.transform = CGAffineTransform(translationX: 0,y: 15)
+//        NoteLabel.transform = CGAffineTransform(translationX: 0,y: 15)
+//        DataInput.transform = CGAffineTransform(translationX: 11, y: 11)
+//        DataLabel.transform = CGAffineTransform(translationX: 11, y: 11)
+//        FeedbackInput.transform = CGAffineTransform(translationX: 15, y: 0)
+//        FeedbackLabel.transform = CGAffineTransform(translationX: 15, y: 0)
+//        ShadowCover.isHidden = true
+//    }
+//
+//
+//
+//    //Button Tapped and Menu closes
+//    func InputButtonTapped(){
+//        UIView.animate(withDuration: 0.2, animations: {
+//            if self.menuView.transform == .identity {
+//                self.closeMenu()
+//                UIView.animate(withDuration: 0.2, animations: {
+//                    self.ShadowCover.isHidden = true
+//                })
+//            } else {
+//
+//            }
+//        })
+//        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: [], animations: {
+//            if self.menuView.transform == .identity {
+//                self.DataInput.transform = .identity
+//                self.DataLabel.transform = .identity
+//                self.NoteInput.transform = .identity
+//                self.NoteLabel.transform = .identity
+//                self.FeedbackInput.transform = .identity
+//                self.FeedbackLabel.transform = .identity
+//            }
+//        })
+//        UIView.animate(withDuration: 0.3, animations: {
+//            if self.InputOpen.transform == .identity {
+//                self.InputOpen.transform = CGAffineTransform(rotationAngle: 45 * (.pi / 180))
+//            } else {
+//                self.InputOpen.transform = .identity
+//            }
+//        })
+//    }
 
 }
