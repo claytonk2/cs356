@@ -2,8 +2,8 @@
 //  DataInputViewController.swift
 //  Havenly
 //
-//  Created by Benjamin Walter on 7/27/18.
-//  Copyright © 2018 Benjamin Walter. All rights reserved.
+//  Created by Clayton Kingsbury on 7/27/18.
+//  Copyright © 2019 Clayton Kingsbury. All rights reserved.
 //
 
 import UIKit
@@ -12,8 +12,8 @@ class DataInputViewController: UIViewController, UITextViewDelegate {
 
     
 //    @IBOutlet weak var DataTypePicker: UIPickerView!
-    @IBOutlet weak var MedicationInput: UITextField!
     @IBOutlet weak var RoundedView: UIView!
+    @IBOutlet weak var RepsInput: UITextField!
     @IBOutlet weak var DataInputField: UITextField!
     @IBOutlet weak var SubmitFeedback: UIButton!
     @IBOutlet weak var FeedbackTextBox: UITextView!
@@ -30,7 +30,7 @@ class DataInputViewController: UIViewController, UITextViewDelegate {
         var tags: String = TagInputBox.text!
         var feedback: String = FeedbackTextBox.text!
         var date: Date = DatePicker.date
-        var dia: String = MedicationInput.text!
+        var dia: String = RepsInput.text!
         var success: Bool = true
         do {
 //            success = try service.save(date: date, value: data, extraVal: dia, tags: tags, note: feedback, type: dataType)
@@ -77,11 +77,9 @@ class DataInputViewController: UIViewController, UITextViewDelegate {
 //        DataTypePicker.delegate = self as! UIPickerViewDelegate
         TagInputBox.delegate = self
         DataInputField.isHidden = false
-        self.DataInputField.placeholder = "mg/dL"
         self.DataInputField.keyboardType = UIKeyboardType.numberPad
+        self.RepsInput.keyboardType = UIKeyboardType.numberPad
 //        view.bringSubviewToFront(DataTypePicker)
-        //self.BottomNumberInput.isHidden = true
-        self.MedicationInput.isHidden = true
         
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
