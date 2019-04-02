@@ -25,6 +25,8 @@
 		5551772A224AA7CC000F33CB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517721224AA7CC000F33CB /* CollectionViewCell.swift */; };
 		5551772B224AA7CC000F33CB /* RemindersEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517722224AA7CC000F33CB /* RemindersEditViewController.swift */; };
 		5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517723224AA7CC000F33CB /* NotesEditViewController.swift */; };
+		555BC93322530AB300FF5E1B /* CreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC93222530AB300FF5E1B /* CreateDictionary.swift */; };
+		555BC936225318B800FF5E1B /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC935225318B800FF5E1B /* WorkoutCell.swift */; };
 		55AE4221224DDE1800D9A247 /* GraphSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE421F224DDE1800D9A247 /* GraphSettingsViewController.swift */; };
 		55C05FEB224B166F0046705B /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FE9224B166F0046705B /* HealthViewController.swift */; };
 		55C05FFC224B19430046705B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF0224B19400046705B /* UIButtonExtension.swift */; };
@@ -132,6 +134,8 @@
 		55517721224AA7CC000F33CB /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		55517722224AA7CC000F33CB /* RemindersEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersEditViewController.swift; sourceTree = "<group>"; };
 		55517723224AA7CC000F33CB /* NotesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesEditViewController.swift; sourceTree = "<group>"; };
+		555BC93222530AB300FF5E1B /* CreateDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDictionary.swift; sourceTree = "<group>"; };
+		555BC935225318B800FF5E1B /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		55AE421F224DDE1800D9A247 /* GraphSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphSettingsViewController.swift; path = ../../../../../Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift; sourceTree = "<group>"; };
 		55C05FE9224B166F0046705B /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthViewController.swift; path = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C05FF0224B19400046705B /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				55517723224AA7CC000F33CB /* NotesEditViewController.swift */,
 				55517720224AA7CC000F33CB /* RemindersCustomCell.swift */,
 				55517722224AA7CC000F33CB /* RemindersEditViewController.swift */,
+				555BC935225318B800FF5E1B /* WorkoutCell.swift */,
 			);
 			path = "Collection Views";
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			children = (
 				55517715224A9B26000F33CB /* FirebaseDatabase.swift */,
 				55517718224A9CF4000F33CB /* CreatePath.swift */,
+				555BC93222530AB300FF5E1B /* CreateDictionary.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -533,6 +539,7 @@
 				55CE0AEB224411B50006DB8B /* GraphIndexToNote.swift in Sources */,
 				55CE0AD6224409820006DB8B /* LoginViewController.swift in Sources */,
 				55CE0B212244143A0006DB8B /* userModel.swift in Sources */,
+				555BC936225318B800FF5E1B /* WorkoutCell.swift in Sources */,
 				55517725224AA7CC000F33CB /* AnalysisInfoTableViewController.swift in Sources */,
 				55C06001224B19430046705B /* FloatingActionButton.swift in Sources */,
 				55CE0B252244143A0006DB8B /* RemFactory.swift in Sources */,
@@ -581,6 +588,7 @@
 				55517724224AA7CC000F33CB /* NoteInputViewController.swift in Sources */,
 				5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */,
 				55517728224AA7CC000F33CB /* NotesCell.swift in Sources */,
+				555BC93322530AB300FF5E1B /* CreateDictionary.swift in Sources */,
 				55CE0B03224413110006DB8B /* SummaryTableViewController.swift in Sources */,
 				55517719224A9CF4000F33CB /* CreatePath.swift in Sources */,
 				55C05FEB224B166F0046705B /* HealthViewController.swift in Sources */,

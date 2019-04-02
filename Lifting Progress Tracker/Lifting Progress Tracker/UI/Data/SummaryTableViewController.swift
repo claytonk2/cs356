@@ -10,6 +10,7 @@ import UIKit
 import HealthKitUI
 import Charts
 
+
 class SummaryTableViewController: UITableViewController {
 
     @IBOutlet weak var RemindersCell: UIView!
@@ -20,6 +21,7 @@ class SummaryTableViewController: UITableViewController {
 //    @IBOutlet weak var WorkoutTable: UITableViewSection!
     @IBOutlet weak var NotesCell: UIView!
     @IBOutlet weak var ToNotesButton: UIButton!
+    var workouts: [Workout] = []
     
     
     var builder: GraphConstructor = GraphConstructor()
@@ -387,5 +389,31 @@ class SummaryTableViewController: UITableViewController {
 //            }
 //        })
 //    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
 
+        // Configure the cell...
+        //cell.textLabel?.text = objectArray[indexPath.section].sectionObjects[indexPath.row]
+
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell", for: indexPath) as! WorkoutCell
+
+        //get address object from array which you can assign to cell
+        let notesObj = workouts[indexPath.row]
+        //assign data from array
+        cell.updateUI(notesObj: notesObj)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 76
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return workouts.count
+    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1//currentNotes.count
+    }
 }

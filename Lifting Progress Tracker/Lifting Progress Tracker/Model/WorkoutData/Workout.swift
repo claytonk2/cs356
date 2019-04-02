@@ -13,11 +13,15 @@ class Workout{
         sets = 0
         Name = ""
         Effort = ""
+        weight = 0
+        date = Date()
     }
     var reps: Int
     var sets: Int
     var Name: String
     var Effort: String
+    var weight: Int
+    var date: Date
     func SetReps(reps: Int){
         self.reps = reps
     }
@@ -41,5 +45,17 @@ class Workout{
     }
     func GetEffort()-> String{
         return self.Effort
+    }
+    func GetWeight()->Int{
+        return self.weight
+    }
+    func SetWeight(weight: Int){
+        self.weight = weight
+    }
+    func GetDate()->Date{
+        return date
+    }
+    func SetDate(date: Date){
+        self.date = date
     }
 }

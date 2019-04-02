@@ -94,21 +94,21 @@ class NotesTableViewController: UITableViewController, UISearchBarDelegate { // 
         return currentNotes.count
     }
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        //let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-//
-//        // Configure the cell...
-//        //cell.textLabel?.text = objectArray[indexPath.section].sectionObjects[indexPath.row]
-//
-//
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath) as! NotesCell
-//
-//        //get address object from array which you can assign to cell
-//        let notesObj = currentNotes[indexPath.row]
-//        //assign data from array
-//        cell.updateUI(notesObj: notesObj)
-//        return cell
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+
+        // Configure the cell...
+        //cell.textLabel?.text = objectArray[indexPath.section].sectionObjects[indexPath.row]
+
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath) as! NotesCell
+
+        //get address object from array which you can assign to cell
+        let notesObj = currentNotes[indexPath.row]
+        //assign data from array
+        cell.updateUI(notesObj: notesObj)
+        return cell
+    }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 76

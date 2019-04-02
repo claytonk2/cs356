@@ -1192,7 +1192,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Workouts" id="rWA-wB-FbP">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="62" id="YIf-pg-yXa" userLabel="Workout Cell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="62" id="YIf-pg-yXa" userLabel="Workout Cell" customClass="WorkoutCell" customModule="Lifting_Progress_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="170" width="375" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YIf-pg-yXa" id="sVK-V6-6Xh">
@@ -1240,11 +1240,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gec-a3-esm">
-                                                    <rect key="frame" x="-16" y="-270" width="375" height="618"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.92967801640000003" green="0.92967801640000003" blue="0.92967801640000003" alpha="0.49584617079999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="6Zf-A7-U4P" firstAttribute="top" secondItem="sVK-V6-6Xh" secondAttribute="top" id="9TG-wq-iba"/>
@@ -1276,7 +1271,6 @@
                         <outlet property="RemindersCell" destination="rH2-0J-qp2" id="1zv-ZL-BwK"/>
                         <outlet property="ToNotesButton" destination="uxT-lP-mue" id="6O4-Vu-sQR"/>
                         <outlet property="ToRemindersButton" destination="im6-W6-s1b" id="5VM-1f-2Xd"/>
-                        <outlet property="Workouts" destination="YIf-pg-yXa" id="DY0-QT-hGG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYG-hU-vJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1288,7 +1282,7 @@
             <objects>
                 <tableViewController id="zUM-oO-Pcr" customClass="NotesTableViewController" customModule="Lifting_Progress_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gH8-lb-ScH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <searchBar key="tableHeaderView" multipleTouchEnabled="YES" contentMode="redraw" misplaced="YES" placeholder="#Tags" id="yNI-SJ-hUt">
@@ -1784,11 +1778,11 @@
             <objects>
                 <viewController title="Reminders" hidesBottomBarWhenPushed="YES" id="O1w-As-R5o" customClass="RemindersViewController" customModule="Lifting_Progress_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I46-JY-pH7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NAp-jK-yTU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RemindersCustomCell" rowHeight="62" id="FMx-SM-67Y" customClass="RemindersCustomCell" customModule="Lifting_Progress_Tracker" customModuleProvider="target">
@@ -2504,7 +2498,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1C-EW-e2F" userLabel="Touch Outside">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <action selector="TouchOutside:" destination="bg9-6o-abU" eventType="touchUpInside" id="3Ni-hi-SfA"/>
                                     <action selector="TouchOutside:" destination="qaV-UG-lc7" eventType="touchUpInside" id="EXb-HY-DwM"/>
@@ -2873,7 +2867,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
             <objects>
                 <tableViewController storyboardIdentifier="Reminders Edit View" title="RemindersEditViewController" id="sQt-R1-mRh" customClass="RemindersEditViewController" customModule="Lifting_Progress_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="R1v-6d-vRp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -2994,7 +2988,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
             <objects>
                 <tableViewController storyboardIdentifier="Notes Edit View" title="RemindersEditViewController" id="eBr-o7-D4z" userLabel="Notes Edit View" customClass="NotesEditViewController" customModule="Lifting_Progress_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="S5A-Qy-9Zb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -3316,12 +3310,12 @@ If you feel that we are not abiding by this privacy policy, you should contact u
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="h7A-Ol-GTm"/>
-        <segue reference="8vi-zY-lgH"/>
-        <segue reference="hpc-Ab-PF1"/>
+        <segue reference="iU1-kQ-dbc"/>
+        <segue reference="Hwf-KH-CUE"/>
+        <segue reference="Qlf-Wm-g1v"/>
         <segue reference="Yck-cD-gnZ"/>
         <segue reference="hQv-XA-hbO"/>
-        <segue reference="M2R-ya-B3p"/>
+        <segue reference="o6w-Za-eMz"/>
         <segue reference="s3N-OQ-DDl"/>
         <segue reference="pr9-Sn-aUn"/>
     </inferredMetricsTieBreakers>
