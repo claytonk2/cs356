@@ -14,26 +14,26 @@ class DataInputViewController: UIViewController, UITextViewDelegate {
 //    @IBOutlet weak var DataTypePicker: UIPickerView!
     @IBOutlet weak var RoundedView: UIView!
     @IBOutlet weak var RepsInput: UITextField!
-    @IBOutlet weak var DataInputField: UITextField!
     @IBOutlet weak var SubmitFeedback: UIButton!
-    @IBOutlet weak var FeedbackTextBox: UITextView!
-    @IBOutlet weak var TagInputBox: UITextView!
+    @IBOutlet weak var SetsInput: UITextField!
     @IBOutlet weak var DatePicker: UIDatePicker!
-    
+    @IBOutlet weak var NameInput: UITextField!
+    @IBOutlet weak var WeightInput: UITextField!
+    let service: WorkoutService = WorkoutService()
     //@IBOutlet weak var DatePicker: UIDatePicker!
     @IBAction func SubmitFeedback(_ sender: UIButton) {
         var dataType: String = ""
         var index = 0
         
         
-        var data: String = DataInputField.text!
-        var tags: String = TagInputBox.text!
-        var feedback: String = FeedbackTextBox.text!
+        var name: String = NameInput.text!
+        var reps: String = RepsInput.text!
         var date: Date = DatePicker.date
-        var dia: String = RepsInput.text!
+        var sets: String = RepsInput.text!
+        var weight: String = WeightInput.text!
         var success: Bool = true
         do {
-//            success = try service.save(date: date, value: data, extraVal: dia, tags: tags, note: feedback, type: dataType)
+            try service.save(sets: sets, reps: reps, weight: weight, name: name, date: date)
         }
         catch {
             print( error)
@@ -62,23 +62,12 @@ class DataInputViewController: UIViewController, UITextViewDelegate {
         self.RoundedView.layer.cornerRadius = 15
         self.RoundedView.layer.masksToBounds = true
         
-        self.FeedbackTextBox.layer.borderColor = UIColor.lightGray.cgColor
-        self.FeedbackTextBox.layer.borderWidth = 1
-        self.TagInputBox.layer.borderColor = UIColor.lightGray.cgColor
-        self.TagInputBox.layer.borderWidth = 1
         
-        TagInputBox.text = "Enter Any #Tags Here"
-        TagInputBox.textColor = UIColor.lightGray
+
         
-        FeedbackTextBox.text = "Enter Notes Here"
-        FeedbackTextBox.textColor = UIColor.lightGray
-        
-//        DataTypePicker.dataSource = self as! UIPickerViewDataSource
-//        DataTypePicker.delegate = self as! UIPickerViewDelegate
-        TagInputBox.delegate = self
-        DataInputField.isHidden = false
-        self.DataInputField.keyboardType = UIKeyboardType.numberPad
+        self.WeightInput.keyboardType = UIKeyboardType.numberPad
         self.RepsInput.keyboardType = UIKeyboardType.numberPad
+        self.SetsInput.keyboardType = UIKeyboardType.numberPad
 //        view.bringSubviewToFront(DataTypePicker)
         
     }

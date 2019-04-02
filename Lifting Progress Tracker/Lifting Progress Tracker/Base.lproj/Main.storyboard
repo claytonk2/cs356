@@ -1285,7 +1285,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" multipleTouchEnabled="YES" contentMode="redraw" misplaced="YES" placeholder="#Tags" id="yNI-SJ-hUt">
+                        <searchBar key="tableHeaderView" multipleTouchEnabled="YES" contentMode="redraw" placeholder="#Tags" id="yNI-SJ-hUt">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
@@ -2583,53 +2583,29 @@ If you feel that we are not abiding by this privacy policy, you should contact u
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Effort" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpH-Fg-4mN">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpH-Fg-4mN">
                                         <rect key="frame" x="21" y="206" width="130" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugE-Fr-MAr">
-                                        <rect key="frame" x="8" y="212" width="327" height="53"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="53" id="h4U-ae-rt0"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="qaV-UG-lc7" id="M9c-xq-Meq"/>
-                                        </connections>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="UZM-gr-JNp" userLabel="Tag Input Field">
-                                        <rect key="frame" x="8" y="273" width="327" height="40"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="ugE-Fr-MAr" firstAttribute="top" secondItem="jdx-dm-vOf" secondAttribute="bottom" constant="5" id="1Pv-io-Z3H"/>
                                     <constraint firstAttribute="trailing" secondItem="HTx-RZ-nFa" secondAttribute="trailing" id="2hx-hD-wlR"/>
-                                    <constraint firstItem="UZM-gr-JNp" firstAttribute="leading" secondItem="ey2-60-wuM" secondAttribute="leading" constant="8" id="AAb-GM-Hhn"/>
-                                    <constraint firstItem="ugE-Fr-MAr" firstAttribute="leading" secondItem="ey2-60-wuM" secondAttribute="leading" constant="8" id="Biu-Qr-Zjn"/>
                                     <constraint firstItem="upR-4z-vUh" firstAttribute="leading" secondItem="ey2-60-wuM" secondAttribute="leading" id="Bxn-9h-IYI"/>
                                     <constraint firstItem="4z2-jw-H6J" firstAttribute="top" secondItem="ey2-60-wuM" secondAttribute="top" id="D4X-bd-uhJ"/>
                                     <constraint firstItem="kde-fp-LJY" firstAttribute="top" secondItem="DWd-jR-8Ox" secondAttribute="bottom" constant="26" id="IoI-Bf-7GX"/>
                                     <constraint firstItem="HTx-RZ-nFa" firstAttribute="top" secondItem="ey2-60-wuM" secondAttribute="top" id="Omp-gg-vlb"/>
                                     <constraint firstAttribute="bottom" secondItem="upR-4z-vUh" secondAttribute="bottom" id="PVv-gt-QlM"/>
-                                    <constraint firstAttribute="trailing" secondItem="ugE-Fr-MAr" secondAttribute="trailing" constant="8" id="R74-VB-ieW"/>
                                     <constraint firstAttribute="trailing" secondItem="JVc-wT-kYq" secondAttribute="trailing" constant="12" id="WxF-hD-wrq"/>
                                     <constraint firstAttribute="trailing" secondItem="DWd-jR-8Ox" secondAttribute="trailing" id="Z2U-rh-Kzh"/>
                                     <constraint firstItem="jdx-dm-vOf" firstAttribute="centerX" secondItem="kde-fp-LJY" secondAttribute="centerX" id="Za2-ju-Fe2"/>
                                     <constraint firstItem="JVc-wT-kYq" firstAttribute="top" secondItem="ey2-60-wuM" secondAttribute="top" constant="11" id="a7m-Ss-O1N"/>
-                                    <constraint firstItem="UZM-gr-JNp" firstAttribute="top" secondItem="ugE-Fr-MAr" secondAttribute="bottom" constant="8" id="b3S-rp-zbe"/>
                                     <constraint firstItem="4z2-jw-H6J" firstAttribute="leading" secondItem="ey2-60-wuM" secondAttribute="leading" id="fZq-gD-aWE"/>
                                     <constraint firstItem="HTx-RZ-nFa" firstAttribute="leading" secondItem="ey2-60-wuM" secondAttribute="leading" id="fjC-Ot-c8X"/>
                                     <constraint firstItem="DWd-jR-8Ox" firstAttribute="leading" secondItem="ey2-60-wuM" secondAttribute="leading" id="hUa-CD-DBT"/>
-                                    <constraint firstItem="upR-4z-vUh" firstAttribute="top" secondItem="UZM-gr-JNp" secondAttribute="bottom" constant="9" id="he2-OB-9bA"/>
                                     <constraint firstItem="jdx-dm-vOf" firstAttribute="width" secondItem="kde-fp-LJY" secondAttribute="width" id="jeJ-SI-r1E"/>
                                     <constraint firstItem="jdx-dm-vOf" firstAttribute="top" secondItem="kde-fp-LJY" secondAttribute="bottom" constant="8" id="kxw-gq-Luq"/>
                                     <constraint firstItem="upR-4z-vUh" firstAttribute="top" secondItem="ey2-60-wuM" secondAttribute="top" constant="262" id="lA4-wE-Ueh"/>
@@ -2638,14 +2614,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
                                     <constraint firstAttribute="bottom" secondItem="JVc-wT-kYq" secondAttribute="bottom" constant="293" id="nP7-0p-YNo"/>
                                     <constraint firstAttribute="trailing" secondItem="4z2-jw-H6J" secondAttribute="trailing" id="oHE-Cc-YVn"/>
                                     <constraint firstItem="DWd-jR-8Ox" firstAttribute="top" secondItem="ey2-60-wuM" secondAttribute="top" constant="50" id="pJG-EB-XNb"/>
-                                    <constraint firstItem="UZM-gr-JNp" firstAttribute="centerX" secondItem="ugE-Fr-MAr" secondAttribute="centerX" id="z2U-Vt-g8U"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="ugE-Fr-MAr"/>
-                                        <exclude reference="UZM-gr-JNp"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.72499457599999995" green="0.72499457599999995" blue="0.72499457599999995" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2662,13 +2631,13 @@ If you feel that we are not abiding by this privacy policy, you should contact u
                     </view>
                     <navigationItem key="navigationItem" id="MOY-ld-xZ1"/>
                     <connections>
-                        <outlet property="DataInputField" destination="kde-fp-LJY" id="jEi-Fh-9L0"/>
                         <outlet property="DatePicker" destination="DWd-jR-8Ox" id="Xxo-kk-wLx"/>
-                        <outlet property="FeedbackTextBox" destination="ugE-Fr-MAr" id="JAB-bx-OtT"/>
+                        <outlet property="NameInput" destination="uZ9-hv-qSz" id="0Qh-d2-HcD"/>
                         <outlet property="RepsInput" destination="jdx-dm-vOf" id="hFA-iN-CjD"/>
                         <outlet property="RoundedView" destination="ey2-60-wuM" id="74N-uZ-G1M"/>
+                        <outlet property="SetsInput" destination="kde-fp-LJY" id="cvk-CC-slQ"/>
                         <outlet property="SubmitFeedback" destination="upR-4z-vUh" id="oo3-Vf-bSf"/>
-                        <outlet property="TagInputBox" destination="UZM-gr-JNp" id="Tcr-Zu-Ykf"/>
+                        <outlet property="WeightInput" destination="lpH-Fg-4mN" id="aWD-6d-28Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qga-as-CvF" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -27,6 +27,7 @@
 		5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517723224AA7CC000F33CB /* NotesEditViewController.swift */; };
 		555BC93322530AB300FF5E1B /* CreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC93222530AB300FF5E1B /* CreateDictionary.swift */; };
 		555BC936225318B800FF5E1B /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC935225318B800FF5E1B /* WorkoutCell.swift */; };
+		55AACAD22253DD7400E6142E /* WorkoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AACAD12253DD7400E6142E /* WorkoutService.swift */; };
 		55AE4221224DDE1800D9A247 /* GraphSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE421F224DDE1800D9A247 /* GraphSettingsViewController.swift */; };
 		55C05FEB224B166F0046705B /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FE9224B166F0046705B /* HealthViewController.swift */; };
 		55C05FFC224B19430046705B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05FF0224B19400046705B /* UIButtonExtension.swift */; };
@@ -136,6 +137,7 @@
 		55517723224AA7CC000F33CB /* NotesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesEditViewController.swift; sourceTree = "<group>"; };
 		555BC93222530AB300FF5E1B /* CreateDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDictionary.swift; sourceTree = "<group>"; };
 		555BC935225318B800FF5E1B /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		55AACAD12253DD7400E6142E /* WorkoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutService.swift; sourceTree = "<group>"; };
 		55AE421F224DDE1800D9A247 /* GraphSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphSettingsViewController.swift; path = ../../../../../Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift; sourceTree = "<group>"; };
 		55C05FE9224B166F0046705B /* HealthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthViewController.swift; path = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"; sourceTree = SOURCE_ROOT; };
 		55C05FF0224B19400046705B /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				55517715224A9B26000F33CB /* FirebaseDatabase.swift */,
 				55517718224A9CF4000F33CB /* CreatePath.swift */,
 				555BC93222530AB300FF5E1B /* CreateDictionary.swift */,
+				55AACAD12253DD7400E6142E /* WorkoutService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */,
 				55517728224AA7CC000F33CB /* NotesCell.swift in Sources */,
 				555BC93322530AB300FF5E1B /* CreateDictionary.swift in Sources */,
+				55AACAD22253DD7400E6142E /* WorkoutService.swift in Sources */,
 				55CE0B03224413110006DB8B /* SummaryTableViewController.swift in Sources */,
 				55517719224A9CF4000F33CB /* CreatePath.swift in Sources */,
 				55C05FEB224B166F0046705B /* HealthViewController.swift in Sources */,
