@@ -24,27 +24,29 @@ class FirebaseDatabase{
         let workoutDate = [ "date": dict["dateId"]]
         //let workouts = dict
         let childUpdates = ["/users/\(userID)/workoutDate/\(dateKey)/": workoutDate,
-                            "/users/\(userID)/workouts\(dateKey)/workouts/\(key)/": dict] as [String : Any]
+                            "/users/\(userID)/workouts/\(key)/": dict] as [String : Any]
         ref.updateChildValues(childUpdates)
     }
     
     public func ReadWorkouts()->[Workout]{
         var workouts: [Workout] = [Workout]()
         let userID = Auth.auth().currentUser?.uid
-        let myWorkouts = (ref.child("users\(userID)").child("workouts").queryOrdered(byChild: "name")) // check this 
-        myWorkouts.observe(of: .value, with: { (snapshot) in
+        let myWorkouts = (ref.child("users/\(userID)").child("workouts").queryOrdered(byChild: "name")) // check this
+        myWorkouts.observe(DataEventType.value, with: { (snapshot) in
             // Get user value
+            print(snapshot.children.allObjects)
             for child in snapshot.children {
-                let valueReps = snapshot.value as? NSDictionary
-                let reps = value?["sets"] as? String ?? ""
-                let sets = value?["reps"] as? String ?? ""
-                let weight = value?["weight"] as? String ?? ""
-                let name = value?["name"] as? String ?? ""
-                let effort = value?["effort"] as? String ?? ""
+//                let valueReps = (child as! DataSnapshot).value as? NSDictionary
+                let reps = ((child as! DataSnapshot).value as? NSDictionary)?["sets"] as? Int ?? 0
+                let sets = ((child as! DataSnapshot).value as? NSDictionary)?["reps"] as? Int ?? 0
+                let weight = ((child as! DataSnapshot).value as? NSDictionary)?["weight"] as? Int ?? 0
+                let name = ((child as! DataSnapshot).value as? NSDictionary)?["name"] as? String ?? ""
+                let effort = ((child as! DataSnapshot).value as? NSDictionary)?["effort"] as? String ?? ""
+                let date: Date = DateStringConv().toDate(date: ((child as! DataSnapshot).value as? NSDictionary)?["dateId"] as? String ?? "")
+                workouts.append(Workout(reps: reps, sets: sets, weight: weight, name: name, effort: effort, date: date))
                 
-                workouts.append(<#T##newElement: Workout##Workout#>)
             }
-            
+            userModel.user.setWorkouts(Workouts: workouts)
             
             // ...
         }) { (error) in

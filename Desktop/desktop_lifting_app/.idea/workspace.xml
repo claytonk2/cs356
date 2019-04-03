@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccf4c50a-b234-4a4d-947f-d84656dcac2b" name="Default Changelist" comment="" />
+    <list default="true" id="ccf4c50a-b234-4a4d-947f-d84656dcac2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker.xcworkspace/xcuserdata/claytonkingsbury.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker.xcworkspace/xcuserdata/claytonkingsbury.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker.xcworkspace/xcuserdata/claytonkingsbury.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker.xcworkspace/xcuserdata/claytonkingsbury.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker/Model/WorkoutData/Workout.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker/Model/WorkoutData/Workout.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker/Model/userModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker/Model/userModel.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker/Network/FirebaseDatabase.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker/Network/FirebaseDatabase.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker/Network/WorkoutService.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker/Network/WorkoutService.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker/UI/Data/SummaryTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lifting Progress Tracker/Lifting Progress Tracker/UI/Data/SummaryTableViewController.swift" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +21,7 @@
     <session id="-1772791996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="33" />
+          <entry key="project.closed" value="34" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.21" value="3" />
           <entry key="project.open.time.23" value="2" />
@@ -27,12 +35,12 @@
           <entry key="project.open.time.35" value="3" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.39" value="2" />
-          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.50" value="1" />
-          <entry key="project.opened" value="34" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -112,11 +120,11 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/track/parentTrack.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1305">
-              <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+            <state relative-caret-position="439">
+              <caret line="154" column="44" lean-forward="true" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -124,7 +132,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/view/parentView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -234,7 +242,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,6 +297,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,16 +363,18 @@
       <workItem from="1551318957692" duration="3824000" />
       <workItem from="1551378051224" duration="1530000" />
       <workItem from="1551720138395" duration="34000" />
+      <workItem from="1554258322746" duration="553000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70292000" />
+    <option name="totallyTimeSpent" value="70845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14306152" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14520743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -514,16 +524,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/home/track.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/track/parentTrack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -542,6 +542,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="128" column="83" selection-start-line="128" selection-start-column="83" selection-end-line="128" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/track/parentTrack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="154" column="44" lean-forward="true" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

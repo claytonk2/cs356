@@ -16,6 +16,14 @@ class Workout{
         weight = 0
         date = Date()
     }
+    init(reps: Int, sets: Int, weight: Int, name: String, effort:String, date: Date) {
+        self.reps = reps
+        self.sets = sets
+        Name = name
+        Effort = effort
+        self.weight = weight
+        self.date = date
+    }
     var reps: Int
     var sets: Int
     var Name: String

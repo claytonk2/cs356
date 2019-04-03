@@ -92,7 +92,13 @@ class userModel {
     }
     
     public func addWorkout(Workout: Workout){
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
         self.workouts.append(Workout)
+    }
+    
+    public func setWorkouts(Workouts: [Workout]){
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
+        self.workouts = Workouts
     }
     public func getWorkouts()->[Workout]{
         return self.workouts

@@ -18,7 +18,13 @@ class WorkoutService{
         workout.SetDate(date: date)
         FirebaseDatabase.instance.AddWorkout(workout: workout)
     }
-    func readAll(){
+    func readAll()->[Workout]{
+        do {
         return FirebaseDatabase.instance.ReadWorkouts()
+//            return true
+        }
+        catch{
+            return []
+        }
     }
 }
