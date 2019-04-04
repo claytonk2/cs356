@@ -21,6 +21,16 @@ class CreateDictionary{
         
         return dict
     }
+    func CreateNote(note: Note)->NSDictionary{
+        let conversion: DateStringConv = DateStringConv()
+        var dict : NSDictionary = [
+            "text" : note.getText(),
+            "tags" : note.getTags(),
+            "date" : conversion.toString(date: note.getDate() as Date)
+        ]
+        
+        return dict
+    }
     
     func DictToJson(dic: NSDictionary)->Data?{
         var jsonData: Data? = nil

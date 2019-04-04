@@ -233,37 +233,37 @@ class SummaryTableViewController: UITableViewController {
     
     
     
+//    change the table to be dynamic, fix the top cells and make it work
     
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-        //cell.textLabel?.text = objectArray[indexPath.section].sectionObjects[indexPath.row]
-        if (indexPath.row == 0){
-            return headerCell
-        }
-//        tableView.register(AnyClass?, forCellReuseIdentifier: <#T##String#>)
-        let nib = UINib(nibName: "WorkoutCell", bundle: nil)
-//        self.tableView.register(WorkoutCell.self, forCellReuseIdentifier: "WorkoutTableViewCell")//register(WorkoutTableViewCell(), forCellWithReuseIdentifier: "WorkoutTableViewCell")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutTableViewCell" , for: indexPath) as! WorkoutTableViewCell
-
-        //get address object from array which you can assign to cell
-        let notesObj = userModel.user.getWorkouts()[indexPath.row]
-        //assign data from array
-        cell.updateUI(workout: notesObj)
-        return cell
-    }
-
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 76
-    }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return userModel.user.getWorkouts().count
-    }
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1//currentNotes.count
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        //let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+//
+//        // Configure the cell...
+//        //cell.textLabel?.text = objectArray[indexPath.section].sectionObjects[indexPath.row]
+//        if (indexPath.row == 0){
+//            return headerCell
+//        }
+////        tableView.register(AnyClass?, forCellReuseIdentifier: <#T##String#>)
+//        let nib = UINib(nibName: "WorkoutCell", bundle: nil)
+////        self.tableView.register(WorkoutCell.self, forCellReuseIdentifier: "WorkoutTableViewCell")//register(WorkoutTableViewCell(), forCellWithReuseIdentifier: "WorkoutTableViewCell")
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutTableViewCell" , for: indexPath) as! WorkoutTableViewCell
+//
+//        //get address object from array which you can assign to cell
+//        let notesObj = userModel.user.getWorkouts()[indexPath.row]
+//        //assign data from array
+//        cell.updateUI(workout: notesObj)
+//        return cell
+//    }
+//
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 76
+//    }
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return userModel.user.getWorkouts().count
+//    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1//currentNotes.count
+//    }
 }

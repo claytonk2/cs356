@@ -16,13 +16,13 @@ import HealthKitUI
 
 class GraphConstructor{
     
-    func readData(data: [HKSample], type: HKUnit) -> ([Double], [String]){
+    func readData(data: [Workout]) -> ([Double], [String]){
         var valueArray: [Double] = []
         var timeArray: [String] = []
         
         for sample in data.reversed() {
-            valueArray.append((sample as! HKQuantitySample).quantity.doubleValue(for: type))
-            timeArray.append(DateStringConv().toStringWTime(date: sample.startDate))
+            valueArray.append(Double(sample.GetWeight()))
+            timeArray.append(DateStringConv().toStringWTime(date: sample.GetDate()))
         }
         return (valueArray, timeArray)
     }
@@ -142,10 +142,10 @@ class GraphConstructor{
     }
 
     
-    func ConstructSumarryGraph(label: String, type: HKUnit, data: [HKSample])->(XAxis, LineChartData){
+    func ConstructGraph(label: String, data: [Workout])->(XAxis, LineChartData){
         //let ll = ChartLimitLine(limit: 10.0, label: "Target")
         // barChartView.rightAxis.addLimitLine(ll)
-        let (valueArray, timeArray) = self.readData(data: data, type: type)
+        let (valueArray, timeArray) = self.readData(data: data)
         let retData: LineChartData = self.setChart(dataPoints: timeArray, values: valueArray, label: label)
         retData.setDrawValues(false)
         let xAxis=XAxis()

@@ -55,5 +55,43 @@ class FirebaseDatabase{
         return workouts
     }
     
+    public func AddNote(note: Note){ ///todo fix this
+        var dict: NSDictionary = CreateDictionary().CreateNote(note: note)
+        let userID = Auth.auth().currentUser?.uid
+        self.ref.child(userID!).setValue("username") // need to set or create ref
+        // chck if on exists
+        guard let dateKey:Any? = ref.child("users/\(userID)/noteDate").childByAutoId().key else { return }
+        guard let key:Any? = ref.child("users/\(userID)/notes").childByAutoId().key else { return }
+        let workoutDate = [ "date": dict["date"]]
+        //let workouts = dict
+        let childUpdates = ["/users/\(userID)/noteDate/\(dateKey)/": workoutDate,
+                            "/users/\(userID)/notes/\(key)/": dict] as [String : Any]
+        ref.updateChildValues(childUpdates)
+    }
+    
+    public func ReadNotes()->[Note]{
+        var notes: [Note] = [Note]()
+        let userID = Auth.auth().currentUser?.uid
+        let myNotes = (ref.child("users/\(userID)").child("notes").queryOrdered(byChild: "name")) // check this
+        myNotes.observe(DataEventType.value, with: { (snapshot) in
+            // Get user value
+            print(snapshot.children.allObjects)
+            for child in snapshot.children {
+                //                let valueReps = (child as! DataSnapshot).value as? NSDictionary
+                let text = ((child as! DataSnapshot).value as? NSDictionary)?["sets"] as? String ?? ""
+                let tags = ((child as! DataSnapshot).value as? NSDictionary)?["reps"] as? String ?? ""
+                let date: Date = DateStringConv().toDate(date: ((child as! DataSnapshot).value as? NSDictionary)?["date"] as? String ?? "")
+                notes.append(Note(date: date as NSDate, text: text, tags: tags))
+                
+            }
+            userModel.user.addNotes(notes: notes)
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        return notes
+    }
+    
 }
 

@@ -22,7 +22,7 @@ class userModel {
     var firstName: String
     var lastName: String
     var workouts: [Workout]
-    var notes: [INote]
+    var notes: [Note]
     var reminders: [Note]
     var userId: String
     var userCredentials: String
@@ -38,8 +38,9 @@ class userModel {
         userCredentials = ""
     }
     
-    public func addNotes(notes: [INote]){
+    public func addNotes(notes: [Note]){
         self.notes = SortNotes().sort(notes: notes)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadNote"), object: nil)
     }
     public func addReminders(rem: [Note]){
         self.reminders = rem
@@ -51,7 +52,7 @@ class userModel {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadRem"), object: nil) // added this
         self.reminders.append(rem)
     }
-    public func addNote(note: INote) -> NSDictionary{
+    public func addNote(note: Note) -> NSDictionary{
         self.notes.append(note)
         self.notes = SortNotes().sort(notes: self.notes)
 //        if let nNote: Note = note as? Note{
@@ -63,7 +64,8 @@ class userModel {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadNote"), object: nil)
         return NSDictionary()
     }
-    public func getNotes()-> [INote]{
+    
+    public func getNotes()-> [Note]{
         return self.notes
     }
     public func setUsername(username: String){

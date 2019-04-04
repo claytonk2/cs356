@@ -76,7 +76,7 @@ class NotesTableViewController: UITableViewController, UISearchBarDelegate { // 
         self.IndividualNote.reloadData()
     }
     
-    func userDidEnterData(notesObj: INote){
+    func userDidEnterData(notesObj: Note){
         userModel.user.addNote(note: notesObj)
         //currentNotes = userModel.user.getNotes()
         self.IndividualNote.reloadData()

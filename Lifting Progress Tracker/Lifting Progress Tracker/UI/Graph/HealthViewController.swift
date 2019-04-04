@@ -24,42 +24,43 @@ class HealthViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var DataLabel: UILabel!
     @IBOutlet weak var FeedbackLabel: UILabel!
     @IBOutlet weak var ShadowCover: UIButton!
-    @IBOutlet var DataGraph: CombinedChartView!
+    @IBOutlet var DataGraph: LineChartView!
     @IBOutlet weak var GraphSettingsButton: UIBarButtonItem!
+    let service: WorkoutService = WorkoutService()
     
-    var BPTop: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       service.readAll()
         InputOpen.createFloatingActionButton()
         DataInput.createFloatingActionButton()
         FeedbackInput.createFloatingActionButton()
         NoteInput.createFloatingActionButton()
-        self.DataGraph.delegate = self
+//        self.DataGraph.delegate = self
         noteDelegate = NoteDelegate(ins: self)
         self.NoteGraph.delegate = noteDelegate
-//        self.buildGraph()
+        self.buildGraph()
 //        GraphSettings.settings.setTop(type: "Blood Glucose")
 //        GraphSettings.settings.setBottom(type: "Heart Rate")
         closeMenu()
 
-    NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       // self.buildGraph()
+        self.buildGraph()
+        service.readAll()
     }
     
     @objc func loadList(){
         //load data here
         DispatchQueue.main.async {
      //       self.DataGraph.initialize()
-            self.DataGraph.resetViewPortOffsets();
+//            self.DataGraph.resetViewPortOffsets();
             self.DataGraph.clearValues();
-            self.DataGraph.clear();
-            self.DataGraph.clearAllViewportJobs()
-//            self.buildGraph()
+//            self.DataGraph.clear();
+//            self.DataGraph.clearAllViewportJobs()
+            self.buildGraph()
         }
     }
     var noteDelegate: NoteDelegate? = nil
@@ -93,97 +94,81 @@ class HealthViewController: UIViewController, ChartViewDelegate {
     
     //let ll = ChartLimitLine(limit: 10.0, label: "Target")
    // barChartView.rightAxis.addLimitLine(ll)
-//    func ConstructorChoice(labelBar: String, labelLine: String, bottomUnit: HKUnit, topUnit: HKUnit)->(xAxis: XAxis, data: CombinedChartData){
-//        if ( (GraphSettings.settings.getTop() == "Blood Pressure") || (GraphSettings.settings.getBottom() == "Blood Pressure") ){
-//            if (self.BPTop){
-//                let (xAxis, data) = BPGraphConstructors().setChartAnalysis(yValuesChart: GraphData.data.getBottom().reversed(), yValuesDiaChart: GraphData.data.bpData!.getDia().reversed(), yValuesSysChart: GraphData.data.bpData!.getSys().reversed(), lineUnit: bottomUnit, barUnit: topUnit, BPTop: self.BPTop, labelLine: labelBar)
-//                return (xAxis, data)
-//            }
-//            else if (GraphSettings.settings.getBottom() == "Blood Pressure"){
-//                let (xAxis, data) = BPGraphConstructors().setChartAnalysis(yValuesChart: GraphData.data.getTop().reversed(), yValuesDiaChart: GraphData.data.bpData!.getDia().reversed(), yValuesSysChart: GraphData.data.bpData!.getSys().reversed(), lineUnit: topUnit, barUnit: bottomUnit, BPTop: self.BPTop, labelLine: labelLine)
-//                return (xAxis, data)
-//            }
-//            else{
-//                print("Error Building Graph BP")
-//            }
-//        }
-//        else {
-//            let (xAxis, data) = GraphConstructor().setChartLines(yValuesLineChart: GraphData.data.getTop().reversed(), yValuesBarChart: GraphData.data.getBottom().reversed(), lineUnit: topUnit, barUnit: bottomUnit, labelLine: labelLine, barLine: labelBar)
-//            return (xAxis, data)
-//        }
-//        return (XAxis(), CombinedChartData())
-//    }
+    func ConstructorChoice(dataString: String)->(xAxis: XAxis, data: LineChartData){
+        
+            
+        let (xAxis, data) = GraphConstructor().ConstructGraph(label: dataString, data: GraphData.data.getData().reversed())
+        return (xAxis, data)
+        
+        return (XAxis(), LineChartData())
+    }
 //
-//    func buildGraph(){ // reinitialize the graph
-//        //barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-//        // do we want to animate the graph??
-//        self.buildNoteGraph()
-//        self.DateLabel.text = "Last Synced: \(DateStringConv().toStringWTimeNS(date: NSDate() as Date))"
-//        let graph = GraphConstructor()
-//        let bloodGlucoseUnitString = "mg/dL"
-//
-//        let (topUnit, bottomUnit) = self.getData()
-//        let labelLine: String = GraphSettings.settings.getTop() + ": " + topUnit.unitString
+    func buildGraph(){ // reinitialize the graph
+        //barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        // do we want to animate the graph??
+        self.buildNoteGraph()
+        self.DateLabel.text = "Last Synced: \(DateStringConv().toStringWTimeNS(date: NSDate() as Date))"
+        let graph = GraphConstructor()
+        service.readAll()
+        let topString: String = GraphSettings.settings.getTop()
+        let labelLine: String = topString//GraphSettings.settings.getTop() + ": " + topUnit.unitString
 //        let labelBar: String = GraphSettings.settings.getBottom() + ": " + bottomUnit.unitString
 //        let topString: String = topUnit.unitString
-//        let bottomString: String = bottomUnit.unitString
-//        DispatchQueue.main.async {
-//            if (!GraphData.data.getTop().isEmpty){
-////                if let test1 = (GraphData.data.getTop()[0] as! HKQuantitySample).quantity.doubleValue(for: topUnit){
-////
-////                }
-//                if (topString != topUnit.unitString || bottomString != bottomUnit.unitString){
-//                    return
+        DispatchQueue.main.async {
+            if (!GraphData.data.getData().isEmpty){
+//                if let test1 = (GraphData.data.getTop()[0] as! HKQuantitySample).quantity.doubleValue(for: topUnit){
+//
 //                }
-////                self.DataGraph.data?.notifyDataChanged()
-////                self.DataGraph.notifyDataSetChanged()
-////                self.DataGraph.invalidateIntrinsicContentSize()
-//                self.DataGraph.clear()
-//                self.DataGraph.data?.clearValues()
-//
-//                self.DataGraph.invalidateIntrinsicContentSize()
-//
-//                let (xAxis, data) = self.ConstructorChoice(labelBar: labelBar, labelLine: labelLine, bottomUnit: bottomUnit, topUnit: topUnit)
-//                self.DataGraph.xAxis.resetCustomAxisMax()
-//                self.DataGraph.xAxis.valueFormatter = xAxis.valueFormatter /// https://stackoverflow.com/questions/38847938/how-to-render-only-chosen-axis-labels-in-ios-charts
-//                //self.DataGraph.xAxis.axisMaxLabels =
-//                self.DataGraph.xAxis.labelPosition = .bottom
-//                self.DataGraph.xAxis.drawLimitLinesBehindDataEnabled = true
-//
-//
-//                self.DataGraph.rightAxis.enabled = GraphSettings.settings.getRAxis()//false
-//                self.DataGraph.rightAxis.labelTextColor = GraphSettings.settings.getBottomColorDot()
-//                self.DataGraph.rightAxis.drawGridLinesEnabled = false // could be the wrong one to set
-//                //self.DataGraph.leftAxis.gridColor = GraphSettings.settings.getTopColorDot()
-//                self.DataGraph.leftAxis.labelTextColor = GraphSettings.settings.getTopColorDot()
-//             //   self.DataGraph.xRange = data.xMax
-//                self.DataGraph.data = data
-//
-//                self.DataGraph.clipDataToContentEnabled = true
-//                // Make sure that only 1 x-label per index is shown
-//                self.DataGraph.xAxis.granularityEnabled = true
-//                self.DataGraph.xAxis.granularity = 1 //https://github.com/danielgindi/Charts/issues/2094
-//                self.DataGraph.setVisibleXRangeMaximum(GraphSettings.settings.getGraphSize()) //20 BEING THE HIGHEST POINT YOU WANT SHOWN, YOU CAN SCROLL ABOVE IR BELOW THAT
-//                //self.DataGraph.xAxis.setLabelCount(6, force: true)
-//
-//
-//                //BuildGraphView.moveViewToY(6) //8 BEING THE HIGHEST VALUE YOU WANT TO REACH AT A POINT
-//                self.DataGraph.dragEnabled = GraphSettings.settings.getDragEnabled()//true
-//                self.DataGraph.doubleTapToZoomEnabled = GraphSettings.settings.getZoom()//true//false changed this without testing
-//                self.DataGraph.moveViewToAnimated(xValue: Double(GraphData.data.getTop().count + GraphData.data.getBottom().count), yValue: Double(0), axis: self.DataGraph.leftAxis.axisDependency, duration: TimeInterval(2.0))
-//                let marker:BPMarker = BPMarker(color: UIColor.lightGray, font: UIFont(name: "Helvetica", size: 12)!, textColor: UIColor.white, insets: UIEdgeInsets(top: 7.0, left: 7.0, bottom: 7.0, right: 7.0))
-//                marker.minimumSize = CGSize(width: 75.0, height: 35.0)
-//
-//                self.DataGraph.marker = marker
-//
-//                self.DataGraph.drawMarkers = true
-//                self.DataGraph.zoomOut()
-//                var des: Description = Description()
-//                des.text = "data"
-//                self.DataGraph.chartDescription = des
-//            }
-//        }
-//    }
+                
+                self.DataGraph.data?.notifyDataChanged()
+                self.DataGraph.notifyDataSetChanged()
+                self.DataGraph.invalidateIntrinsicContentSize()
+                self.DataGraph.clear()
+                self.DataGraph.data?.clearValues()
+
+                self.DataGraph.invalidateIntrinsicContentSize()
+
+                let (xAxis, data) = self.ConstructorChoice(dataString: topString)
+                self.DataGraph.xAxis.resetCustomAxisMax()
+                self.DataGraph.xAxis.valueFormatter = xAxis.valueFormatter /// https://stackoverflow.com/questions/38847938/how-to-render-only-chosen-axis-labels-in-ios-charts
+                //self.DataGraph.xAxis.axisMaxLabels =
+                self.DataGraph.xAxis.labelPosition = .bottom
+                self.DataGraph.xAxis.drawLimitLinesBehindDataEnabled = true
+
+
+                self.DataGraph.rightAxis.enabled = GraphSettings.settings.getRAxis()//false
+                self.DataGraph.rightAxis.drawGridLinesEnabled = false // could be the wrong one to set
+                //self.DataGraph.leftAxis.gridColor = GraphSettings.settings.getTopColorDot()
+                self.DataGraph.leftAxis.labelTextColor = GraphSettings.settings.getTopColorDot()
+//                self.DataGraph.chartXMax = data.xMax
+                self.DataGraph.setVisibleXRangeMaximum(data.xMax)
+                self.DataGraph.data = data
+
+                self.DataGraph.clipDataToContentEnabled = true
+                // Make sure that only 1 x-label per index is shown
+                self.DataGraph.xAxis.granularityEnabled = true
+                self.DataGraph.xAxis.granularity = 1 //https://github.com/danielgindi/Charts/issues/2094
+                self.DataGraph.setVisibleXRangeMaximum(GraphSettings.settings.getGraphSize()) //20 BEING THE HIGHEST POINT YOU WANT SHOWN, YOU CAN SCROLL ABOVE IR BELOW THAT
+                //self.DataGraph.xAxis.setLabelCount(6, force: true)
+
+
+                //BuildGraphView.moveViewToY(6) //8 BEING THE HIGHEST VALUE YOU WANT TO REACH AT A POINT
+                self.DataGraph.dragEnabled = GraphSettings.settings.getDragEnabled()//true
+                self.DataGraph.doubleTapToZoomEnabled = GraphSettings.settings.getZoom()//true//false changed this without testing
+                self.DataGraph.moveViewToAnimated(xValue: Double(GraphData.data.getData().count), yValue: Double(0), axis: self.DataGraph.leftAxis.axisDependency, duration: TimeInterval(2.0))
+                let marker:BPMarker = BPMarker(color: UIColor.lightGray, font: UIFont(name: "Helvetica", size: 12)!, textColor: UIColor.white, insets: UIEdgeInsets(top: 7.0, left: 7.0, bottom: 7.0, right: 7.0))
+                marker.minimumSize = CGSize(width: 75.0, height: 35.0)
+
+                self.DataGraph.marker = marker
+
+                self.DataGraph.drawMarkers = true
+                self.DataGraph.zoomOut()
+                var des: Description = Description()
+                des.text = "data"
+                self.DataGraph.chartDescription = des
+            }
+        }
+    }
 //
 //    let bloodGlucoseUnitString = "mg/dL"
 //    let getter: GetPastHealth = GetPastHealth()

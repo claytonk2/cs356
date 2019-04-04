@@ -10,9 +10,9 @@ import Foundation
 
 class GraphData{
     static let data: GraphData = GraphData()
-    var topData: [Double] = []
+    var topData: [Workout] = []
     var bottomData: [Double] = []
-    func setTop(data: [Double]){
+    func setTop(data: [Workout]){
         self.topData = data
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
@@ -20,7 +20,7 @@ class GraphData{
         self.bottomData = data
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
-    func getTop()->[Double]{
+    func getData()->[Workout]{
         return self.topData
     }
     func getBottom()->[Double]{

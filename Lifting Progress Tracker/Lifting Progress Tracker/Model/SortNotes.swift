@@ -8,17 +8,17 @@
 
 import Foundation
 class SortNotes{
-    func sort(notes: [INote])->[INote]{
+    func sort(notes: [Note])->[Note]{
         if (notes.count == 1){
             return notes
         }
-        var temp: INote = notes[0]
-        var retNotes: [INote] = notes
+        var temp: Note = notes[0]
+        var retNotes: [Note] = notes
         var sortedAboveIndex: Int = notes.count;
         repeat {
             var lastSwapIndex = 0
             for i in 1...(retNotes.count - 1) {
-                if ((retNotes[i - 1] as! Note).getDate().timeIntervalSince1970 > (retNotes[i] as! Note).getDate().timeIntervalSince1970) {
+                if (retNotes[i - 1].getDate().timeIntervalSince1970 > retNotes[i].getDate().timeIntervalSince1970) {
                     temp = retNotes[i]
                     retNotes[i] = retNotes[i-1]
                     retNotes[i-1] = temp

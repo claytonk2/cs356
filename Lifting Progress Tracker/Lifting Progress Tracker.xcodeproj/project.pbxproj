@@ -27,6 +27,7 @@
 		5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517723224AA7CC000F33CB /* NotesEditViewController.swift */; };
 		555BC93322530AB300FF5E1B /* CreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC93222530AB300FF5E1B /* CreateDictionary.swift */; };
 		555BC936225318B800FF5E1B /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC935225318B800FF5E1B /* WorkoutCell.swift */; };
+		559DF8BA2255CACD00D0979B /* BPMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DF8B82255CACD00D0979B /* BPMarker.swift */; };
 		55AACAD22253DD7400E6142E /* WorkoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AACAD12253DD7400E6142E /* WorkoutService.swift */; };
 		55AE4221224DDE1800D9A247 /* GraphSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE421F224DDE1800D9A247 /* GraphSettingsViewController.swift */; };
 		55C0280A2254591E00A93697 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C028092254591E00A93697 /* WorkoutTableViewCell.swift */; };
@@ -138,6 +139,7 @@
 		55517723224AA7CC000F33CB /* NotesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesEditViewController.swift; sourceTree = "<group>"; };
 		555BC93222530AB300FF5E1B /* CreateDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDictionary.swift; sourceTree = "<group>"; };
 		555BC935225318B800FF5E1B /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		559DF8B82255CACD00D0979B /* BPMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPMarker.swift; sourceTree = "<group>"; };
 		55AACAD12253DD7400E6142E /* WorkoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutService.swift; sourceTree = "<group>"; };
 		55AE421F224DDE1800D9A247 /* GraphSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphSettingsViewController.swift; path = ../../../../../Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift; sourceTree = "<group>"; };
 		55C028092254591E00A93697 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		55CE0AEE224411F20006DB8B /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				559DF8B82255CACD00D0979B /* BPMarker.swift */,
 				55C05FF1224B19410046705B /* FABmenuViewExtention.swift */,
 				55C05FF5224B19420046705B /* FloatingActionButton.swift */,
 				55C05FF0224B19400046705B /* UIButtonExtension.swift */,
@@ -595,6 +598,7 @@
 				5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */,
 				55517728224AA7CC000F33CB /* NotesCell.swift in Sources */,
 				555BC93322530AB300FF5E1B /* CreateDictionary.swift in Sources */,
+				559DF8BA2255CACD00D0979B /* BPMarker.swift in Sources */,
 				55AACAD22253DD7400E6142E /* WorkoutService.swift in Sources */,
 				55CE0B03224413110006DB8B /* SummaryTableViewController.swift in Sources */,
 				55C0280A2254591E00A93697 /* WorkoutTableViewCell.swift in Sources */,
