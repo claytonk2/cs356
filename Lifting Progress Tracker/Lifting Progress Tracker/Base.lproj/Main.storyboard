@@ -3365,7 +3365,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="556-t4-qDS">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="CloseNotes:" destination="YDN-h2-hE7" id="Mar-YG-Dn2"/>
+                                <action selector="CloseWorkouts:" destination="YDN-h2-hE7" id="8eZ-iv-mFl"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AbY-OC-eaa">

@@ -173,7 +173,7 @@ class HealthViewController: UIViewController, ChartViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.buildGraph()
+        self.buildGraph()
         prepareBackgroundView()
     }
 
