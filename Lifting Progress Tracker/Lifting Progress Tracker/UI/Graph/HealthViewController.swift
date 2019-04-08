@@ -80,7 +80,7 @@ class HealthViewController: UIViewController, ChartViewDelegate {
            let marker:CustomBalloon = CustomBalloon(color: UIColor.lightGray, font: UIFont(name: "Helvetica", size: 12)!, textColor: UIColor.white, insets: UIEdgeInsets(top: 7.0, left: 7.0, bottom: 7.0, right: 7.0))
             marker.minimumSize = CGSize(width: 75.0, height: 35.0)
             self.NoteGraph.marker = marker
-            self.NoteGraph.drawMarkers = true
+            self.NoteGraph.drawMarkers = false
             self.NoteGraph.clipDataToContentEnabled = true
             // Make sure that only 1 x-label per index is shown
             self.NoteGraph.xAxis.granularityEnabled = true

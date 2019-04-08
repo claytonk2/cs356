@@ -16,7 +16,7 @@ class GraphData{
     var reps: [String] = []
     func setTop(data: [Workout]){
         self.topData = data
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     func setBottom(data: [Double]){
         self.bottomData = data

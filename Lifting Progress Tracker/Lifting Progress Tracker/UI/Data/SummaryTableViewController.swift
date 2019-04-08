@@ -40,7 +40,9 @@ class SummaryTableViewController: UITableViewController {
 //        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "summary"), object: nil)
         SummaryTable.delegate = self
         SummaryTable.dataSource = self
-        SummaryTable.reloadData()
+        
+        service.readAll()//workouts =
+        NoteService().readAll()
         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
 //        InputOpen.createFloatingActionButton()
 //        DataInput.createFloatingActionButton()
@@ -59,7 +61,7 @@ class SummaryTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        service.readAll()//workouts =
+        SummaryTable.reloadData()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

@@ -34,6 +34,7 @@ class FirebaseDatabase{
         let myWorkouts = (ref.child("users/\(userID)").child("workouts").queryOrdered(byChild: "name")) // check this
         myWorkouts.observe(DataEventType.value, with: { (snapshot) in
             // Get user value
+            workouts = []
             print(snapshot.children.allObjects)
             for child in snapshot.children {
 //                let valueReps = (child as! DataSnapshot).value as? NSDictionary

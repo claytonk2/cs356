@@ -90,7 +90,7 @@ class userModel {
     
     public func addWorkout(Workout: Workout){
         self.workouts.append(Workout)
-        self.workouts = SortWorkouts().sort(workouts: self.workouts)
+        workouts = SortWorkouts().sort(workouts: self.workouts)
         GraphData.data.SetExercises()
         GraphData.data.SetReps()
         GraphData.data.setTop(data: FilterWorkouts())

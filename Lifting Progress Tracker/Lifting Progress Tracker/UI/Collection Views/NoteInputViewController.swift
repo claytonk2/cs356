@@ -50,7 +50,7 @@ class NoteInputViewController: UIViewController, UITextViewDelegate, UIPickerVie
 //                alertView.addButton(withTitle: "OK")
 //                alertView.show()
 //            }
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
             dismiss(animated: true)
         }
 
