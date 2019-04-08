@@ -68,6 +68,8 @@ class GraphConstructor{
         let lineChartDataSet = LineChartDataSet(entries: dataEntries, label: label)
         lineChartDataSet.circleHoleRadius = 0
         lineChartDataSet.circleRadius = 5
+        lineChartDataSet.circleColors = [GraphSettings.settings.getTopColorDot()]
+        lineChartDataSet.colors = [GraphSettings.settings.getTopColorLine()]
         let lineChartData = LineChartData(dataSet: lineChartDataSet)
         lineChartData.setDrawValues(false)
         return lineChartData//lineChartView.data = lineChartData
@@ -148,6 +150,7 @@ class GraphConstructor{
         let (valueArray, timeArray) = self.readData(data: data)
         let retData: LineChartData = self.setChart(dataPoints: timeArray, values: valueArray, label: label)
         retData.setDrawValues(false)
+//        redData.
         let xAxis=XAxis()
         let chartFormmater: ChartFormatter = ChartFormatter(labels: timeArray)
         

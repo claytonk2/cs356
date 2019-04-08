@@ -76,6 +76,7 @@
 		55CE0B252244143A0006DB8B /* RemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B152244143A0006DB8B /* RemFactory.swift */; };
 		55CE0B262244143A0006DB8B /* ReminderToEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B162244143A0006DB8B /* ReminderToEdit.swift */; };
 		55CE0B29224415360006DB8B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B28224415360006DB8B /* Workout.swift */; };
+		55DBCE70225B176B007F81B6 /* SortWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DBCE6F225B176B007F81B6 /* SortWorkouts.swift */; };
 		E248307DE17EA287F0E907AA /* libPods-Lifting Progress Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E80E1ECEA4147894402795A /* libPods-Lifting Progress Tracker.a */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +191,7 @@
 		55CE0B152244143A0006DB8B /* RemFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemFactory.swift; sourceTree = "<group>"; };
 		55CE0B162244143A0006DB8B /* ReminderToEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderToEdit.swift; sourceTree = "<group>"; };
 		55CE0B28224415360006DB8B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		55DBCE6F225B176B007F81B6 /* SortWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortWorkouts.swift; sourceTree = "<group>"; };
 		BCDD0003D16421C8A2880D7B /* Pods-Lifting Progress Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lifting Progress Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lifting Progress Tracker/Pods-Lifting Progress Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -385,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				55CE0B28224415360006DB8B /* Workout.swift */,
+				55DBCE6F225B176B007F81B6 /* SortWorkouts.swift */,
 			);
 			path = WorkoutData;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				55CE0AEB224411B50006DB8B /* GraphIndexToNote.swift in Sources */,
 				55CE0AD6224409820006DB8B /* LoginViewController.swift in Sources */,
 				55CE0B212244143A0006DB8B /* userModel.swift in Sources */,
+				55DBCE70225B176B007F81B6 /* SortWorkouts.swift in Sources */,
 				555BC936225318B800FF5E1B /* WorkoutCell.swift in Sources */,
 				55517725224AA7CC000F33CB /* AnalysisInfoTableViewController.swift in Sources */,
 				5527FD91225AD157005751AF /* HomeViewController.swift in Sources */,

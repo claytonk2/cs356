@@ -90,10 +90,12 @@ class userModel {
     
     public func addWorkout(Workout: Workout){
         self.workouts.append(Workout)
+        self.workouts = SortWorkouts().sort(workouts: self.workouts)
         GraphData.data.SetExercises()
         GraphData.data.SetReps()
+        GraphData.data.setTop(data: FilterWorkouts())
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGraph"), object: nil)
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGraph"), object: nil)
     }
     
     func FilterWorkouts()->[Workout]{
@@ -107,19 +109,19 @@ class userModel {
     }
     
     public func setWorkouts(Workouts: [Workout]){
-        self.workouts = Workouts
+        self.workouts = SortWorkouts().sort(workouts: Workouts)
         GraphData.data.SetExercises()
         GraphData.data.SetReps()
         if (GraphSettings.settings.getTop() == "nul"){
             do{
             try GraphSettings.settings.setTop(type: Workouts[0].GetName())
             try GraphSettings.settings.setReps(reps: Workouts[0].GetReps())
-            GraphData.data.setTop(data: FilterWorkouts())
-            }
+                        }
             catch{}
         }
+        GraphData.data.setTop(data: FilterWorkouts())
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGraph"), object: nil)
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGraph"), object: nil)
     }
     public func getWorkouts()->[Workout]{
         return self.workouts
