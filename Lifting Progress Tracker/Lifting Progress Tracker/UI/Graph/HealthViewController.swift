@@ -31,7 +31,7 @@ class HealthViewController: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       service.readAll()
+//       service.readAll()
         InputOpen.createFloatingActionButton()
         DataInput.createFloatingActionButton()
         FeedbackInput.createFloatingActionButton()
@@ -44,12 +44,12 @@ class HealthViewController: UIViewController, ChartViewDelegate {
 //        GraphSettings.settings.setBottom(type: "Heart Rate")
         closeMenu()
 
-    NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "loadGraph"), object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.buildGraph()
-        service.readAll()
+//        service.readAll()
     }
     
     @objc func loadList(){
@@ -109,13 +109,13 @@ class HealthViewController: UIViewController, ChartViewDelegate {
         self.buildNoteGraph()
         self.DateLabel.text = "Last Synced: \(DateStringConv().toStringWTimeNS(date: NSDate() as Date))"
         let graph = GraphConstructor()
-        service.readAll()
+//        service.readAll()
         let topString: String = GraphSettings.settings.getTop()
         let labelLine: String = topString//GraphSettings.settings.getTop() + ": " + topUnit.unitString
 //        let labelBar: String = GraphSettings.settings.getBottom() + ": " + bottomUnit.unitString
 //        let topString: String = topUnit.unitString
         DispatchQueue.main.async {
-            if (!GraphData.data.getData().isEmpty){
+            if (!GraphData.data.getData().isEmpty && GraphSettings.settings.getTop() != "nul"){
 //                if let test1 = (GraphData.data.getTop()[0] as! HKQuantitySample).quantity.doubleValue(for: topUnit){
 //
 //                }
@@ -136,10 +136,10 @@ class HealthViewController: UIViewController, ChartViewDelegate {
                 self.DataGraph.xAxis.drawLimitLinesBehindDataEnabled = true
 
 
-                self.DataGraph.rightAxis.enabled = GraphSettings.settings.getRAxis()//false
+                self.DataGraph.rightAxis.enabled = false//GraphSettings.settings.getRAxis()//false
                 self.DataGraph.rightAxis.drawGridLinesEnabled = false // could be the wrong one to set
                 //self.DataGraph.leftAxis.gridColor = GraphSettings.settings.getTopColorDot()
-                self.DataGraph.leftAxis.labelTextColor = GraphSettings.settings.getTopColorDot()
+//                self.DataGraph.leftAxis.labelTextColor = GraphSettings.settings.getTopColorDot()
 //                self.DataGraph.chartXMax = data.xMax
                 self.DataGraph.setVisibleXRangeMaximum(data.xMax)
                 self.DataGraph.data = data
@@ -169,73 +169,7 @@ class HealthViewController: UIViewController, ChartViewDelegate {
             }
         }
     }
-//
-//    let bloodGlucoseUnitString = "mg/dL"
-//    let getter: GetPastHealth = GetPastHealth()
-//
-//    func getData()->(HKUnit, HKUnit){
-//        let topString: String = GraphSettings.settings.getTop()
-//        let bottomString: String = GraphSettings.settings.getBottom() // why is graph settings bottom Red??
-//        var topUnit: HKUnit = HKUnit(from: bloodGlucoseUnitString)
-//        var bottomUnit: HKUnit = HKUnit(from: bloodGlucoseUnitString)
-//
-//        if (topString == "Blood Glucose") {
-//            //getter.getBloodGlucose(top: true)//topSample = userModel.user.getBloodGlucose() as! [HKSample]
-//            topUnit = HKUnit(from: bloodGlucoseUnitString)
-//        }//,"Blood Pressure","Calories","Carbs","Heart Rate","Medication"
-//        else if ("Calories" == topString){
-//           // getter.getCalories(top: true)//topSample = userModel.user.getCalories() as! [HKSample] // dont have this info stored?
-//            topUnit = HKUnit.kilocalorie()
-//        }
-//        else if ("Steps" == topString){
-//          //  getter.getSteps(top: true)//topSample = userModel.user.getCalories() as! [HKSample] // dont have this info stored?
-//            topUnit = HKUnit.count()//.unitDivided(by: HKUnit.minute())
-//        }
-//        else if ("Blood Pressure" == topString){
-//          //  getter.getBloodPreasure(top: true)//topSample = userModel.user.bloodPressure as! [HKSample] // dont have this info stored?
-//            topUnit = HKUnit.millimeterOfMercury()
-//            BPTop = true
-//        }
-//        else if ("Carbs" == topString){
-//         //   getter.getCarbs(top: true)//topSample = userModel.user.getCarbs() as! [HKSample] // dont have this info stored?
-//            topUnit = HKUnit.gram()
-//        }
-//        else if ("Heart Rate" == topString){
-//         //   getter.getHeartRate(top: true)//topSample = userModel.user.getHeartRate() as! [HKSample]
-//            topUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
-//        }
-//        else if ("Medication" == topString){}
-//
-//
-//        if ("Blood Glucose" == bottomString){
-//        //    getter.getBloodGlucose(top: false)//bottomSample = userModel.user.getBloodGlucose() as! [HKSample]
-//            bottomUnit = HKUnit(from: bloodGlucoseUnitString)
-//        }//,"Blood Pressure","Calories","Carbs","Heart Rate","Medication"
-//        else if ("Blood Pressure" == bottomString){
-//        //     getter.getBloodPreasure(top: false)//bottomSample = userModel.user.bloodPressure as! [HKSample] // dont have this info stored?
-//            bottomUnit = HKUnit.millimeterOfMercury()
-//            BPTop = false
-//        }
-//        else if ("Calories" == bottomString){
-//         //   getter.getCalories(top: false)//bottomSample = userModel.user.getCalories() as! [HKSample] // dont have this info stored?
-//            bottomUnit = HKUnit.kilocalorie()
-//        }
-//        else if ("Steps" == bottomString){
-//       //     getter.getSteps(top: false)//topSample = userModel.user.getCalories() as! [HKSample] // dont have this info stored?
-//            bottomUnit = HKUnit.count()//.unitDivided(by: HKUnit.minute())
-//        }
-//        else if ("Carbs" == bottomString){
-//       //     getter.getCarbs(top: false)//bottomSample = userModel.user.getCarbs() as! [HKSample] // dont have this info stored?
-//            bottomUnit = HKUnit.gram()
-//        }
-//        else if ("Heart Rate" == bottomString){
-//        //    getter.getHeartRate(top: false)//bottomSample = userModel.user.getHeartRate() as! [HKSample]
-//            bottomUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
-//        }
-//        else if ("Medication" == bottomString){}
-//
-//        return (topUnit, bottomUnit)
-//    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

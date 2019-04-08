@@ -182,7 +182,7 @@ open class BPMarker: BalloonMarker
     open override func refreshContent(entry: ChartDataEntry, highlight: Highlight)
     {
         
-        setLabel(entry.accessibilityValue! + String(entry.y))//setLabel(userModel.user.getNotes()[Int(entry.x)].getText())
+        setLabel(String(entry.y) + " lbs")//setLabel(userModel.user.getNotes()[Int(entry.x)].getText())
     }
     
     //    @objc open func setLabel(_ newLabel: String)

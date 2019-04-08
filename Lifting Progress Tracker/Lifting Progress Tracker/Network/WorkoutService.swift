@@ -17,14 +17,14 @@ class WorkoutService{
         workout.SetName(Name: name)
         workout.SetDate(date: date)
         FirebaseDatabase.instance.AddWorkout(workout: workout)
+        userModel.user.addWorkout(Workout: workout)
     }
-    func readAll()->[Workout]{
+    func readAll(){
         do {
-        return FirebaseDatabase.instance.ReadWorkouts()
+        FirebaseDatabase.instance.ReadWorkouts()
 //            return true
         }
         catch{
-            return []
         }
     }
 }

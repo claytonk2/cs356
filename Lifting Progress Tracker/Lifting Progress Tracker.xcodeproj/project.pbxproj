@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5527FD8E225AB297005751AF /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527FD8D225AB297005751AF /* NoteService.swift */; };
+		5527FD91225AD157005751AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527FD90225AD156005751AF /* HomeViewController.swift */; };
 		5544DE6A22416D2D00888097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544DE6922416D2D00888097 /* AppDelegate.swift */; };
 		5544DE6C22416D2D00888097 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544DE6B22416D2D00888097 /* RootViewController.swift */; };
 		5544DE6E22416D2D00888097 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544DE6D22416D2D00888097 /* DataViewController.swift */; };
@@ -118,6 +120,8 @@
 /* Begin PBXFileReference section */
 		1CA357D04CFB7F6642525135 /* Pods-Lifting Progress Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lifting Progress Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lifting Progress Tracker/Pods-Lifting Progress Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		2E80E1ECEA4147894402795A /* libPods-Lifting Progress Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lifting Progress Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5527FD8D225AB297005751AF /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
+		5527FD90225AD156005751AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5544DE6622416D2D00888097 /* Lifting Progress Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lifting Progress Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5544DE6922416D2D00888097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5544DE6B22416D2D00888097 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 				55517718224A9CF4000F33CB /* CreatePath.swift */,
 				555BC93222530AB300FF5E1B /* CreateDictionary.swift */,
 				55AACAD12253DD7400E6142E /* WorkoutService.swift */,
+				5527FD8D225AB297005751AF /* NoteService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 		55CE0ACE224406130006DB8B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5527FD90225AD156005751AF /* HomeViewController.swift */,
 				5551771A224AA7A3000F33CB /* Collection Views */,
 				55CE0AEE224411F20006DB8B /* Extention */,
 				55CE0ADB22440A4C0006DB8B /* Graph */,
@@ -553,6 +559,7 @@
 				55CE0B212244143A0006DB8B /* userModel.swift in Sources */,
 				555BC936225318B800FF5E1B /* WorkoutCell.swift in Sources */,
 				55517725224AA7CC000F33CB /* AnalysisInfoTableViewController.swift in Sources */,
+				5527FD91225AD157005751AF /* HomeViewController.swift in Sources */,
 				55C06001224B19430046705B /* FloatingActionButton.swift in Sources */,
 				55CE0B252244143A0006DB8B /* RemFactory.swift in Sources */,
 				55CE0AD4224409320006DB8B /* LoginCheck.swift in Sources */,
@@ -605,6 +612,7 @@
 				559DF8BA2255CACD00D0979B /* BPMarker.swift in Sources */,
 				55AACAD22253DD7400E6142E /* WorkoutService.swift in Sources */,
 				55CE0B03224413110006DB8B /* SummaryTableViewController.swift in Sources */,
+				5527FD8E225AB297005751AF /* NoteService.swift in Sources */,
 				55C0280A2254591E00A93697 /* WorkoutTableViewCell.swift in Sources */,
 				55517719224A9CF4000F33CB /* CreatePath.swift in Sources */,
 				55C05FEB224B166F0046705B /* HealthViewController.swift in Sources */,

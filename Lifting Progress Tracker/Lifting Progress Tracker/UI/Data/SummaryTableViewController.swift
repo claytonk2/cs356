@@ -38,7 +38,8 @@ class SummaryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "summary"), object: nil)
-        
+        SummaryTable.delegate = self
+        SummaryTable.dataSource = self
         SummaryTable.reloadData()
         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
 //        InputOpen.createFloatingActionButton()
@@ -240,7 +241,7 @@ class SummaryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutTableViewCell" , for: indexPath) as! WorkoutTableViewCell
 
         //get address object from array which you can assign to cell
-        let notesObj = userModel.user.getWorkouts()[indexPath.row]
+        let notesObj = userModel.user.getWorkouts()[indexPath.row - 1]
         //assign data from array
         cell.updateUI(workout: notesObj)
         return cell
@@ -251,7 +252,7 @@ class SummaryTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return userModel.user.getWorkouts().count
+        return userModel.user.getWorkouts().count + 1
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

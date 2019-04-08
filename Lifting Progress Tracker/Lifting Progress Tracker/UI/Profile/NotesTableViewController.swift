@@ -12,7 +12,7 @@ class NotesTableViewController: UITableViewController, UISearchBarDelegate { // 
     @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var DoneButton: UIBarButtonItem!
     @IBOutlet weak var IndividualNote: UITableView!
-    var currentNotes: [INote] = []
+    var currentNotes: [Note] = []
     
     @IBAction func CloseNotes(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -64,6 +64,7 @@ class NotesTableViewController: UITableViewController, UISearchBarDelegate { // 
         currentNotes = userModel.user.getNotes()
         IndividualNote.reloadData()
         setUpSearchBar()
+        NoteService().readAll()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -73,6 +74,7 @@ class NotesTableViewController: UITableViewController, UISearchBarDelegate { // 
     
     @objc func loadList(){
         //load data here
+        currentNotes = userModel.user.getNotes()
         self.IndividualNote.reloadData()
     }
     

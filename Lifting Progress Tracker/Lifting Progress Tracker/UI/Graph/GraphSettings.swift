@@ -46,7 +46,7 @@ class GraphSettings{
         self.zoom = view
     }
 
-    var topGraph: String = "Blood Glucose" //"Blood Glucose","Blood Pressure","Calories","Carbs","Heart Rate","Medication"
+    var topGraph: String = "nul" //"Blood Glucose","Blood Pressure","Calories","Carbs","Heart Rate","Medication"
     var bottomGraph: String = "Heart Rate"
     var topColorDot: UIColor = UIColor(named: "CustomBlue")!
     var topColorLine: UIColor = UIColor(named: "CustomBlue")!
@@ -175,14 +175,13 @@ class GraphSettings{
     func setGraphSizeFloat(val: Float){
         self.graphSizeFloat = val
     }
-    let bloodGlucoseUnitString = "mg/dL"
 //    let getter: GetPastHealth = GetPastHealth()
-    var BPTop: Bool = true
-    func getBPTop()->Bool{
-        return self.BPTop
+    var reps: Int = -1
+    func getReps()->Int{
+        return reps
     }
-    func setGetBPTop(top: Bool){
-        self.BPTop = top
+    func setReps(reps: Int){
+        self.reps = reps
     }
     
 }

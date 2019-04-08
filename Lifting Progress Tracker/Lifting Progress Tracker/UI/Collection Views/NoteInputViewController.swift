@@ -41,15 +41,15 @@ class NoteInputViewController: UIViewController, UITextViewDelegate, UIPickerVie
             let note: String = FeedbackTextBox.text!
             let tags: String = TagInputBox.text! // tags are set up weirldy //todo fix
             let noteOb: Note = Note(date: date, text: note, tags: tags)
-            let dic: NSDictionary = userModel.user.addNote(note: noteOb)
-            if let error: String = try ((dic as! NSDictionary).value(forKey: "error") as? String){
-                var alertView:UIAlertView = UIAlertView()
-                alertView.title = "Error While Saving Note!"
-                alertView.message = "Please try again or contact us with your issue"
-                alertView.delegate = self
-                alertView.addButton(withTitle: "OK")
-                alertView.show()
-            }
+            userModel.user.addNote(note: noteOb)
+//            if let error: String = try ((dic as! NSDictionary).value(forKey: "error") as? String){
+//                var alertView:UIAlertView = UIAlertView()
+//                alertView.title = "Error While Saving Note!"
+//                alertView.message = "Please try again or contact us with your issue"
+//                alertView.delegate = self
+//                alertView.addButton(withTitle: "OK")
+//                alertView.show()
+//            }
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
             dismiss(animated: true)
         }

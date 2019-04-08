@@ -52,17 +52,12 @@ class userModel {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadRem"), object: nil) // added this
         self.reminders.append(rem)
     }
-    public func addNote(note: Note) -> NSDictionary{
+    public func addNote(note: Note){
         self.notes.append(note)
         self.notes = SortNotes().sort(notes: self.notes)
-//        if let nNote: Note = note as? Note{
-//            return StoreNote().store(note: nNote) as! NSDictionary
-//        }
-//        else if let dNote: DataNote = note as? DataNote{
-//            return StoreNote().store(note: dNote) as! NSDictionary
-//        }
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadNote"), object: nil)
-        return NSDictionary()
+        
+        return NoteService().save(note: note) //as! NSDictionary
+
     }
     
     public func getNotes()-> [Note]{
@@ -94,13 +89,37 @@ class userModel {
     }
     
     public func addWorkout(Workout: Workout){
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
         self.workouts.append(Workout)
+        GraphData.data.SetExercises()
+        GraphData.data.SetReps()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGraph"), object: nil)
+    }
+    
+    func FilterWorkouts()->[Workout]{
+        var workouts:[Workout] = []
+        for i in userModel.user.getWorkouts(){
+            if (i.GetName() ==  GraphSettings.settings.getTop() && i.GetReps() == GraphSettings.settings.getReps()){
+                workouts.append(i)
+            }
+        }
+        return workouts
     }
     
     public func setWorkouts(Workouts: [Workout]){
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
         self.workouts = Workouts
+        GraphData.data.SetExercises()
+        GraphData.data.SetReps()
+        if (GraphSettings.settings.getTop() == "nul"){
+            do{
+            try GraphSettings.settings.setTop(type: Workouts[0].GetName())
+            try GraphSettings.settings.setReps(reps: Workouts[0].GetReps())
+            GraphData.data.setTop(data: FilterWorkouts())
+            }
+            catch{}
+        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGraph"), object: nil)
     }
     public func getWorkouts()->[Workout]{
         return self.workouts

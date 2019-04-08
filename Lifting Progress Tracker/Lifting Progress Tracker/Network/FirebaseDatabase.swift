@@ -28,7 +28,7 @@ class FirebaseDatabase{
         ref.updateChildValues(childUpdates)
     }
     
-    public func ReadWorkouts()->[Workout]{
+    public func ReadWorkouts(){
         var workouts: [Workout] = [Workout]()
         let userID = Auth.auth().currentUser?.uid
         let myWorkouts = (ref.child("users/\(userID)").child("workouts").queryOrdered(byChild: "name")) // check this
@@ -52,7 +52,6 @@ class FirebaseDatabase{
         }) { (error) in
             print(error.localizedDescription)
         }
-        return workouts
     }
     
     public func AddNote(note: Note){ ///todo fix this
@@ -69,7 +68,7 @@ class FirebaseDatabase{
         ref.updateChildValues(childUpdates)
     }
     
-    public func ReadNotes()->[Note]{
+    public func ReadNotes(){
         var notes: [Note] = [Note]()
         let userID = Auth.auth().currentUser?.uid
         let myNotes = (ref.child("users/\(userID)").child("notes").queryOrdered(byChild: "name")) // check this
@@ -90,7 +89,7 @@ class FirebaseDatabase{
         }) { (error) in
             print(error.localizedDescription)
         }
-        return notes
+//        return notes
     }
     
 }

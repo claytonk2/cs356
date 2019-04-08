@@ -18,6 +18,9 @@ class ChartFormatter:NSObject,IAxisValueFormatter{
     }
     
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        if (value == -1){
+            return labels[0]
+        }
         return labels[(Int(value) % labels.count)] // this should be taken out eventually
     }
 }

@@ -10,8 +10,8 @@ import Foundation
 import Foundation
 class NoteSearchService{
     
-    func search(notes: [INote], search: String) -> [INote]{
-        var containTag: [INote]  = []
+    func search(notes: [Note], search: String) -> [Note]{
+        var containTag: [Note]  = []
         for note in notes{
             if note.getTags().contains(search){
                 containTag.append(note)

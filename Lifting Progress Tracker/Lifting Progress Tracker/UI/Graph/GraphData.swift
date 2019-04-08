@@ -12,6 +12,8 @@ class GraphData{
     static let data: GraphData = GraphData()
     var topData: [Workout] = []
     var bottomData: [Double] = []
+    var exercises: [String] = []
+    var reps: [String] = []
     func setTop(data: [Workout]){
         self.topData = data
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
@@ -19,6 +21,32 @@ class GraphData{
     func setBottom(data: [Double]){
         self.bottomData = data
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+    }
+    func SetExercises(){
+        var exercises: [String] = []
+        let workouts: [Workout] =  userModel.user.getWorkouts()
+        for i in workouts{
+            if(!exercises.contains(i.GetName())){
+                exercises.append(i.GetName())
+            }
+        }
+        self.exercises = exercises
+    }
+    func SetReps(){
+        var reps: [String] = []
+        let workouts: [Workout] =  userModel.user.getWorkouts()
+        for i in workouts{
+            if(!reps.contains(i.GetReps().description)){
+                reps.append(i.GetReps().description)
+            }
+        }
+        self.reps = reps
+    }
+    func GetExercises()->[String]{
+        return self.exercises
+    }
+    func GetReps()->[String]{
+        return self.reps
     }
     func getData()->[Workout]{
         return self.topData

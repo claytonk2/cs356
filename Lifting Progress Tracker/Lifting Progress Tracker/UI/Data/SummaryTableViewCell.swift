@@ -23,6 +23,9 @@ class SummaryTableViewCell: UITableViewCell {
         
         NotesCell.layer.cornerRadius = 8.0
         NotesCell.layer.masksToBounds = true
+        
+//        ReminderImage
+//        NotesImage
         // Initialization code
     }
 
