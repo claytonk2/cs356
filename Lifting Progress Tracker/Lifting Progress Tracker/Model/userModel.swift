@@ -95,7 +95,7 @@ class userModel {
         GraphData.data.SetReps()
         GraphData.data.setTop(data: FilterWorkouts())
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
-//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGraph"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadW"), object: nil)
     }
     
     func FilterWorkouts()->[Workout]{
@@ -121,7 +121,7 @@ class userModel {
         }
         GraphData.data.setTop(data: FilterWorkouts())
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
-//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGraph"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadW"), object: nil)
     }
     public func getWorkouts()->[Workout]{
         return self.workouts

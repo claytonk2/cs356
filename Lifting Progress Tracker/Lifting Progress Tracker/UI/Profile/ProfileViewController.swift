@@ -48,8 +48,8 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
             if indexPath.row == 0 {
                 self.performSegue(withIdentifier: "notesSegue", sender: self)
             } else {
-                if indexPath.row == 0 {
-                    self.performSegue(withIdentifier: "workoutsSegue", sender: self)
+                if indexPath.row == 2 {
+                    self.performSegue(withIdentifier: "workoutSegue", sender: self)
                 } else {
                     
                 }

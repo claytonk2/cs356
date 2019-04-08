@@ -27,6 +27,8 @@
 		5551772A224AA7CC000F33CB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517721224AA7CC000F33CB /* CollectionViewCell.swift */; };
 		5551772B224AA7CC000F33CB /* RemindersEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517722224AA7CC000F33CB /* RemindersEditViewController.swift */; };
 		5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517723224AA7CC000F33CB /* NotesEditViewController.swift */; };
+		55545A24225BEFE2003EFA20 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55545A23225BEFE2003EFA20 /* WorkoutTableViewController.swift */; };
+		55545A27225BF50C003EFA20 /* WorkoutSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55545A26225BF50C003EFA20 /* WorkoutSearchService.swift */; };
 		555BC93322530AB300FF5E1B /* CreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC93222530AB300FF5E1B /* CreateDictionary.swift */; };
 		555BC936225318B800FF5E1B /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC935225318B800FF5E1B /* WorkoutCell.swift */; };
 		5564442822568583004DFC7A /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564442722568583004DFC7A /* SummaryTableViewCell.swift */; };
@@ -143,6 +145,8 @@
 		55517721224AA7CC000F33CB /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		55517722224AA7CC000F33CB /* RemindersEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersEditViewController.swift; sourceTree = "<group>"; };
 		55517723224AA7CC000F33CB /* NotesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesEditViewController.swift; sourceTree = "<group>"; };
+		55545A23225BEFE2003EFA20 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
+		55545A26225BF50C003EFA20 /* WorkoutSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSearchService.swift; sourceTree = "<group>"; };
 		555BC93222530AB300FF5E1B /* CreateDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDictionary.swift; sourceTree = "<group>"; };
 		555BC935225318B800FF5E1B /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		5564442722568583004DFC7A /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
@@ -335,6 +339,8 @@
 				5544DE6D22416D2D00888097 /* DataViewController.swift */,
 				55CE0B00224413100006DB8B /* SummaryTableViewController.swift */,
 				5564442722568583004DFC7A /* SummaryTableViewCell.swift */,
+				55545A23225BEFE2003EFA20 /* WorkoutTableViewController.swift */,
+				55545A26225BF50C003EFA20 /* WorkoutSearchService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -582,7 +588,9 @@
 				55CE0B062244134C0006DB8B /* GraphChangeViewController.swift in Sources */,
 				55517726224AA7CC000F33CB /* CarbsViewCell.swift in Sources */,
 				55CE0B1F2244143A0006DB8B /* SortNotes.swift in Sources */,
+				55545A24225BEFE2003EFA20 /* WorkoutTableViewController.swift in Sources */,
 				55CE0AED224411B50006DB8B /* CustomBalloon.swift in Sources */,
+				55545A27225BF50C003EFA20 /* WorkoutSearchService.swift in Sources */,
 				55C05FFC224B19430046705B /* UIButtonExtension.swift in Sources */,
 				55CE0AE5224411B50006DB8B /* GraphSettings.swift in Sources */,
 				55CE0B182244143A0006DB8B /* NoteToEdit.swift in Sources */,
