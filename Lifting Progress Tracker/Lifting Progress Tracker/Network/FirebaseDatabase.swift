@@ -77,8 +77,8 @@ class FirebaseDatabase{
             print(snapshot.children.allObjects)
             for child in snapshot.children {
                 //                let valueReps = (child as! DataSnapshot).value as? NSDictionary
-                let text = ((child as! DataSnapshot).value as? NSDictionary)?["sets"] as? String ?? ""
-                let tags = ((child as! DataSnapshot).value as? NSDictionary)?["reps"] as? String ?? ""
+                let text = ((child as! DataSnapshot).value as? NSDictionary)?["text"] as? String ?? ""
+                let tags = ((child as! DataSnapshot).value as? NSDictionary)?["tags"] as? String ?? ""
                 let date: Date = DateStringConv().toDate(date: ((child as! DataSnapshot).value as? NSDictionary)?["date"] as? String ?? "")
                 notes.append(Note(date: date as NSDate, text: text, tags: tags))
                 

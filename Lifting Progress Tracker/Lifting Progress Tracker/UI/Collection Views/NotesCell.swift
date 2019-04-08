@@ -14,7 +14,7 @@ class NotesCell: UITableViewCell {
     @IBOutlet weak var MainLineNotesLabel: UILabel!
     @IBOutlet weak var TagsLabel: UILabel!
     
-    func updateUI(notesObj: INote) {
+    func updateUI(notesObj: Note) {
         //Drow your cell with values from notesObj
         if let note: Note = notesObj as? Note{
             MainLineNotesLabel.text = note.getText()
@@ -22,23 +22,7 @@ class NotesCell: UITableViewCell {
             TagsLabel.text = note.getTags()
             
         }
-        else if let note: DataNote = notesObj as? DataNote{
-            var values: [String] = note.getValues()
-            if values.isEmpty {
-                print("Value Error in NotesCell")
-                return
-            }
-            if (values.count == 1){
-                MainLineNotesLabel.text = note.getType() + " reading of " + values[0] + ": " +  note.getText()
-           
-            }
-            else{
-                 MainLineNotesLabel.text = note.getType() + " reading of " + values[0] + " over " + values[1] + ": " +  note.getText()
-            }
-            
-            DateLabel.text = DateStringConv().toStringWTimeNS(date: note.getDate() as! Date)
-            TagsLabel.text = note.getTags()
-        }
+        
        // MainLineNotesLabel.text = TotalNotesModel.notes.MainLineNotes
     }
     

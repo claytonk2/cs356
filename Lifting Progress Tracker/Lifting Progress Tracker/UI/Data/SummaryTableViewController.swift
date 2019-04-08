@@ -248,6 +248,9 @@ class SummaryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if(indexPath.row == 0){
+            return 150
+        }
         return 76
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
