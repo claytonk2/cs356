@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Network/FirebaseDatabase.swift"
-            timestampString = "576398107.187732"
+            timestampString = "576398983.211208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Network/FirebaseDatabase.swift"
-            timestampString = "576398107.1883349"
+            timestampString = "576398983.211314"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Network/FirebaseDatabase.swift"
-            timestampString = "576398107.1887389"
+            timestampString = "576398983.211395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Network/FirebaseDatabase.swift"
-            timestampString = "576398107.189136"
+            timestampString = "576398983.211471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Network/FirebaseDatabase.swift"
-            timestampString = "576398107.189536"
+            timestampString = "576398983.211545"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Network/FirebaseDatabase.swift"
-            timestampString = "576398107.189934"
+            timestampString = "576398983.211621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"
-            timestampString = "576398107.1903369"
+            timestampString = "576398983.211701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"
-            timestampString = "576398107.190412"
+            timestampString = "576398983.211773"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"
-            timestampString = "576398107.190483"
+            timestampString = "576398983.211843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "167"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"
-            timestampString = "576398107.190552"
+            timestampString = "576398983.211912"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "168"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"
-            timestampString = "576398107.190622"
+            timestampString = "576398983.2119811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "145"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"
-            timestampString = "576398107.190691"
+            timestampString = "576398983.21205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/GraphData.swift"
-            timestampString = "576398107.190761"
+            timestampString = "576398983.212121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/GraphData.swift"
-            timestampString = "576398107.1908309"
+            timestampString = "576398983.212191"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/GraphData.swift"
-            timestampString = "576398107.19093"
+            timestampString = "576398983.212289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -330,7 +330,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/HealthViewController.swift"
-            timestampString = "576398107.191089"
+            timestampString = "576398983.212384"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -351,8 +351,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
             endingLineNumber = "119"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "computeAxisValues(min:max:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -426,7 +426,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Model/userModel.swift"
-            timestampString = "576398107.191341"
+            timestampString = "576398983.21257"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -438,11 +438,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Model/userModel.swift"
-            timestampString = "576398107.191439"
+            timestampString = "576398983.212661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
@@ -458,7 +458,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Network/FirebaseDatabase.swift"
-            timestampString = "576398107.191519"
+            timestampString = "576398983.212743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -474,7 +474,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Data/SummaryTableViewController.swift"
-            timestampString = "576398107.1919301"
+            timestampString = "576398983.212823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -490,7 +490,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Graph/GraphData.swift"
-            timestampString = "576398107.192012"
+            timestampString = "576398983.212906"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -506,7 +506,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Model/userModel.swift"
-            timestampString = "576398107.192089"
+            timestampString = "576398983.2129771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
@@ -522,7 +522,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Model/userModel.swift"
-            timestampString = "576398107.192167"
+            timestampString = "576398983.2130539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -538,7 +538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Data/SummaryTableViewController.swift"
-            timestampString = "576398107.192243"
+            timestampString = "576398983.213132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -554,7 +554,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Data/SummaryTableViewController.swift"
-            timestampString = "576398107.192319"
+            timestampString = "576398983.21321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -570,7 +570,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Network/FirebaseDatabase.swift"
-            timestampString = "576398107.192392"
+            timestampString = "576398983.213285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -582,11 +582,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Network/FirebaseDatabase.swift"
-            timestampString = "576398107.1927741"
+            timestampString = "576398983.213356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -602,7 +602,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/Network/FirebaseDatabase.swift"
-            timestampString = "576398107.193174"
+            timestampString = "576398983.213425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -618,12 +618,202 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lifting Progress Tracker/UI/Data/SummaryTableViewController.swift"
-            timestampString = "576398116.803718"
+            timestampString = "576398983.2134939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+            timestampString = "576398983.213568"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+            timestampString = "576398983.214152"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+            timestampString = "576398983.21454"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "GraphSettingsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifting_Progress_Tracker.GraphSettingsViewController.init(style: __C.UITableViewStyle) -&gt; Lifting_Progress_Tracker.GraphSettingsViewController"
+                  moduleName = "Lifting Progress Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/claytonkingsbury/Documents/GitHub/Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+                  timestampString = "576398983.655407"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "401">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifting_Progress_Tracker.GraphSettingsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Lifting_Progress_Tracker.GraphSettingsViewController"
+                  moduleName = "Lifting Progress Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/claytonkingsbury/Documents/GitHub/Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+                  timestampString = "576398983.659427"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "424">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifting_Progress_Tracker.GraphSettingsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Lifting_Progress_Tracker.GraphSettingsViewController&gt;"
+                  moduleName = "Lifting Progress Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/claytonkingsbury/Documents/GitHub/Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+                  timestampString = "576398983.664052"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "398">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+            timestampString = "576398983.214962"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "GraphSettingsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifting_Progress_Tracker.GraphSettingsViewController.init(style: __C.UITableViewStyle) -&gt; Lifting_Progress_Tracker.GraphSettingsViewController"
+                  moduleName = "Lifting Progress Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/claytonkingsbury/Documents/GitHub/Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+                  timestampString = "576398983.677092"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "526">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifting_Progress_Tracker.GraphSettingsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Lifting_Progress_Tracker.GraphSettingsViewController"
+                  moduleName = "Lifting Progress Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/claytonkingsbury/Documents/GitHub/Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+                  timestampString = "576398983.681002"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lifting_Progress_Tracker.GraphSettingsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Lifting_Progress_Tracker.GraphSettingsViewController&gt;"
+                  moduleName = "Lifting Progress Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/claytonkingsbury/Documents/GitHub/Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+                  timestampString = "576398983.685614"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "494">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+            timestampString = "576399015.44467"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "CloseGraphSettings(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Havenly/Startup_App/UI_Stuff/HomeScreen/GraphSettingsViewController.swift"
+            timestampString = "576399102.178362"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "FilterWorkouts()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

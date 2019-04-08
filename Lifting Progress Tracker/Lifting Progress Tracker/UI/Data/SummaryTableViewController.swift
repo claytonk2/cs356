@@ -243,7 +243,7 @@ class SummaryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutTableViewCell" , for: indexPath) as! WorkoutTableViewCell
 
         //get address object from array which you can assign to cell
-        let notesObj = userModel.user.getWorkouts()[indexPath.row - 1]
+        let notesObj = userModel.user.getWorkouts()[(userModel.user.getWorkouts().count - indexPath.row)]
         //assign data from array
         cell.updateUI(workout: notesObj)
         return cell
