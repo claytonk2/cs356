@@ -44,13 +44,14 @@ class userModel {
     }
     public func addReminders(rem: [Note]){
         self.reminders = rem
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadRem"), object: nil)
     }
     public func getReminders()->[Note]{
         return self.reminders
     }
     public func addReminder(rem: Note){
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadRem"), object: nil) // added this
         self.reminders.append(rem)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadRem"), object: nil) // added this
     }
     public func addNote(note: Note){
         self.notes.append(note)

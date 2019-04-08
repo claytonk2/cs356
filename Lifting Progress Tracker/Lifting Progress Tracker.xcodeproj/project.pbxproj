@@ -29,6 +29,7 @@
 		5551772C224AA7CC000F33CB /* NotesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55517723224AA7CC000F33CB /* NotesEditViewController.swift */; };
 		55545A24225BEFE2003EFA20 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55545A23225BEFE2003EFA20 /* WorkoutTableViewController.swift */; };
 		55545A27225BF50C003EFA20 /* WorkoutSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55545A26225BF50C003EFA20 /* WorkoutSearchService.swift */; };
+		55545A29225BFAA6003EFA20 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55545A28225BFAA6003EFA20 /* ReminderService.swift */; };
 		555BC93322530AB300FF5E1B /* CreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC93222530AB300FF5E1B /* CreateDictionary.swift */; };
 		555BC936225318B800FF5E1B /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC935225318B800FF5E1B /* WorkoutCell.swift */; };
 		5564442822568583004DFC7A /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564442722568583004DFC7A /* SummaryTableViewCell.swift */; };
@@ -74,7 +75,6 @@
 		55CE0B1F2244143A0006DB8B /* SortNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B0F224414390006DB8B /* SortNotes.swift */; };
 		55CE0B212244143A0006DB8B /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B112244143A0006DB8B /* userModel.swift */; };
 		55CE0B222244143A0006DB8B /* DataNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B122244143A0006DB8B /* DataNote.swift */; };
-		55CE0B242244143A0006DB8B /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B142244143A0006DB8B /* ReminderService.swift */; };
 		55CE0B252244143A0006DB8B /* RemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B152244143A0006DB8B /* RemFactory.swift */; };
 		55CE0B262244143A0006DB8B /* ReminderToEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B162244143A0006DB8B /* ReminderToEdit.swift */; };
 		55CE0B29224415360006DB8B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B28224415360006DB8B /* Workout.swift */; };
@@ -147,6 +147,7 @@
 		55517723224AA7CC000F33CB /* NotesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesEditViewController.swift; sourceTree = "<group>"; };
 		55545A23225BEFE2003EFA20 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		55545A26225BF50C003EFA20 /* WorkoutSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSearchService.swift; sourceTree = "<group>"; };
+		55545A28225BFAA6003EFA20 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
 		555BC93222530AB300FF5E1B /* CreateDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDictionary.swift; sourceTree = "<group>"; };
 		555BC935225318B800FF5E1B /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		5564442722568583004DFC7A /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
@@ -191,7 +192,6 @@
 		55CE0B0F224414390006DB8B /* SortNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortNotes.swift; sourceTree = "<group>"; };
 		55CE0B112244143A0006DB8B /* userModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
 		55CE0B122244143A0006DB8B /* DataNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataNote.swift; sourceTree = "<group>"; };
-		55CE0B142244143A0006DB8B /* ReminderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
 		55CE0B152244143A0006DB8B /* RemFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemFactory.swift; sourceTree = "<group>"; };
 		55CE0B162244143A0006DB8B /* ReminderToEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderToEdit.swift; sourceTree = "<group>"; };
 		55CE0B28224415360006DB8B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
@@ -288,7 +288,6 @@
 				55CE0B09224414390006DB8B /* NoteSearchService.swift */,
 				55CE0B08224414390006DB8B /* NoteToEdit.swift */,
 				55CE0B152244143A0006DB8B /* RemFactory.swift */,
-				55CE0B142244143A0006DB8B /* ReminderService.swift */,
 				55CE0B162244143A0006DB8B /* ReminderToEdit.swift */,
 				55CE0B0F224414390006DB8B /* SortNotes.swift */,
 				55CE0B112244143A0006DB8B /* userModel.swift */,
@@ -304,6 +303,7 @@
 				555BC93222530AB300FF5E1B /* CreateDictionary.swift */,
 				55AACAD12253DD7400E6142E /* WorkoutService.swift */,
 				5527FD8D225AB297005751AF /* NoteService.swift */,
+				55545A28225BFAA6003EFA20 /* ReminderService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -580,7 +580,6 @@
 				55517716224A9B26000F33CB /* FirebaseDatabase.swift in Sources */,
 				5544DE6C22416D2D00888097 /* RootViewController.swift in Sources */,
 				55CE0AEC224411B50006DB8B /* BalloonMarker.swift in Sources */,
-				55CE0B242244143A0006DB8B /* ReminderService.swift in Sources */,
 				55CE0B262244143A0006DB8B /* ReminderToEdit.swift in Sources */,
 				55CE0AF9224412EC0006DB8B /* ProfileScreenViewController.swift in Sources */,
 				55517727224AA7CC000F33CB /* DataInputViewController.swift in Sources */,
@@ -611,6 +610,7 @@
 				5544DE6A22416D2D00888097 /* AppDelegate.swift in Sources */,
 				55CE0B1B2244143A0006DB8B /* NoteFactory.swift in Sources */,
 				55CE0AE8224411B50006DB8B /* GraphConstructor.swift in Sources */,
+				55545A29225BFAA6003EFA20 /* ReminderService.swift in Sources */,
 				55CE0AFD224412EC0006DB8B /* FeedbackViewController.swift in Sources */,
 				55CE0AF8224412EC0006DB8B /* RemindersViewController.swift in Sources */,
 				55CE0B1C2244143A0006DB8B /* Note.swift in Sources */,

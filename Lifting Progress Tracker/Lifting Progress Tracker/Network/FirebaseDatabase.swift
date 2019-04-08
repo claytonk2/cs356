@@ -75,6 +75,7 @@ class FirebaseDatabase{
         let myNotes = (ref.child("users/\(userID)").child("notes").queryOrdered(byChild: "name")) // check this
         myNotes.observe(DataEventType.value, with: { (snapshot) in
             // Get user value
+            notes = []
             print(snapshot.children.allObjects)
             for child in snapshot.children {
                 //                let valueReps = (child as! DataSnapshot).value as? NSDictionary
@@ -91,6 +92,45 @@ class FirebaseDatabase{
             print(error.localizedDescription)
         }
 //        return notes
+    }
+    
+    public func AddReminder(reminder: Note){ ///todo fix this
+        var dict: NSDictionary = CreateDictionary().CreateNote(note: reminder)
+        let userID = Auth.auth().currentUser?.uid
+        self.ref.child(userID!).setValue("username") // need to set or create ref
+        // chck if on exists
+        guard let dateKey:Any? = ref.child("users/\(userID)/reminderDate").childByAutoId().key else { return }
+        guard let key:Any? = ref.child("users/\(userID)/reminders").childByAutoId().key else { return }
+        let workoutDate = [ "date": dict["date"]]
+        //let workouts = dict
+        let childUpdates = ["/users/\(userID)/reminderDate/\(dateKey)/": workoutDate,
+                            "/users/\(userID)/reminders/\(key)/": dict] as [String : Any]
+        ref.updateChildValues(childUpdates)
+    }
+    
+    public func ReadReminders(){
+        var notes: [Note] = [Note]()
+        let userID = Auth.auth().currentUser?.uid
+        let myNotes = (ref.child("users/\(userID)").child("reminders").queryOrdered(byChild: "name")) // check this
+        myNotes.observe(DataEventType.value, with: { (snapshot) in
+            // Get user value
+            notes = []
+            print(snapshot.children.allObjects)
+            for child in snapshot.children {
+                //                let valueReps = (child as! DataSnapshot).value as? NSDictionary
+                let text = ((child as! DataSnapshot).value as? NSDictionary)?["text"] as? String ?? ""
+                let tags = ((child as! DataSnapshot).value as? NSDictionary)?["tags"] as? String ?? ""
+                let date: Date = DateStringConv().toDate(date: ((child as! DataSnapshot).value as? NSDictionary)?["date"] as? String ?? "")
+                notes.append(Note(date: date as NSDate, text: text, tags: tags))
+                
+            }
+            userModel.user.addReminders(rem: notes)
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        //        return notes
     }
     
 }
