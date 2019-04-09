@@ -9,7 +9,7 @@
 import Foundation
 class SortNotes{
     func sort(notes: [Note])->[Note]{
-        if (notes.count == 1){
+        if (notes.count <= 1){
             return notes
         }
         var temp: Note = notes[0]

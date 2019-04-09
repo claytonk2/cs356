@@ -9,7 +9,7 @@
 import Foundation
 class SortWorkouts{
     func sort(workouts: [Workout])->[Workout]{
-        if (workouts.count == 1){
+        if (workouts.count <= 1){
             return workouts
         }
         var temp: Workout = workouts[0]

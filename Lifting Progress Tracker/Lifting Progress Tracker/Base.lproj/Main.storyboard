@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gyp-iH-qIc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gyp-iH-qIc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -702,12 +702,12 @@
                         <outlet property="CloseGraphSettingsButton" destination="eMY-C7-ORd" id="nXA-ue-eJx"/>
                         <outlet property="DataPoint1ColorPicker" destination="4Rd-Zs-KFS" id="vPx-DT-6kc"/>
                         <outlet property="DisplayValues" destination="asF-xd-oNy" id="DGY-8r-6oX"/>
-                        <outlet property="ExerciseDelegate" destination="NdF-eB-0Nx" id="mGc-2o-dYa"/>
+                        <outlet property="ExerciseDelegate" destination="NdF-eB-0Nx" id="Vz0-Wj-DSn"/>
                         <outlet property="GraphSettingsTableView" destination="SmA-QT-T3R" id="m8m-9Y-4J3"/>
                         <outlet property="GraphSizeSlider" destination="KuS-F4-Mt9" id="VNd-NM-a48"/>
                         <outlet property="Line1ColorPicker" destination="gje-sF-wKi" id="Zif-AT-D3y"/>
                         <outlet property="SIzeSlider" destination="nab-Dk-8ZR" id="KQX-ua-oA4"/>
-                        <outlet property="SetsPicker" destination="0Bl-4A-cLG" id="pg5-4V-7Vh"/>
+                        <outlet property="SetsPicker" destination="0Bl-4A-cLG" id="79i-fr-Y8n"/>
                         <outlet property="SizeLabel" destination="hXS-ZG-1I3" id="COr-Ge-s9j"/>
                     </connections>
                 </tableViewController>
@@ -926,7 +926,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ze9-bi-svp">
-                                        <rect key="frame" x="62" y="62" width="40" height="40"/>
+                                        <rect key="frame" x="86" y="89" width="16" height="22"/>
                                         <color key="backgroundColor" red="0.17254901959999999" green="0.74117647060000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="Heart Rate Icon">
@@ -938,7 +938,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmu-m0-zC9" userLabel="Feedback Input">
-                                        <rect key="frame" x="35" y="140" width="40" height="40"/>
+                                        <rect key="frame" x="59" y="149" width="16" height="22"/>
                                         <color key="backgroundColor" red="0.17254901959999999" green="0.74117647060000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="Speech Bubble">
@@ -950,7 +950,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jh-kn-07z">
-                                        <rect key="frame" x="27" y="118" width="56" height="14"/>
+                                        <rect key="frame" x="39" y="127" width="56" height="14"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -962,7 +962,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBw-hb-VXl">
-                                        <rect key="frame" x="68.5" y="40" width="27" height="14"/>
+                                        <rect key="frame" x="80.5" y="67" width="27" height="14"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1200,7 +1200,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4U-g8-6Co">
-                                            <rect key="frame" x="59" y="27" width="54" height="21"/>
+                                            <rect key="frame" x="59" y="27" width="54" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -1218,7 +1218,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aQ-SN-78N">
-                                            <rect key="frame" x="16" y="54" width="155" height="21"/>
+                                            <rect key="frame" x="16" y="54.5" width="155" height="20.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="155" id="ui6-EJ-en1"/>
                                             </constraints>
@@ -1748,7 +1748,7 @@
                     <navigationItem key="navigationItem" title="Profile" largeTitleDisplayMode="never" id="ob5-eh-4hL">
                         <barButtonItem key="rightBarButtonItem" style="done" id="6tN-Bu-dlI">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ng3-uc-EHf">
-                                <rect key="frame" x="337" y="10" width="22" height="24"/>
+                                <rect key="frame" x="336.5" y="10" width="22.5" height="24.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="More"/>
@@ -3271,7 +3271,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" multipleTouchEnabled="YES" contentMode="redraw" placeholder="#Name or Date" id="p9B-G1-UlJ">
+                        <searchBar key="tableHeaderView" multipleTouchEnabled="YES" contentMode="redraw" misplaced="YES" placeholder="#Name or Date" id="p9B-G1-UlJ">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
@@ -3397,7 +3397,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
         <image name="Heart Rate Icon" width="40" height="40"/>
         <image name="Info Icon" width="25" height="25"/>
         <image name="Line Blue" width="2000" height="300"/>
-        <image name="More" width="22" height="24"/>
+        <image name="More" width="22.5" height="24.5"/>
         <image name="Note Icon" width="570" height="570"/>
         <image name="Pencil Icon" width="40" height="40"/>
         <image name="Plus Sign" width="60" height="60"/>
