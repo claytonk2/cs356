@@ -31,7 +31,7 @@ class WorkoutSearchService{
         if(DateStringConv().toStringWTimeNS(date: date).contains(text)){
             return true
         }
-        if(DateStringConv().toStringWTime(date: date).contains(text)){
+        if(DateStringConv().toStringWYear(date: date).contains(text)){
             return true
         }
         return false

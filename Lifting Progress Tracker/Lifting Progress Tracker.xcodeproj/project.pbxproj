@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552548C2225CFA8900FD80BE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552548BF225CFA7200FD80BE /* Charts.framework */; };
+		552548C3225CFA8900FD80BE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 552548BF225CFA7200FD80BE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5527FD8E225AB297005751AF /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527FD8D225AB297005751AF /* NoteService.swift */; };
 		5527FD91225AD157005751AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527FD90225AD156005751AF /* HomeViewController.swift */; };
 		5544DE6A22416D2D00888097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544DE6922416D2D00888097 /* AppDelegate.swift */; };
@@ -31,7 +33,6 @@
 		55545A27225BF50C003EFA20 /* WorkoutSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55545A26225BF50C003EFA20 /* WorkoutSearchService.swift */; };
 		55545A29225BFAA6003EFA20 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55545A28225BFAA6003EFA20 /* ReminderService.swift */; };
 		555BC93322530AB300FF5E1B /* CreateDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC93222530AB300FF5E1B /* CreateDictionary.swift */; };
-		555BC936225318B800FF5E1B /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BC935225318B800FF5E1B /* WorkoutCell.swift */; };
 		5564442822568583004DFC7A /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564442722568583004DFC7A /* SummaryTableViewCell.swift */; };
 		559DF8BA2255CACD00D0979B /* BPMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DF8B82255CACD00D0979B /* BPMarker.swift */; };
 		55AACAD22253DD7400E6142E /* WorkoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AACAD12253DD7400E6142E /* WorkoutService.swift */; };
@@ -75,31 +76,29 @@
 		55CE0B262244143A0006DB8B /* ReminderToEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B162244143A0006DB8B /* ReminderToEdit.swift */; };
 		55CE0B29224415360006DB8B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CE0B28224415360006DB8B /* Workout.swift */; };
 		55DBCE70225B176B007F81B6 /* SortWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DBCE6F225B176B007F81B6 /* SortWorkouts.swift */; };
-		BF8BD8B4225C33650065F220 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8BD8B1225C335F0065F220 /* Charts.framework */; };
-		BF8BD8B5225C33650065F220 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF8BD8B1225C335F0065F220 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF8BD8B9225C340F0065F220 /* GraphSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BD8B8225C340E0065F220 /* GraphSettingsViewController.swift */; };
 		BF8BD8BF225C38920065F220 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF8BD8BE225C38920065F220 /* GoogleService-Info.plist */; };
 		E248307DE17EA287F0E907AA /* libPods-Lifting Progress Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E80E1ECEA4147894402795A /* libPods-Lifting Progress Tracker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BF8BD8B0225C335F0065F220 /* PBXContainerItemProxy */ = {
+		552548BE225CFA7200FD80BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BF8BD8AB225C335E0065F220 /* Charts.xcodeproj */;
+			containerPortal = 552548B9225CFA7200FD80BE /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		BF8BD8B2225C335F0065F220 /* PBXContainerItemProxy */ = {
+		552548C0225CFA7200FD80BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BF8BD8AB225C335E0065F220 /* Charts.xcodeproj */;
+			containerPortal = 552548B9225CFA7200FD80BE /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
 		};
-		BF8BD8B6225C33650065F220 /* PBXContainerItemProxy */ = {
+		552548C4225CFA8900FD80BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BF8BD8AB225C335E0065F220 /* Charts.xcodeproj */;
+			containerPortal = 552548B9225CFA7200FD80BE /* Charts.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = A58A4ED274A941CA248EA921;
 			remoteInfo = Charts;
@@ -113,7 +112,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BF8BD8B5225C33650065F220 /* Charts.framework in Embed Frameworks */,
+				552548C3225CFA8900FD80BE /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +122,7 @@
 /* Begin PBXFileReference section */
 		1CA357D04CFB7F6642525135 /* Pods-Lifting Progress Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lifting Progress Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lifting Progress Tracker/Pods-Lifting Progress Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		2E80E1ECEA4147894402795A /* libPods-Lifting Progress Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lifting Progress Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		552548B9225CFA7200FD80BE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		5527FD8D225AB297005751AF /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
 		5527FD90225AD156005751AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5544DE6622416D2D00888097 /* Lifting Progress Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lifting Progress Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +149,6 @@
 		55545A26225BF50C003EFA20 /* WorkoutSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSearchService.swift; sourceTree = "<group>"; };
 		55545A28225BFAA6003EFA20 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
 		555BC93222530AB300FF5E1B /* CreateDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDictionary.swift; sourceTree = "<group>"; };
-		555BC935225318B800FF5E1B /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		5564442722568583004DFC7A /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		559DF8B82255CACD00D0979B /* BPMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPMarker.swift; sourceTree = "<group>"; };
 		55AACAD12253DD7400E6142E /* WorkoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutService.swift; sourceTree = "<group>"; };
@@ -194,7 +193,6 @@
 		55CE0B28224415360006DB8B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		55DBCE6F225B176B007F81B6 /* SortWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortWorkouts.swift; sourceTree = "<group>"; };
 		BCDD0003D16421C8A2880D7B /* Pods-Lifting Progress Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lifting Progress Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lifting Progress Tracker/Pods-Lifting Progress Tracker.debug.xcconfig"; sourceTree = "<group>"; };
-		BF8BD8AB225C335E0065F220 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		BF8BD8B8225C340E0065F220 /* GraphSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphSettingsViewController.swift; sourceTree = "<group>"; };
 		BF8BD8BE225C38920065F220 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -205,17 +203,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E248307DE17EA287F0E907AA /* libPods-Lifting Progress Tracker.a in Frameworks */,
-				BF8BD8B4225C33650065F220 /* Charts.framework in Frameworks */,
+				552548C2225CFA8900FD80BE /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552548BA225CFA7200FD80BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				552548BF225CFA7200FD80BE /* Charts.framework */,
+				552548C1225CFA7200FD80BE /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5544DE5D22416D2D00888097 = {
 			isa = PBXGroup;
 			children = (
-				BF8BD8AB225C335E0065F220 /* Charts.xcodeproj */,
 				5544DE6822416D2D00888097 /* Lifting Progress Tracker */,
 				5544DE6722416D2D00888097 /* Products */,
 				CAC227CC61EB2DAAB501BEA2 /* Pods */,
@@ -234,6 +240,7 @@
 		5544DE6822416D2D00888097 /* Lifting Progress Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				552548B9225CFA7200FD80BE /* Charts.xcodeproj */,
 				BF8BD8BE225C38920065F220 /* GoogleService-Info.plist */,
 				55CE0ACE224406130006DB8B /* UI */,
 				55CE0ACD224406040006DB8B /* Network */,
@@ -261,7 +268,6 @@
 				55517723224AA7CC000F33CB /* NotesEditViewController.swift */,
 				55517720224AA7CC000F33CB /* RemindersCustomCell.swift */,
 				55517722224AA7CC000F33CB /* RemindersEditViewController.swift */,
-				555BC935225318B800FF5E1B /* WorkoutCell.swift */,
 				55C028092254591E00A93697 /* WorkoutTableViewCell.swift */,
 			);
 			path = "Collection Views";
@@ -389,15 +395,6 @@
 			path = WorkoutData;
 			sourceTree = "<group>";
 		};
-		BF8BD8AC225C335E0065F220 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BF8BD8B1225C335F0065F220 /* Charts.framework */,
-				BF8BD8B3225C335F0065F220 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		CAC227CC61EB2DAAB501BEA2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,7 +429,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BF8BD8B7225C33650065F220 /* PBXTargetDependency */,
+				552548C5225CFA8900FD80BE /* PBXTargetDependency */,
 			);
 			name = "Lifting Progress Tracker";
 			productName = "Lifting Progress Tracker";
@@ -467,8 +464,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BF8BD8AC225C335E0065F220 /* Products */;
-					ProjectRef = BF8BD8AB225C335E0065F220 /* Charts.xcodeproj */;
+					ProductGroup = 552548BA225CFA7200FD80BE /* Products */;
+					ProjectRef = 552548B9225CFA7200FD80BE /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -479,18 +476,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BF8BD8B1225C335F0065F220 /* Charts.framework */ = {
+		552548BF225CFA7200FD80BE /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = BF8BD8B0225C335F0065F220 /* PBXContainerItemProxy */;
+			remoteRef = 552548BE225CFA7200FD80BE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BF8BD8B3225C335F0065F220 /* ChartsTests.xctest */ = {
+		552548C1225CFA7200FD80BE /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = BF8BD8B2225C335F0065F220 /* PBXContainerItemProxy */;
+			remoteRef = 552548C0225CFA7200FD80BE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -568,7 +565,6 @@
 				55CE0B212244143A0006DB8B /* userModel.swift in Sources */,
 				55DBCE70225B176B007F81B6 /* SortWorkouts.swift in Sources */,
 				BF8BD8B9225C340F0065F220 /* GraphSettingsViewController.swift in Sources */,
-				555BC936225318B800FF5E1B /* WorkoutCell.swift in Sources */,
 				55517725224AA7CC000F33CB /* AnalysisInfoTableViewController.swift in Sources */,
 				5527FD91225AD157005751AF /* HomeViewController.swift in Sources */,
 				55C06001224B19430046705B /* FloatingActionButton.swift in Sources */,
@@ -635,10 +631,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BF8BD8B7225C33650065F220 /* PBXTargetDependency */ = {
+		552548C5225CFA8900FD80BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Charts;
-			targetProxy = BF8BD8B6225C33650065F220 /* PBXContainerItemProxy */;
+			targetProxy = 552548C4225CFA8900FD80BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -787,7 +783,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87L7M578QT;
 				INFOPLIST_FILE = "Lifting Progress Tracker/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -808,7 +804,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87L7M578QT;
 				INFOPLIST_FILE = "Lifting Progress Tracker/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

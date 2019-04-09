@@ -68,7 +68,7 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         self.profilePicture.layer.borderColor = UIColor.lightGray.cgColor
         self.profilePicture.layer.borderWidth = 3
         
-        usersName.text = userModel.user.firstName + " " + userModel.user.lastName
+        usersName.text = "Profile"
         // Do any additional setup after loading the view.
         
         InputOpen.createFloatingActionButton()

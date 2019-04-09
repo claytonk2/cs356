@@ -22,7 +22,7 @@ class WorkoutTableViewCell: UITableViewCell {
         weightLabel.text = String(workout?.GetWeight() as! Int)
         exerciseLabel.text = workout?.GetName()
         setsLabel.text = String(workout?.GetSets() as! Int)
-        dateLabel.text = DateStringConv().toStringWTimeNS(date: workout?.GetDate())
+        dateLabel.text = DateStringConv().toStringWYear(date: workout?.GetDate())
     }
     
     override func awakeFromNib() {

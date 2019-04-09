@@ -54,4 +54,13 @@ class DateStringConv{
         let stringDate: String = formatter.string(from: date!)
         return stringDate
     }
+    func toStringWYear(date: Date?) -> String{
+        var formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, h:mm a yyyy"
+        guard let unwrappedDate = date else { return "" }
+        
+        //Using the dateFromString variable from before.
+        let stringDate: String = formatter.string(from: date!)
+        return stringDate
+    }
 }
