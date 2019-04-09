@@ -110,6 +110,9 @@ class userModel {
     }
     
     public func setWorkouts(Workouts: [Workout]){
+        if(Workouts.isEmpty){
+            return
+        }
         self.workouts = SortWorkouts().sort(workouts: Workouts)
         GraphData.data.SetExercises()
         GraphData.data.SetReps()
