@@ -1414,7 +1414,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKl-6S-J7H" userLabel="Touch Outside">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="TouchOutside:" destination="bg9-6o-abU" eventType="touchUpInside" id="wuE-e6-qz6"/>
@@ -2124,10 +2124,10 @@
                     <navigationItem key="navigationItem" title="Settings" id="caG-18-fnm">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="h53-8b-GC9">
                             <color key="tintColor" red="0.17254901959999999" green="0.74117647060000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="CloseSettings:" destination="Ehf-df-hqY" id="7g3-VJ-RdS"/>
-                            </connections>
                         </barButtonItem>
+                        <connections>
+                            <outlet property="backBarButtonItem" destination="h53-8b-GC9" id="8R2-EU-f7y"/>
+                        </connections>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUC-zz-6z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3418,7 +3418,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
         <segue reference="iU1-kQ-dbc"/>
         <segue reference="Hwf-KH-CUE"/>
         <segue reference="Qlf-Wm-g1v"/>
-        <segue reference="Yck-cD-gnZ"/>
+        <segue reference="aGx-WT-hfo"/>
         <segue reference="hQv-XA-hbO"/>
         <segue reference="o6w-Za-eMz"/>
         <segue reference="s3N-OQ-DDl"/>
