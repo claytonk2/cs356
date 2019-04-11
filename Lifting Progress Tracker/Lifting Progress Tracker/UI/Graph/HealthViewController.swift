@@ -48,8 +48,15 @@ class HealthViewController: UIViewController, ChartViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.buildGraph()
+//
+        if (GraphData.data.getData().count > 1){
+            self.buildGraph()
 //        service.readAll()
+        }
+        else{
+            self.DataGraph.clearValues();
+            self.DataGraph.clear()
+        }
     }
     
     @objc func loadList(){
@@ -58,6 +65,7 @@ class HealthViewController: UIViewController, ChartViewDelegate {
      //       self.DataGraph.initialize()
 //            self.DataGraph.resetViewPortOffsets();
             self.DataGraph.clearValues();
+            
 //            self.DataGraph.clear();
 //            self.DataGraph.clearAllViewportJobs()
             self.buildGraph()
@@ -173,7 +181,7 @@ class HealthViewController: UIViewController, ChartViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.buildGraph()
+       // self.buildGraph()
         prepareBackgroundView()
     }
 

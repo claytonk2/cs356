@@ -41,8 +41,9 @@ class FeedbackViewController: UIViewController, UITextViewDelegate, MFMailCompos
         if FeedbackTextBox.hasText{
             message = FeedbackTextBox.text!
             self.sendEmail()
+            dismiss(animated: true)
         }
-        //dismiss(animated: true)
+//        dismiss(animated: true)
     }
     @IBAction func closeFeedback(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -53,7 +54,7 @@ class FeedbackViewController: UIViewController, UITextViewDelegate, MFMailCompos
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["info@havenlyhealth.com"])
+            mail.setToRecipients(["ckingsbury2@gmail.com"])
             mail.setMessageBody(message, isHTML: false)
             mail.setSubject("In-App Feedback")
             
