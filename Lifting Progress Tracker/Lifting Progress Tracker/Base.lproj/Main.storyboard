@@ -1983,33 +1983,8 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Company" id="lzG-Ev-3vb">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="spI-d7-DUS">
-                                        <rect key="frame" x="0.0" y="379" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="spI-d7-DUS" id="kGo-Nd-vqi">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIu-iu-Rob">
-                                                    <rect key="frame" x="17" y="6" width="307" height="33"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <state key="normal" title="Brainstorming &amp; Feedback Group">
-                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="FacebookPage:" destination="Ehf-df-hqY" eventType="touchUpInside" id="65d-Ml-q2H"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="bIu-iu-Rob" secondAttribute="trailing" constant="17" id="Wwi-fR-Aqy"/>
-                                                <constraint firstAttribute="bottom" secondItem="bIu-iu-Rob" secondAttribute="bottom" constant="4.5" id="duV-nw-eJT"/>
-                                                <constraint firstItem="bIu-iu-Rob" firstAttribute="leading" secondItem="kGo-Nd-vqi" secondAttribute="leading" constant="17" id="hbb-q4-MoP"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oG4-dP-3Ho">
-                                        <rect key="frame" x="0.0" y="423" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="379" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oG4-dP-3Ho" id="xk2-ka-HIn">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -2035,7 +2010,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2fx-D0-3qL">
-                                        <rect key="frame" x="0.0" y="467" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="423" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2fx-D0-3qL" id="wEF-TA-1DH">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -2063,7 +2038,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="yRf-AE-iIm">
-                                        <rect key="frame" x="0.0" y="511" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="467" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yRf-AE-iIm" id="aoA-ZO-5Xh">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -2089,7 +2064,7 @@
                             <tableViewSection id="Xks-jR-cru">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ILB-xL-O21">
-                                        <rect key="frame" x="0.0" y="591" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="547" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ILB-xL-O21" id="EiY-bf-vhk">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -2124,10 +2099,10 @@
                     <navigationItem key="navigationItem" title="Settings" id="caG-18-fnm">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="stop" id="h53-8b-GC9">
                             <color key="tintColor" red="0.17254901959999999" green="0.74117647060000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="CloseSettings:" destination="Ehf-df-hqY" id="8Xl-nd-043"/>
+                            </connections>
                         </barButtonItem>
-                        <connections>
-                            <outlet property="backBarButtonItem" destination="h53-8b-GC9" id="8R2-EU-f7y"/>
-                        </connections>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUC-zz-6z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2165,39 +2140,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Havenly Logo Full Blue" translatesAutoresizingMaskIntoConstraints="NO" id="iZr-XW-xTx">
-                                <rect key="frame" x="67" y="186" width="241" height="76"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Get to know us and our story on our Facebook Page!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jfW-bi-ZBx">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Get to know us and our story on our Facebook Page!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jfW-bi-ZBx">
                                 <rect key="frame" x="67" y="300" width="241" height="66"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2s-aG-N4p" userLabel="Lifting Progress Tracker">
-                                <rect key="frame" x="119.5" y="374" width="136" height="33"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="@HavenlyHealth">
-                                    <color key="titleColor" red="0.1176470588" green="0.69411764710000001" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="FacebookPage:" destination="7yD-pk-bMW" eventType="touchUpInside" id="Lfm-BU-44c"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iZr-XW-xTx" firstAttribute="leading" secondItem="HpA-o6-RAh" secondAttribute="leading" constant="67" id="4uz-se-rVe"/>
-                            <constraint firstItem="iZr-XW-xTx" firstAttribute="centerX" secondItem="feD-cd-SjH" secondAttribute="centerX" id="6pb-0j-kRN"/>
-                            <constraint firstItem="jfW-bi-ZBx" firstAttribute="top" secondItem="iZr-XW-xTx" secondAttribute="bottom" constant="38" id="BTD-j5-I2m"/>
-                            <constraint firstItem="HpA-o6-RAh" firstAttribute="bottom" secondItem="N2s-aG-N4p" secondAttribute="bottom" constant="260" id="LGx-6R-IZc"/>
                             <constraint firstItem="HpA-o6-RAh" firstAttribute="trailing" secondItem="jfW-bi-ZBx" secondAttribute="trailing" constant="67" id="TlM-ER-6mG"/>
-                            <constraint firstItem="N2s-aG-N4p" firstAttribute="centerX" secondItem="HpA-o6-RAh" secondAttribute="centerX" id="VHQ-3p-Iwm"/>
-                            <constraint firstItem="HpA-o6-RAh" firstAttribute="bottom" secondItem="iZr-XW-xTx" secondAttribute="bottom" constant="405" id="dxy-3X-ymB"/>
                             <constraint firstItem="jfW-bi-ZBx" firstAttribute="leading" secondItem="HpA-o6-RAh" secondAttribute="leading" constant="67" id="f20-fF-7Fb"/>
-                            <constraint firstItem="iZr-XW-xTx" firstAttribute="top" secondItem="HpA-o6-RAh" secondAttribute="top" constant="70" id="mC9-95-0Nf"/>
-                            <constraint firstItem="N2s-aG-N4p" firstAttribute="top" secondItem="jfW-bi-ZBx" secondAttribute="bottom" constant="8" id="wZl-ef-uYy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HpA-o6-RAh"/>
                     </view>
@@ -3103,10 +3057,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Havenly Logo Full Blue" translatesAutoresizingMaskIntoConstraints="NO" id="yq9-2x-RPZ">
-                                <rect key="frame" x="67" y="186" width="241" height="76"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please direct questions concerning your account to info@havenlyhealth.com" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MVu-Y6-Mk4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Please direct questions concerning your account to ckingsbury2@gmail.com" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MVu-Y6-Mk4">
                                 <rect key="frame" x="67" y="300" width="241" height="76"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -3116,12 +3067,7 @@ If you feel that we are not abiding by this privacy policy, you should contact u
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZaF-Vj-gRz" firstAttribute="bottom" secondItem="yq9-2x-RPZ" secondAttribute="bottom" constant="405" id="5xQ-gn-06T"/>
-                            <constraint firstItem="yq9-2x-RPZ" firstAttribute="top" secondItem="ZaF-Vj-gRz" secondAttribute="top" constant="70" id="6Dd-on-Ubm"/>
                             <constraint firstItem="ZaF-Vj-gRz" firstAttribute="trailing" secondItem="MVu-Y6-Mk4" secondAttribute="trailing" constant="67" id="MlH-P7-bms"/>
-                            <constraint firstItem="MVu-Y6-Mk4" firstAttribute="top" secondItem="yq9-2x-RPZ" secondAttribute="bottom" constant="38" id="OwY-BL-q3G"/>
-                            <constraint firstItem="yq9-2x-RPZ" firstAttribute="centerX" secondItem="n5d-WC-o3S" secondAttribute="centerX" id="R7d-1f-vu1"/>
-                            <constraint firstItem="yq9-2x-RPZ" firstAttribute="leading" secondItem="ZaF-Vj-gRz" secondAttribute="leading" constant="67" id="SyN-SR-Oxf"/>
                             <constraint firstItem="ZaF-Vj-gRz" firstAttribute="bottom" secondItem="MVu-Y6-Mk4" secondAttribute="bottom" constant="291" id="Uwr-Tk-eqy"/>
                             <constraint firstItem="MVu-Y6-Mk4" firstAttribute="leading" secondItem="ZaF-Vj-gRz" secondAttribute="leading" constant="67" id="n8d-hd-sb1"/>
                         </constraints>

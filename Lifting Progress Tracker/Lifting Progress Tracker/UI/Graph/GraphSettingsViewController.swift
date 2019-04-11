@@ -2,8 +2,8 @@
 //  GraphSettingsViewController.swift
 //  Havenly
 //
-//  Created by Benjamin Walter on 8/21/18.
-//  Copyright © 2018 Benjamin Walter. All rights reserved.
+//  Created by Clayton Kingsbury on 8/21/18.
+//  Copyright © 2018 Clayton Kingsbury. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ class GraphSettingsViewController: UITableViewController {
     
     private let dataSourceColor = ["Red","Orange","Yellow","Green","Blue","Purple"]
     private let exercises = GraphData.data.GetExercises()
-    private let reps = GraphData.data.GetReps()
+    private var reps = GraphData.data.GetReps()
     
     let footerTitle = ["Maximum number of data points displayed in graph view when zoomed out"]
     
@@ -304,5 +304,14 @@ extension GraphSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSou
         
         return label
     }
-    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if(pickerView == ExerciseDelegate){
+            GraphSettings.settings.setTop(type: exercises[row])
+//            FilterWorkouts()
+            GraphData.data.SetReps()
+            reps = GraphData.data.GetReps()
+            self.SetsPicker.selectRow(0, inComponent: 0, animated: true)
+            self.SetsPicker.reloadAllComponents()
+        }
+    }
 }

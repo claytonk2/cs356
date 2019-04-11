@@ -1,17 +1,30 @@
 //
-//  AnalysisInfoTableViewController.swift
-//  Havenly
+//  SettingsViewController.swift
+//  Startup_App
 //
-//  Created by Clayton Kingsbury on 9/13/18.
-//  Copyright © 2018 Clayton Kingsbury. All rights reserved.
+//  Created by Clayton Kingsbury on 7/20/18.
+//  Copyright © 2018 Clayton kingsbury. All rights reserved.
 //
 
 import UIKit
 
-class AnalysisInfoTableViewController: UITableViewController {
+
+class SettingsViewController: UITableViewController {
+
 
     
-    @IBOutlet weak var CloseInfoButton: UIBarButtonItem!
+    @IBAction func CloseSettings(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func OpenNotificationsSettings(_ sender: Any) {
+        UIApplication.shared.open(URL.init(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+    }
+    
+   
+    
+    //Should send to rootview... Maybe?
+    //This link gives some decent help with this: https://medium.com/@felicity.johnson.mail/pushing-popping-dismissing-viewcontrollers-a30e98731df5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +34,14 @@ class AnalysisInfoTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    
     }
 
     // MARK: - Table view data source
 
 
-    @IBAction func CloseInfo(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
     
+
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -86,3 +98,4 @@ class AnalysisInfoTableViewController: UITableViewController {
     */
 
 }
+

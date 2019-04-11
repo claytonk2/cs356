@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55191940225EDFE400F605BF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519193E225EDFE400F605BF /* SettingsViewController.swift */; };
 		552548C2225CFA8900FD80BE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552548BF225CFA7200FD80BE /* Charts.framework */; };
 		552548C3225CFA8900FD80BE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 552548BF225CFA7200FD80BE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5527FD8E225AB297005751AF /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527FD8D225AB297005751AF /* NoteService.swift */; };
@@ -122,6 +123,7 @@
 /* Begin PBXFileReference section */
 		1CA357D04CFB7F6642525135 /* Pods-Lifting Progress Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lifting Progress Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lifting Progress Tracker/Pods-Lifting Progress Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		2E80E1ECEA4147894402795A /* libPods-Lifting Progress Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lifting Progress Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5519193E225EDFE400F605BF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		552548B9225CFA7200FD80BE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		5527FD8D225AB297005751AF /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
 		5527FD90225AD156005751AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 		55CE0ADA22440A3E0006DB8B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				5519193E225EDFE400F605BF /* SettingsViewController.swift */,
 				55CE0AF6224412EC0006DB8B /* ExpandedNoteViewController.swift */,
 				55CE0AF5224412EB0006DB8B /* FeedbackViewController.swift */,
 				55CE0AEF224412EB0006DB8B /* NotesTableViewController.swift */,
@@ -595,6 +598,7 @@
 				55CE0AD8224409D70006DB8B /* RegisterViewController.swift in Sources */,
 				5551772B224AA7CC000F33CB /* RemindersEditViewController.swift in Sources */,
 				55CE0B192244143A0006DB8B /* NoteSearchService.swift in Sources */,
+				55191940225EDFE400F605BF /* SettingsViewController.swift in Sources */,
 				55CE0AF7224412EC0006DB8B /* NotesTableViewController.swift in Sources */,
 				55CE0B29224415360006DB8B /* Workout.swift in Sources */,
 				5544DE7022416D2D00888097 /* ModelController.swift in Sources */,

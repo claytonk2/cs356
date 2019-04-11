@@ -3,7 +3,7 @@
 //  Havenly
 //
 //  Created by Clayton kingsbury on 9/10/18.
-//  Copyright © 2018 Benjamin Walter. All rights reserved.
+//  Copyright © 2018 Clayton Kingsbury. All rights reserved.
 //
 
 import Foundation

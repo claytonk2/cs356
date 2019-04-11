@@ -3,7 +3,7 @@
 //  Havenly
 //
 //  Created by Clayton kingsbury on 8/24/18.
-//  Copyright © 2018 Benjamin Walter. All rights reserved.
+//  Copyright © 2018 Clayton Kingsbury. All rights reserved.
 //
 
 import Foundation
@@ -36,7 +36,7 @@ class GraphData{
         var reps: [String] = []
         let workouts: [Workout] =  userModel.user.getWorkouts()
         for i in workouts{
-            if(!reps.contains(i.GetReps().description)){
+            if(!reps.contains(i.GetReps().description) && i.GetName() == GraphSettings.settings.getTop()){
                 reps.append(i.GetReps().description)
             }
         }

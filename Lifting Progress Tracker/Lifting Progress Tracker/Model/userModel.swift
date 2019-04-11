@@ -114,8 +114,7 @@ class userModel {
             return
         }
         self.workouts = SortWorkouts().sort(workouts: Workouts)
-        GraphData.data.SetExercises()
-        GraphData.data.SetReps()
+        
         if (GraphSettings.settings.getTop() == "nul"){
             do{
             try GraphSettings.settings.setTop(type: Workouts[0].GetName())
@@ -123,6 +122,8 @@ class userModel {
                         }
             catch{}
         }
+        GraphData.data.SetExercises()
+        GraphData.data.SetReps()
         GraphData.data.setTop(data: FilterWorkouts())
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadWorkout"), object: nil)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadW"), object: nil)

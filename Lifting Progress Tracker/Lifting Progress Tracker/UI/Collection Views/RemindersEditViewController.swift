@@ -2,7 +2,7 @@
 //  RemindersEditViewController.swift
 //  Havenly
 //
-//  Created by Benjamin Walter on 8/29/18.
+//  Created by Clayton Kingsbury on 8/29/18.
 //
 
 import UIKit

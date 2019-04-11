@@ -2,8 +2,8 @@
 //  SummaryTableViewController.swift
 //  Havenly
 //
-//  Created by Benjamin Walter on 8/24/18.
-//  Copyright © 2018 Benjamin Walter. All rights reserved.
+//  Created by Clayton Kingsbury on 8/24/18.
+//  Copyright © 2018 Clayton Kingsbury. All rights reserved.
 //
 
 import UIKit
