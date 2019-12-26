@@ -118,7 +118,7 @@ class HealthViewController: UIViewController, ChartViewDelegate {
         self.DateLabel.text = "Last Synced: \(DateStringConv().toStringWTimeNS(date: NSDate() as Date))"
         let graph = GraphConstructor()
 //        service.readAll()
-        let topString: String = GraphSettings.settings.getTop()
+        let topString: String = GraphSettings.settings.getTop() + " x " + GraphSettings.settings.getReps().description
         let labelLine: String = topString//GraphSettings.settings.getTop() + ": " + topUnit.unitString
 //        let labelBar: String = GraphSettings.settings.getBottom() + ": " + bottomUnit.unitString
 //        let topString: String = topUnit.unitString
